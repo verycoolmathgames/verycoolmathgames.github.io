@@ -1,23 +1,150 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	    <link rel="stylesheet" type="text/css" href="styles/index.css">
-	    <style type="text/css">
-	        body{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-.chatiframe{
-    width: 300px;
-    position: fixed;
-    height: 100%;
-}
-	    </style>
-	</head>
-	<body>
+<head>
+  <title> Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
-		
+  .chat { position: fixed; top:0; right:0;} 
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  top: 200;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.pink {
+  position: relative;
+  top: 400;
+  left: 20;
+  width: 20%;
+  height: 2000px;
+  background-color: black;
+  color: white;
+
+}
+</style>
+</head>
+<body onload="myFunction()">
+  <div class="pink"> <p style="font-style: 18px;"><i>Announcements: </i></p></div>
+<iframe class="chat" src="https://ickyalphanumericwebpages--roycea.repl.co/" frameborder="0" height="74%" width="20%" scrolling="no" ></iframe>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img_nature_wide.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+<script> function myFunction() { alert("Please maximize or minimize your page by using the zoom tool to have a better view and to not face technical discomforts. Thank you. "); } </script>
+ 
+
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		 <script src="/__/firebase/6.2.3/firebase.js"></script>
 
@@ -26,6 +153,6 @@
 
 		<!-- Initialize Firebase -->
 		<script src="/__/firebase/init.js"></script>
-		
-	</body>
-</html>
+	
+</body>
+</html> 
