@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title> Website</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
 
-  .chat { position: fixed; top:0; right:0;} 
+<head>
+
+  <title> Website</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+  .chat { position: fixed; top:0; right:0;}
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
@@ -63,12 +67,12 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -87,12 +91,57 @@ img {vertical-align: middle;}
 
 }
 </style>
+
 </head>
+
+
 <body onload="myFunction()">
-  <div class="pink"> <p style="font-style: 18px;"><i>Announcements: </i></p></div>
-<iframe class="chat" src="https://ickyalphanumericwebpages--roycea.repl.co/" frameborder="0" height="74%" width="20%" scrolling="no" ></iframe>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div class="slideshow-container">
+
+    <!--nav begin-->
+      <header>
+        <nav>
+
+          <!--Beginning of Dropdown-->
+          <div class="dropdown">
+    <button class="dropbtn">Games</button>
+    <div class="dropdown-content">
+      <a href="games_popular.html">PSPL</a>
+      <a href="blockly.html">BlocklyPhysics</a>
+    </div>
+  </div>
+  <!--End of Dropdown-->
+
+            <!--Beginning of Dropdown-->
+          <div class="dropdown">
+    <button class="dropbtn">Memes</button>
+    <div class="dropdown-content">
+      <a href="memes_popular.html">Most Popular</a>
+      <a href="memes_new.html">New Memes</a>
+    </div>
+  </div>
+  <!--End of Dropdown-->
+
+    </nav>
+      </header>
+      <!--nav end-->
+
+
+  <!--Beginning of Slideshow and Announcements Stuff-->
+  <div class="pink">
+
+    <p style="font-style: 18px;">
+
+      <i>Announcements: </i>
+
+    </p>
+
+  </div>
+
+  <iframe class="chat" src="https://ickyalphanumericwebpages--roycea.repl.co/" frameborder="0" height="74%" width="20%" scrolling="no"></iframe>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
@@ -113,15 +162,18 @@ img {vertical-align: middle;}
 </div>
 
 </div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
+  <br>
+
+  <div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
 </div>
+  <!--End of Slideshow and Announcements Stuff-->
 
-<script>
+
+  <script>
 var slideIndex = 0;
 showSlides();
 
@@ -130,29 +182,20 @@ function showSlides() {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {slideIndex = 1}
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 </script>
-<script> function myFunction() { alert("Please maximize or minimize your page by using the zoom tool to have a better view and to not face technical discomforts. Thank you. "); } </script>
- 
+  <script> function myFunction() { alert("Please maximize or minimize your page by using the zoom tool to have a better view and to not face technical discomforts. Thank you. "); } </script>
 
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		 <script src="/__/firebase/6.2.3/firebase.js"></script>
 
-		<!-- TODO: Add SDKs for Firebase products that you want to use
-     		https://firebase.google.com/docs/web/setup#reserved-urls -->
-
-		<!-- Initialize Firebase -->
-		<script src="/__/firebase/init.js"></script>
-	
 </body>
-</html> 
+</html>
