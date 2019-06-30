@@ -141,10 +141,10 @@ border-radius: 10%;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #0080FF;
-}
+  background-color: #dbdbdb;
 
-.dropdown-content {
+}
+.dr{
   display: none;
   position: absolute;
   background-color: #0080FF;
