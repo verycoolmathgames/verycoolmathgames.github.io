@@ -1,9 +1,7 @@
 nav{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   padding: 1%;
-  background-color: #0080FF;
 }
 
   .chat {
