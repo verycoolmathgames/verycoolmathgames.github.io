@@ -3,7 +3,6 @@ nav{
   display: flex;
   flex-direction: row;
   padding: 1%;
-  background-color: #0080FF;
 }
 
   .chat {
@@ -79,7 +78,7 @@ nav{
     animation-duration: 1.5s;
   }
   .navelement{
-    color: white;
+    color:gray;
     padding: 1%;
     text-decoration: none;
   }
