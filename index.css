@@ -125,7 +125,7 @@ border-radius: 10%;
 
 .dropdown {
   float: left;
-  background: #0080FF;
+  background: #DCDCDC;
   overflow: hidden;
 }
 
@@ -133,9 +133,9 @@ border-radius: 10%;
   font-size: 16px;
   border: none;
   outline: none;
-  color: white;
+  color: gray;
   padding: 14px 16px;
-  background-color: #0080FF;
+  background-color: white;
   font-family: inherit;
   margin: 0;
 }
