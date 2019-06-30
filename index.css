@@ -78,7 +78,11 @@ nav{
     animation-name: fade;
     animation-duration: 1.5s;
   }
-
+  .navelement{
+    color: white;
+    padding: 1%;
+    text-decoration: none;
+  }
   @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
