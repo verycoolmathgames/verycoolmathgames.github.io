@@ -79,7 +79,7 @@ nav{
     animation-duration: 1.5s;
   }
   .navelement{
-    color: white;
+    color: gray;
     padding: 1%;
     text-decoration: none;
   }
