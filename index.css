@@ -3,7 +3,9 @@ nav{
   flex-direction: row;
   padding: 1%;
 }
-
+.logolight{
+  width: 100px;
+}
   .chat {
     position: fixed;
     top:0;
