@@ -141,10 +141,14 @@ border-radius: 10%;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #dbdbdb;
-
+  background-color: #0080FF;
 }
+<<<<<<< HEAD
 .dropdown-content{
+=======
+
+.dropdown-content {
+>>>>>>> parent of f1516fa... weird stuff
   display: none;
   position: absolute;
   background-color: #0080FF;
