@@ -8,7 +8,7 @@ nav{
 }
 
 .navelement{
-  color: #dedede;
+  color: white;
   padding: 2%;
   text-decoration: none;
 }
@@ -46,7 +46,7 @@ nav{
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #c9c9c9;
+  background-color: #dedede;
 }
 
 .dropdown-content {
