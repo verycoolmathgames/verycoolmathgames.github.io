@@ -6,7 +6,9 @@ nav{
   flex-direction: row;
   padding: 2%;
 }
-
+.logolight{
+  width: 100px;
+}
 .navelement{
   color: white;
   padding: 2%;
