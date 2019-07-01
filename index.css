@@ -4,7 +4,6 @@
 nav{
   display: flex;
   flex-direction: row;
-  padding: 2%;
 }
 .logolight{
   width: 100px;
@@ -33,6 +32,7 @@ nav{
 
 .dropdown {
   float: left;
+  padding: 2%;
   background: #dedede;
   overflow: hidden;
 }
