@@ -4,11 +4,12 @@ nav{
   padding: 1%;
 }
 .logolight{
-  width: 100px;
+  width: 300px;
+  height: 260px;
 }
   .chat {
     position: fixed;
-    top:0;
+    top: 0;
     right:0;
   }
 
@@ -168,4 +169,13 @@ border-radius: 10%;
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.chatextreme {
+  position: fixed;
+  top: 100;
+  right:0;
+}
+.abc{
+	position: relative;
+	height: 1500px;
 }
