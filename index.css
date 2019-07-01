@@ -6,7 +6,8 @@ nav{
   flex-direction: row;
 }
 .logolight{
-  width: 10px;
+  width: 50px;
+  height: 50px;
 }
 .navelement{
   color: gray;
@@ -37,7 +38,7 @@ nav{
   border: none;
   outline: none;
   color: #484747;
-  padding: 14px, 16px;
+  padding: 14px 16px;
   background-color: white;
   font-family: sans-serif;
   margin: 0;
@@ -76,10 +77,7 @@ nav{
 /* Rasmit's Navbar and NOTHING ELSE */
 /* Rasmit's Navbar and NOTHING ELSE */
 
-.logolight{
-  width: 300px;
-  height: 260px;
-}
+
   .chat {
     position: fixed;
     top: 0;
