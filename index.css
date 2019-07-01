@@ -10,7 +10,8 @@ nav{
   width: 100px;
 }
 .navelement{
-  color: white;
+  color: gray;
+  background-color: white;
   padding: 2%;
   text-decoration: none;
 }
