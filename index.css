@@ -4,12 +4,15 @@
 nav{
   display: flex;
   flex-direction: row;
-  padding: 2%;
 }
-
+.logolight{
+  width: 50px;
+  height: 50px;
+}
 .navelement{
-  color: #dcd3c4;
-  padding: 1%;
+  color: gray;
+  background-color: white;
+  padding: 2%;
   text-decoration: none;
 }
 
@@ -28,31 +31,27 @@ nav{
   font-family: courier;
 }
 
-.dropdown {
-  float: left;
-  background: #dcd3c4;
-  overflow: hidden;
-}
-
 .dropdown .dropbtn {
   font-size: 16px;
+  float: left;
+  overflow: hidden;
   border: none;
   outline: none;
   color: #484747;
   padding: 14px 16px;
-  background-color: #dcd3c4;
-  font-family: inherit;
+  background-color: white;
+  font-family: sans-serif;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #c7c3bb;
+  background-color: #dedede;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #dcd3c4;
+  background-color: #dedede;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -68,7 +67,7 @@ nav{
 }
 
 .dropdown-content a:hover {
-  background-color: #bfb4a3;
+  background-color: #c7c7c7;
 }
 
 .dropdown:hover .dropdown-content {
@@ -78,10 +77,7 @@ nav{
 /* Rasmit's Navbar and NOTHING ELSE */
 /* Rasmit's Navbar and NOTHING ELSE */
 
-.logolight{
-  width: 300px;
-  height: 260px;
-}
+
   .chat {
     position: fixed;
     top: 0;
