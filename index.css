@@ -31,21 +31,16 @@ nav{
   font-family: courier;
 }
 
-.dropdown {
-  float: left;
-  padding: 2%;
-  background: white;
-  overflow: hidden;
-}
-
 .dropdown .dropbtn {
   font-size: 16px;
+  float: left;
+  overflow: hidden;
   border: none;
   outline: none;
   color: #484747;
   padding: 14px 16px;
   background-color: white;
-  font-family: inherit;
+  font-family: sans-serif;
   margin: 0;
 }
 
