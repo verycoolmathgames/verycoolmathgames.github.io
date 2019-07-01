@@ -1,12 +1,10 @@
-<!DOCTYPE html>
 <html>
-
 <head>
 
   <title>Thanks for Sharing</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="github.css">
 </head>
 
 <body>
@@ -15,7 +13,15 @@
       <header>
         <nav>
           <img class="logolight" src="images/verycoolmathgameslogolight.jpg">
-
+<!--Beginning of Dropdown-->
+          <div class="dropdown">
+    <a href="leaderboard/leaderboards.php" class="dropbtn navelement">Admin</a>
+     <i class="fa fa-caret-down"></i>
+     <div class="dropdown-content">
+       <a href="admin_announcements.php">Change announcements</a>
+    </div>
+  </div>
+<!--End of Dropdown-->
           <!--Beginning of Dropdown-->
           <div class="dropdown">
     <a href="games/games.html" class="dropbtn navelement">Games</a>
@@ -23,14 +29,14 @@
      <div class="dropdown-content">
       <a href="games/popular.html">Popular Games</a>
       <a href="games/new.html">New Games</a>
-      <a href="games/rcmmnd.html">Your Recommendations<a/>
-    </div>
-  </div>
+      <a href="games/rcmmnd.html">Your Recommendations</a><a>
+    </a></div><a>
+  </a></div><a>
   <!--End of Dropdown-->
 
             <!--Beginning of Dropdown-->
-          <div class="dropdown">
-    <a href="memes/memes.html" class="dropbtn navelement">Memes</a>
+          </a><div class="dropdown"><a>
+    </a><a href="memes/memes.html" class="dropbtn navelement">Memes</a>
      <i class="fa fa-caret-down"></i>
      <div class="dropdown-content">
       <a href="memes/popular.html">Popular Games</a>
@@ -47,85 +53,36 @@
      <div class="dropdown-content">
        <a href="leaderboard/weekly.html">This Week</a>
        <a href="leaderboard/monthly.html">This Month</a>
-       <a href="leaderboard/yearly.html">This Year<a/>
-       <a href="leaderboard/friends.html">Your Friends<a/>
+       <a href="leaderboard/yearly.html">This Year</a>
+       <a href="leaderboard/friends.html">Your Friends</a>
        <a href="leaderboard/games.html">Game Leaderboards</a>
     </div>
   </div>
 <!--End of Dropdown-->
-
+ <!--Beginning of Dropdown-->
+          <div class="dropdown">
+    <a href="sign_in.html" class="dropbtn navelement">Sign In</a>
+  </div>
+<!--End of Dropdown-->
     </nav>
      <!--nav end-->
       </header>
   <article>
 
   <!--Beginning of Slideshow and-Beginning of Slideshow and Announc-Beginning of Slideshow and Announcements Stuff-->
-<div class="pink"> <p style="font-style: 18px;"><i>Announcements: </i></p></div>
-<iframe class="chat" src="https://ickyalphanumericwebpages--roycea.repl.co/" frameborder="0" height="74%" width="20%" scrolling="no" ></iframe>
 
-  <div class="slideshow-container">
+<div class="chatextreme">
+<iframe class="chat" src="https://ickyalphanumericwebpages--roycea.repl.co/" frameborder="0" height="100%" width="25%" scrolling="no"></iframe>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img_nature_wide.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img_snow_wide.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="img_mountains_wide.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
-  </div>
-
-  </div>
-
-    <br>
-
-    <div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
     <!--End of Slideshow and Announcements Stuff-->
 </article>
 <footer>
   <a href="https://www.freeiconspng.com/img/653">Download For Free Pencil Png In High Resolution</a>
 </footer>
-  <script>
+  <div class="announcement">
+	<iframe class="abc" src="https://ickyalphanumericwebpages--roycea.repl.co/announcements.php?uname=x&amp;rname=ANNOUNCEMENTS&amp;enSubmit=Enter" frameborder="0" height="1500px" width="25%" scrolling="no"></iframe>
 
-    var spt>
+	</div>
 
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 4000); // Change image every 2 seconds
-
-    }
-
-  </script>
-</body>
-</html>
+</body></html>
