@@ -15,6 +15,7 @@ class App extends Component {
         </header>
 
         <div className='container'>
+
           <section className='add-item'>
               <form>
                 <input type="text" name="username" placeholder="Type a username" />
@@ -22,13 +23,16 @@ class App extends Component {
                 <button>Create Account</button>
               </form>
           </section>
+
           <section className='display-item'>
             <div className='wrapper'>
               <ul>
               </ul>
             </div>
           </section>
+
         </div>
+
       </div>
 
     );
