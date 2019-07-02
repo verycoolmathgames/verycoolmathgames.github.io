@@ -1,0 +1,17 @@
+[debug] [2019-07-02T13:00:17.056Z] ----------------------------------------------------------------------
+[debug] [2019-07-02T13:00:17.058Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\md_sh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only firestore
+[debug] [2019-07-02T13:00:17.058Z] CLI Version:   7.0.2
+[debug] [2019-07-02T13:00:17.058Z] Platform:      win32
+[debug] [2019-07-02T13:00:17.058Z] Node Version:  v11.8.0
+[debug] [2019-07-02T13:00:17.059Z] Time:          Tue Jul 02 2019 09:00:17 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-07-02T13:00:17.059Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-02T13:00:17.066Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-02T13:00:17.067Z] > authorizing via signed-in user
+[debug] [2019-07-02T13:00:17.069Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/verycoolthanksforsharing  
+ 
+[debug] [2019-07-02T13:00:17.430Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["firestore"]
+[debug] [2019-07-02T13:00:17.444Z] Starting emulator firestore with args {"host":"localhost","port":8080,"rules":"C:\\Users\\md_sh\\firestore.rules"}
+[info] i  firestore: Logging to firestore-debug.log
+[info] +  firestore: Emulator started at http://localhost:8080
