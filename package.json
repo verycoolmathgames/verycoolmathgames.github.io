@@ -2,8 +2,9 @@
   "dependencies": {
     "gh-pages": "^2.0.1"
   }
-  "homepage": "verycoolmathgames.github.io/",
+  "homepage": "verycoolmathgames.github.io",
   "scripts": {
     "predeploy": "yarn run build",
+    "deploy": "",
   }
 }
