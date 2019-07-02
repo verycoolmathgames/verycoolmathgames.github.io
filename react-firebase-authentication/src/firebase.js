@@ -3,7 +3,7 @@ const config = {
     apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
     authDomain: "verycoolmathgames.firebaseapp.com",
     databaseURL: "https://verycoolmathgames.firebaseio.com",
-    projectId: "react-firebase-authentication-eeec7",
+    projectId: "verycoolthanksforsharing",
     storageBucket: "react-firebase-authentication-eeec7.appspot.com",
     messagingSenderId: "144750278413"
 };
