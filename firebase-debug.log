@@ -31,3 +31,37 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2019-07-02T13:00:47.430Z] Jul 02, 2019 9:00:47 AM io.gapi.emulators.netty.NotFoundHandler handleRequest
 INFO: Unknown request URI: /favicon.ico
 
+[debug] [2019-07-02T13:29:23.040Z] ----------------------------------------------------------------------
+[debug] [2019-07-02T13:29:23.042Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\md_sh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only firestore
+[debug] [2019-07-02T13:29:23.042Z] CLI Version:   7.0.2
+[debug] [2019-07-02T13:29:23.042Z] Platform:      win32
+[debug] [2019-07-02T13:29:23.042Z] Node Version:  v11.8.0
+[debug] [2019-07-02T13:29:23.042Z] Time:          Tue Jul 02 2019 09:29:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-07-02T13:29:23.042Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-02T13:29:23.050Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-02T13:29:23.051Z] > authorizing via signed-in user
+[debug] [2019-07-02T13:29:23.052Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-07-02T13:29:23.052Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-07-02T13:29:23.359Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-02T13:29:23.363Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/verycoolthanksforsharing  
+ 
+[debug] [2019-07-02T13:29:23.700Z] <<< HTTP RESPONSE 200
+[info] i  Starting emulators: ["firestore"]
+[debug] [2019-07-02T13:29:23.712Z] Starting emulator firestore with args {"host":"localhost","port":8080,"rules":"C:\\Users\\md_sh\\firestore.rules"}
+[info] i  firestore: Logging to firestore-debug.log
+[info] +  firestore: Emulator started at http://localhost:8080
+[debug] [2019-07-02T13:29:25.222Z] API endpoint: http://localhost:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+[debug] [2019-07-02T13:29:25.222Z] 
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2019-07-02T13:29:29.861Z] Jul 02, 2019 9:29:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
