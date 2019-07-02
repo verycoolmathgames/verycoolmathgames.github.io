@@ -15,3 +15,19 @@
 [debug] [2019-07-02T13:00:17.444Z] Starting emulator firestore with args {"host":"localhost","port":8080,"rules":"C:\\Users\\md_sh\\firestore.rules"}
 [info] i  firestore: Logging to firestore-debug.log
 [info] +  firestore: Emulator started at http://localhost:8080
+[debug] [2019-07-02T13:00:18.758Z] API endpoint: http://localhost:8080
+
+[debug] [2019-07-02T13:00:18.759Z] If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2019-07-02T13:00:47.384Z] Jul 02, 2019 9:00:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
+[debug] [2019-07-02T13:00:47.430Z] Jul 02, 2019 9:00:47 AM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /favicon.ico
+
