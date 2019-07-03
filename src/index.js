@@ -8,8 +8,4 @@ import "firebase/firestore";
 ReactDOM.render(<App />, document.getElementById('root'))
 
 var admin = require('firebase-admin');
-
-admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
-});
+var app = admin.initializeApp();
