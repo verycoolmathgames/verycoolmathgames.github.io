@@ -24,7 +24,11 @@
 
   <script>
     window.onload = function(){
-      if 
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          window.location.replace("https://verycoolmathgames.github.io/")
+        }
+      });
     }
     document.getElementById("signin").innerHTML = "Sign Out";
 
