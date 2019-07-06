@@ -9,15 +9,15 @@ nav{
 .navelement{
   color: gray;
   background-color: white;
-  padding: 5%;
+  padding: %;
   text-decoration: none;
 }
 
 .menuLink{
-  color: #060606;
+ color: #060606;
   margin:1%;
   font-size: 70%;
-  padding: 1%;
+  padding:1%;
   background-color: black;
   border-radius: 10%;
 }
