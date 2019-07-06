@@ -23,12 +23,12 @@
   <script defer src="/__/firebase/init.js"></script>
 
   <script>
-    
+
     window.onload = function(){
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
           document.getElementById("signin").innerHTML = "Sign Out";
-        }
+        } else
       });
     }
 
