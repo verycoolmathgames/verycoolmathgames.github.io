@@ -15,12 +15,13 @@
         <script type="text/javascript">
 
             window.onload = checkSignedIn();{
-                
+
                 firebase.auth().onAuthStateChanged(function (user) {
                     if (user) {
                         document.getElementById("signin").innerHTML                            
                     }
                 });
+                
             };
 
         </script>
