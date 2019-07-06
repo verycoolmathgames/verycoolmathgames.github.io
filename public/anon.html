@@ -49,8 +49,11 @@ limitations under the License.
                     var errorMessage = error.message;
                     console.error(error);
                 });
-                // Automatic Redirect
-                window.location.href = "http://verycoolmathgames.github.io";
+                // Automatic Redirectfirebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    window.location.replace("https://verycoolmathgames.github.io/")
+                }
+            });
                 // [END authanon]
             }
             document.getElementById('quickstart-sign-in').disabled = true;
