@@ -117,9 +117,13 @@ limitations under the License.
             // [END authstatelistener]
             document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
             // Automatic Redirect
-            if (firebase.auth().currentUser) {
-                window.location.href="https://verycoolmathgames.github.io"
-            }    
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    // User is signed in.
+                } else {
+                    // No user is signed in.
+                }
+            });    
         }
         window.onload = function () {
             initApp();
