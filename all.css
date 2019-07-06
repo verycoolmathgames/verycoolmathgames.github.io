@@ -2,10 +2,12 @@ nav{
   display: flex;
   flex-direction: row;
 }
+
 .logolight{
   width: 220px;
   height: 100px;
 }
+
 .navelement{
   color: gray;
   background-color: white;
