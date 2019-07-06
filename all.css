@@ -1,7 +1,6 @@
 nav{
   display: flex;
   flex-direction: row;
-  padding-top: 1cm;
 }
 .logolight{
   width: 220px;
