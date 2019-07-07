@@ -44,7 +44,7 @@
         var Announcements = db.collection("announcements");
 
         function addAnnouncement(date, text){
-            db.collection("announcements").doc(date).set({
+            Announcements.doc(date).set({
                 date: date,
                 text: text,
             })
