@@ -43,7 +43,7 @@
         var db = firebase.firestore();
 
         function addAnnouncement(date, text){
-        db.collection("announcements").add({
+        db.collection("announcements").docadd({
             date: date,
             text: text,
         })
