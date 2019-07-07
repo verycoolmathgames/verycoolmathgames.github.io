@@ -45,7 +45,7 @@
         function addAnnouncement(date, text){
         db.collection("announcements").add({
             date: date,
-            text: "Lovelace",
+            text: text,
             born: 1815
         })
             .then(function (docRef) {
