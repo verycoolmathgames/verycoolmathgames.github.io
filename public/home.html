@@ -57,9 +57,9 @@
         };
 
         db.collection("announcements").get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
+            querySnapshot.forEach((doc) => {
                     console.log(`${doc.id} => ${doc.data()}`);
-                });
+            });
         });
 
     </script>
