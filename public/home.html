@@ -54,7 +54,7 @@
             .catch(function (error) {
                 console.error("Error adding document: ", error);
             });
-        }
+        };
 
         db.collection("announcements").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
