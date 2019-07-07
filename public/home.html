@@ -41,7 +41,7 @@
         firebase.initializeApp(firebaseConfig);
 
         var db = firebase.firestore();
-
+        
         db.collection("users").add({
             first: "Ada",
             last: "Lovelace",
@@ -53,7 +53,7 @@
             .catch(function (error) {
                 console.error("Error adding document: ", error);
             });
-            
+
 
     </script>
 
