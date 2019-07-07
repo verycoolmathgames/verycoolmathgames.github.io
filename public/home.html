@@ -42,7 +42,7 @@
 
         var db = firebase.firestore();
 
-        function addAnnouncement(date){
+        function addAnnouncement(date, text){
         db.collection("announcements").add({
             date: date,
             text: "Lovelace",
