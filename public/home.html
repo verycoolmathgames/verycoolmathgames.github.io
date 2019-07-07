@@ -41,7 +41,7 @@
         firebase.initializeApp(firebaseConfig);
 
         var db = firebase.firestore();
-        var Announcements = db.collection()
+        var Announcements = db.collection("announcements")
 
         function addAnnouncement(date, text){
         db.collection("announcements").doc(date).set({
