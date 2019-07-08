@@ -4,11 +4,11 @@
   font-family: courier;
 }
 
-  .chat {
-    position: fixed;
-    top: 0;
-    right:0;
-  }
+    .chat {
+      position: fixed;
+      top: 0;
+      right:0;
+    }
 
   *{
   box-sizing: border-box;
