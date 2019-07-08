@@ -1,0 +1,15 @@
+{
+    "short_name": "VCMG",
+    "name": "Very Cool Math Games",
+    "icons": [
+        {
+            "src": "/images/verycoolmathgamestitle.png",
+            "type": "image/png",
+            "sizes": "600x600"
+        }
+    ],
+    "start_url": "https://verycoolmathgames.github.io",
+    "background_color": "#31a4e1ff",
+    "display": "browser",
+    "gcm_sender_id": "103953800507"
+}
