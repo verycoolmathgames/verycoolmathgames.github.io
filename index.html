@@ -1,3 +1,4 @@
+
 <html class="mdl-js">
 
 <head>
@@ -22,7 +23,8 @@
   <script defer="" src="/__/firebase/6.2.4/firebase-storage.js"></script>
   <script defer="" src="/__/firebase/init.js"></script>
 
-  <script>
+
+<script>
 
     window.onload = function () {
       firebase.auth().onAuthStateChanged(function (user) {
@@ -42,7 +44,22 @@
     gtag('js', new Date());
     gtag('config', 'UA-143389600-1');
   </script>
-
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "showLink": false
+})});
+</script>
 </head>
 
 <body>
@@ -129,7 +146,11 @@
     <!--End of Slideshow and Announcements Stuff-->
 
   </article>
-
-</body>
+<script>
+  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/185482/script.js');
+</script>
+  </body>
 
 </html>
