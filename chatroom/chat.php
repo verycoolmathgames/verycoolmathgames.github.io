@@ -132,7 +132,8 @@ el=document.myform.txtt
         var range = el.createTextRange();
         range.collapse(false);
         range.select();
-    }</script>
+    }
+	</script>
  
 
 
