@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thanks for Sharing</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.2.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script>
+
+      const firebase = require("firebase");
+      require("firebase/firestore");
+
+      function getUserDetails() {
+
+        firebase.initializeApp({
+          apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
+          authDomain: "verycoolthanksforsharing.firebaseapp.com",
+          databaseURL: "https://verycoolthanksforsharing.firebaseio.com",
+          projectId: "verycoolthanksforsharing",
+          storageBucket: "verycoolthanksforsharing.appspot.com",
+          messagingSenderId: "78626384450",
+          appId: "1:78626384450:web:5c1a5470485502ab"
+        });
+
+        var user = firebase.auth().currentUser;
+        var name, uid;
+
+        if (user != null) {
+          name = user.displayName;
+          uid = user.uid;
+        };
+      };
+
+      var db = firebase.firestore();
+      var website_chat = db.collection("website_chat");
+      var displayNames = db.collection("displayNames");
+
+
+      function sendMessage(chatroom, text) {
+        db.collection(chatroom).add({
+          displayName: name,
+          text: text,
+          time: db.ServerValue.TIMESTAMP,
+          uid: uid,
+        })
+          .then(function (docRef) {
+            console.log("Message sent with docid: ", docRef.id);
+          })
+          .catch(function (error) {
+            console.error("Error sharing a very cool message, thanks for sharing though!", error);
+          });
+      };
+
+      window.onload = function () {
+        getUserDetails();
+      };
+
+    </script>
+
+  </head>
+  <body>
+    <script src="app.js">
+    </script>
+  </body>
+</html>
