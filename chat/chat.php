@@ -37,8 +37,6 @@ if (isset($_GET['enSubmit']) && isset($_GET['uname']) && isset($_GET['rname'])){
 ?>
 <!DOCTYPE html>
 <html>
-<link rel="manifest" href="/manifest.json">
-<!--Another head and style thing...-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset= utf-8"
 <style>
@@ -110,18 +108,13 @@ if (isset($_GET['enSubmit']) && isset($_GET['uname']) && isset($_GET['rname'])){
 </form>
 
 </div>
-<div class="ad1">          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Something placed over here </div>
-<div class="ad2">          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Something placed over here </div>
 <?php
 }
 ?>
 
 
 <head>
-<title> Chat room </title>
-<link rel="icon" type="image/ico0.2ref="images/oof.png" />
-
-<link rel="stylesheet" href="index.css">
+<title>Chatroom</title>
 <style>
 
 textarea > span{
@@ -139,7 +132,8 @@ el=document.myform.txtt
         var range = el.createTextRange();
         range.collapse(false);
         range.select();
-    }</script>
+    }
+	</script>
  
 
 
