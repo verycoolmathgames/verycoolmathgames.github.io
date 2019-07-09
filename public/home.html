@@ -25,19 +25,6 @@
 
     <script>
 
-        const messaging = firebase.messaging;
-        messaging.usePublicVapidKey("BDWFWxEnjLOud_FwzfNbZyEEzkmPECi-8e_1QKfTQpghzECcMGD2T63k29Az_svcHAebby3Sd-CXto6kVUs1RyY");
-
-        Notification.requestPermission().then((permission) => {
-            if (permission === 'granted') {
-                console.log('Thanks for sharing notification permission! :)');
-                // TODO(developer): Retrieve an Instance ID token for use with FCM.
-                // ...
-            } else {
-                console.log('Sharing notification permission is caring... :__(');
-            }
-        });
-
         const firebase = require("firebase");
         require("firebase/firestore");
 
