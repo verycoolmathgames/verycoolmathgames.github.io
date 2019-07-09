@@ -13,7 +13,7 @@
     "source": "functions"
   },
   "hosting": [{
-    "site": "verycoolthanksforsharing",
+    "site": "verycoolthanksforsharing.firebaseapp.com",
     "public": "public",
     "ignore": [
       "firebase.json",
