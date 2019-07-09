@@ -37,8 +37,6 @@ if (isset($_GET['enSubmit']) && isset($_GET['uname']) && isset($_GET['rname'])){
 ?>
 <!DOCTYPE html>
 <html>
-
-<!--Another head and style thing...-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset= utf-8"
 <style>
