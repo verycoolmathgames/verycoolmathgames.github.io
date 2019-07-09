@@ -13,14 +13,13 @@
     "source": "functions"
   },
   "hosting": [{
-    "site": "verycoolthanksforsharing.firebaseapp.com",
-    "public": "public",
+    "public": "public/main",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
-  }],
+  },
   "storage": {
     "rules": "storage.rules"
   }
