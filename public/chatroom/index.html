@@ -44,7 +44,6 @@
         db.collection(chatroom).add({
           displayName: name,
           text: text,
-          time: db.ServerValue.TIMESTAMP,
           uid: uid,
         })
           .then(function (docRef) {
