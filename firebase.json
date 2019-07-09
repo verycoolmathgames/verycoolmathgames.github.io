@@ -23,7 +23,7 @@
       ]
     },
     {
-      "target": "verycoolthanksforsharing",
+      "target": "verycoolchat",
       "public": "public/main",
       "ignore": [
         "firebase.json",
