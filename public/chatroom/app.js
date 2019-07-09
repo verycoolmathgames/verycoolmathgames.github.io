@@ -10,7 +10,7 @@ window.document.addEventListener("DOMContentLoaded", event => {
         document.createTextNode(chatData.displayName + `<br>`);
         document.createTextNode(chatData.text + `<br>`);
         var chatStuff = document.createElement("H1");
-        h.appendChild(t);
+        chatStuff.appendChild(t);
         document.body.appendChild(h);
     })
 
