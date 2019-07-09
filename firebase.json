@@ -13,7 +13,7 @@
     "source": "functions"
   },
   "hosting": [{
-    "target": "verycoolchat"
+    "target": "verycoolchat",
     "public": "public",
     "ignore": [
       "firebase.json",
