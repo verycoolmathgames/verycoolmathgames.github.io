@@ -115,8 +115,6 @@ if (isset($_GET['enSubmit']) && isset($_GET['uname']) && isset($_GET['rname'])){
 
 <head>
 <title>Chatroom</title>
-
-<link rel="stylesheet" href="index.css">
 <style>
 
 textarea > span{
