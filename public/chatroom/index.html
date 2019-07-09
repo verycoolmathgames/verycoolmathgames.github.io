@@ -43,7 +43,6 @@
         var displayNames = db.collection("displayNames");
       };
 
-
       function sendMessage(chatroom, text) {
         db.collection(chatroom).add({
           displayName: name,
