@@ -13,7 +13,7 @@
     "source": "functions"
   },
   "hosting": [
-      {
+    {
       "target": "verycoolthanksforsharing",
       "public": "public/main",
       "ignore": [
