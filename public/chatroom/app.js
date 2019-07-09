@@ -1,4 +1,4 @@
-window.ddocument.addEventListener("DOMContentLoaded", event => {
+window.document.addEventListener("DOMContentLoaded", event => {
 
     const app = firebase.app();
     const db = firebase.firestore();
