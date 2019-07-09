@@ -13,14 +13,14 @@
     "source": "functions"
   },
   "hosting": [
-    {
-    "public": "public/main",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+      {
+      "public": "public/main",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
 ],
   "storage": {
     "rules": "storage.rules"
