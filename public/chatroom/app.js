@@ -11,7 +11,7 @@ window.document.addEventListener("DOMContentLoaded", event => {
         var text = document.createTextNode(chatData.text + `<br>`);
         var chatStuff = document.createElement("H1");
         chatStuff.appendChild();
-        document.appendChild;
+        document.appendChild();
     })
 
 });
