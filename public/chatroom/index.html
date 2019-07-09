@@ -25,6 +25,126 @@
       textarea>span {
         font-style: italic;
       }
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <style>
+        .pizza {
+          position: fixed;
+          top: 10;
+          background-color: lightyellow;
+          width: 100%
+        }
+    
+        .w3-animate-left {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 10%;
+          background-color: blue;
+        }
+    
+        .w3-animate-right {
+          position: fixed;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 10%;
+          background-color: blue;
+        }
+    
+        .ad1 {
+          position: relative;
+          top: 300;
+          right: 50;
+          height: 15%;
+          background-color: navy;
+          color: white;
+        }
+    
+        .ad2 {
+          position: relative;
+          top: 400;
+          right: 50;
+          height: 15%;
+          background-color: navy;
+          color: white;
+        }
+    
+        .a {
+          bottom: 0;
+          position: fixed;
+          right: 300;
+        }
+    
+        .b {
+          bottom: 0;
+          position: fixed;
+          right: 600;
+        }
+    
+        .c {
+          position: fixed;
+          bottom: 10;
+          left: 300;
+          background-color: lightyellow;
+          height: 20%;
+          width: 40%
+        }
+    
+        .classy {
+          width: 100px;
+          height: 50px;
+          background-color: red;
+          font-weight: bold;
+          position: relative;
+          -webkit-animation: mymove 5s infinite;
+          /* Safari 4.0 - 8.0 */
+          animation: mymove 5s infinite;
+        }
+    
+        /* Safari 4.0 - 8.0 */
+        #div1 {
+          -webkit-animation-timing-function: linear;
+        }
+    
+        #div2 {
+          -webkit-animation-timing-function: ease;
+        }
+    
+    
+    
+        /* Standard syntax */
+        #div1 {
+          animation-timing-function: linear;
+        }
+    
+        #div2 {
+          animation-timing-function: ease;
+        }
+    
+    
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes mymove {
+          from {
+            left: 400px;
+          }
+    
+          to {
+            left: 1400px;
+          }
+        }
+    
+        /* Standard syntax */
+        @keyframes mymove {
+          from {
+            left: 400px;
+          }
+    
+          to {
+            left: 1400px;
+          }
+        }
+
     </style>
 
     <script>
@@ -185,6 +305,6 @@
         $textarea.scrollTop($textarea[0].scrollHeight);
       });
     </script>
-    
+
   </body>
 </html>
