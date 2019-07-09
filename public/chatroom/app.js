@@ -8,7 +8,7 @@ window.document.addEventListener("DOMContentLoaded", event => {
     chatHistory.onSnapshot(doc => {
         const chatData = doc.data();
         document.createTextNode(chatData.displayName + `<br>`);
-        document.create(chatData.text + `<br>`);
+        document.createTe(chatData.text + `<br>`);
     })
 
 });
