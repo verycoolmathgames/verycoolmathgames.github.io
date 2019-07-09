@@ -24,7 +24,7 @@
     },
     {
       "target": "verycoolchat",
-      "public": "public/main",
+      "public": "public/chatroom",
       "ignore": [
         "firebase.json",
         "**/.*",
