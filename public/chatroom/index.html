@@ -1,40 +1,4 @@
-<?php
-if (isset($_GET['enSubmit']) && isset($_GET['uname']) && isset($_GET['rname'])){
-	echo'<meta http-equiv="refresh" content="30">';
-	$room=$_GET['rname']; 
-	$uname=$_GET['uname'];
-	if (!is_dir($room)) mkdir($room);
-	$files = scandir($room);  
-	foreach ($files as $user){
-		if ($user=='.' || $user=='..') continue;
-		$handle=fopen("$room/$user",'r');
-		$time = fread($handle, filesize("$room/$user"));
-		fclose($handle);
-		if ((time()-$time)>20) unlink("$room/$user"); 
-	}
-	$contents='';
-	$filename="$room.txt";
-	if (file_exists($filename)){
-		$handle = fopen($filename, "r");
-		$contents = fread($handle, filesize($filename));
-		fclose($handle);	
-	}
-	$handle = fopen("$room/$uname", "w");
-	fwrite($handle, time());
-	fclose($handle);
-	
-	$files = scandir($room);
-	$users='';
-	foreach ($files as $user) if ($user!='.' && $user!='..') $users.=$user."\n";
-	
-	if (isset($_POST['Send'])){
-		$text=$_POST['txt'];
-		$contents.="$uname: $text";
-		$handle = fopen("$filename", "a");
-		fwrite($handle, "$uname: $text\n");
-		fclose($handle);
-	}
-?>
+
 
 <!DOCTYPE html>
 <html>
