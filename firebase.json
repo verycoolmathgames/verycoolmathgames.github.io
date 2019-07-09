@@ -22,6 +22,15 @@
         "**/node_modules/**"
       ]
     },
+        {
+          "target": "verycoolthanksforsharing",
+          "public": "public/main",
+          "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+          ]
+        },
   ],
   "storage": {
     "rules": "storage.rules"
