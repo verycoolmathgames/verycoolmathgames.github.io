@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", event => {
     chatHistory.onSnapshot(doc => {
         const chatData = doc.data();
         document.write(chatData.displayName + `<br>`)
-        document.write(data.text + `<br>`)
+        document.write(chatData.text + `<br>`)
     })
 
 });
