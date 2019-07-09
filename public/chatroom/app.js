@@ -9,9 +9,6 @@ window.document.addEventListener("DOMContentLoaded", event => {
         const chatData = doc.data();
         var name = document.createTextNode(chatData.displayName + `<br>`);
         var text = document.createTextNode(chatData.text + `<br>`);
-        var chatStuff = document.createElement("H1");
-        chatStuff.appendChild();
-        document.appendChild(chatStuff);
     })
 
 });
