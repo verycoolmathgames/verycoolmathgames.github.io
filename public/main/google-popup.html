@@ -37,7 +37,6 @@ limitations under the License.
         function toggleSignIn() {
             if (!firebase.auth().currentUser) {
                 var provider = new firebase.auth.GoogleAuthProvider();
-                // [START addscopes]
                 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
                 // [END addscopes]
                 // [START signin]
