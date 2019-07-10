@@ -30,10 +30,6 @@ limitations under the License.
     <script src="/__/firebase/init.js"></script>
 
     <script type="text/javascript">
-        /**
-         * Function called when clicking the Login/Logout button.
-         */
-        // [START buttoncallback]
         function toggleSignIn() {
             if (!firebase.auth().currentUser) {
                 var provider = new firebase.auth.GoogleAuthProvider();
