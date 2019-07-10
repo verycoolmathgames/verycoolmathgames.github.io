@@ -40,8 +40,7 @@ limitations under the License.
                 var provider = new firebase.auth.GoogleAuthProvider();
 
                 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-                // [END addscopes]
-                // [START signin]
+
                 firebase.auth().signInWithPopup(provider).then(function (result) {
                     // This gives you a Google Access Token. You can use it to access the Google API.
                     var token = result.credential.accessToken;
