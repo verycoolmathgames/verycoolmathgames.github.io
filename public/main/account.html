@@ -46,7 +46,7 @@
         var user = firebase.auth().currentUser;
         var name, uid;
         var db = firebase.firestore();
-        var displayNames = db.collection();
+        var displayNames = db.collection("displayNames");
 
         if (user != null) {
             name = user.displayName;
