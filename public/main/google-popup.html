@@ -36,7 +36,6 @@ limitations under the License.
         // [START buttoncallback]
         function toggleSignIn() {
             if (!firebase.auth().currentUser) {
-                // [START createprovider]
                 var provider = new firebase.auth.GoogleAuthProvider();
                 // [END createprovider]
                 // [START addscopes]
