@@ -51,11 +51,8 @@ limitations under the License.
                         console.error(error);
                     }
                 });
-                // [END signin]
             } else {
-                // [START signout]
                 firebase.auth().signOut();
-                // [END signout]
             }
             // [START_EXCLUDE]
             document.getElementById('quickstart-sign-in').disabled = true;
