@@ -44,8 +44,8 @@ limitations under the License.
                 firebase.auth().signInWithPopup(provider).then(function (result) {
                     var token = result.credential.accessToken;
                     var user = result.user;
+                    
                     document.getElementById('quickstart-oauthtoken').textContent = token;
-                    // [END_EXCLUDE]
                 }).catch(function (error) {
                     // Handle Errors here.
                     var errorCode = error.code;
