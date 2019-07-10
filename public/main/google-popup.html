@@ -58,7 +58,6 @@ limitations under the License.
         }
 
         function initApp() {
-            // [START authstatelistener]
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
                     // User is signed in.
