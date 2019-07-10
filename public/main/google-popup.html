@@ -43,7 +43,6 @@ limitations under the License.
                     var errorMessage = error.message;
                     var email = error.email;
                     var credential = error.credential;
-                    // [START_EXCLUDE]
                     if (errorCode === 'auth/account-exists-with-different-credential') {
                         alert('You have already signed up with a different authentication provider for that email.');
                         // If you are using multiple auth providers on your app you should handle linking
