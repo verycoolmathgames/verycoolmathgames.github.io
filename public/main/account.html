@@ -37,7 +37,7 @@
         const firebase = require("firebase");
 
         function getUserDetails() {
-            
+
             firebase.initializeApp({
                 apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
                 authDomain: "verycoolthanksforsharing.firebaseapp.com",
@@ -55,6 +55,7 @@
                 name = user.displayName;
                 uid = user.uid;
             };
+        }
 
         var userWelcome = document.getElementById("hellouser").innerHTML;
 
