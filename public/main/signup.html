@@ -95,7 +95,6 @@ limitations under the License.
         function addUserToFirestore(displayName, email, uid) {
             db.collection(emails).add({
                 email: email,
-                text: text,
                 uid: uid,
             })
                 .then(function (docRef) {
