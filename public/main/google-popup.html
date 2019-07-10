@@ -29,7 +29,7 @@ limitations under the License.
     <script src="/__/firebase/init.js"></script>
 
     <script type="text/javascript">
-    
+
         function toggleSignIn() {
             if (!firebase.auth().currentUser) {
                 var provider = new firebase.auth.GoogleAuthProvider();
@@ -37,7 +37,6 @@ limitations under the License.
                 firebase.auth().signInWithPopup(provider).then(function (result) {
                     var token = result.credential.accessToken;
                     var user = result.user;
-                    document.getElementById('quickstart-oauthtoken').textContent = token;
                 }).catch(function (error) {
                     var errorCode = error.code;
                     var errorMessage = error.message;
