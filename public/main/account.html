@@ -45,6 +45,7 @@
 
         var user = firebase.auth().currentUser;
         var name, uid;
+        var db
 
         if (user != null) {
             name = user.displayName;
