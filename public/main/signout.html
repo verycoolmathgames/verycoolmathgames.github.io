@@ -42,9 +42,10 @@ limitations under the License.
                 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
                 firebase.auth().signInWithPopup(provider).then(function (result) {
+                    
                     var token = result.credential.accessToken;
                     var user = result.user;
-                    
+
                     document.getElementById('quickstart-oauthtoken').textContent = token;
                 }).catch(function (error) {
                     // Handle Errors here.
