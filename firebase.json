@@ -21,15 +21,6 @@
         "**/.*",
         "**/node_modules/**"
       ]
-    },
-    {
-      "target": "verycoolchat",
-      "public": "public/chatroom",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
     }
   ],
   "storage": {
