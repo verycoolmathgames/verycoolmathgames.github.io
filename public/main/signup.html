@@ -89,7 +89,19 @@ limitations under the License.
             });
         }
 
-        
+              function sendMessage(chatroom, text) {
+                    db.collection(chatroom).add({
+                        displayName: name,
+                        text: text,
+                        uid: uid,
+                    })
+                        .then(function (docRef) {
+                            console.log("Message sent with docid: ", docRef.id);
+                        })
+                        .catch(function (error) {
+                            console.error("Error sharing a very cool message, thanks for sharing though!", error);
+                        });
+                };
 
 
         function initApp() {
