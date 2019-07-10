@@ -55,7 +55,6 @@ limitations under the License.
                 document.getElementById('quickstart-sign-in').disabled = false;
             });
             document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-            firebase.auth().onAuthStateChanged(function (user) {
                 window.location.replace("https://verycoolmathgames.github.io");
         }
         window.onload = function () {
