@@ -76,7 +76,7 @@ limitations under the License.
                 })
                     .then(function (docRef) {
                         console.log("User created with displayName: ", docRef.id);
-                    })
+                    });
                     .catch(function (error) {
                         console.error("Error creating user in Firestore. ", error);
                     });
