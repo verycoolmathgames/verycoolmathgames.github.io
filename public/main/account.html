@@ -47,8 +47,7 @@
         var uid;
         var db = firebase.firestore();
         var users = db.collection("users");
-
-            uid = user.uid;
+uid = user.uid;
 
         function getDisplayName(uid) {
             displayName = users.doc(uid);
