@@ -80,18 +80,7 @@ limitations under the License.
                 window.location.replace("home.html");
                 document.getElementById('quickstart-sign-in').disabled = true;
             });
-            function addUserToFirestore(username, email, uid) {
-                emails("emails").doc(username).set({
-                    email: email,
-                    uid: uid,
-                })
-                .then(function (docRef) {
-                    console.log("User created with displayName: ", docRef.id);
-                })
-                .catch(function (error) {
-                    console.error("Error creating user in Firestore. ", error);
-                });
-            };
+            
         };
 
         function initApp() {
