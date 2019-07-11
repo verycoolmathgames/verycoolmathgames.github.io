@@ -94,9 +94,9 @@
     <h2>404 GATEWAY Error</h2>
     <h3>Yes, THAT GATEWAY</h3>
     <h1>Page Not Found</h1>
-    <p>Royce probably messed up somewhere. Just blame Royce lol.</p>
+    <p>Royce probably messed up somewhere. Just blame Rasmit lol.</p>
     <h3>Why am I seeing this?</h3>
-    <p>Isn't it obvious? Cuz Royce did stuff. Don't worry, I'll make sure he didn't put malware on your device lol.</p>
+    <p>Isn't it obvious? Cuz Rasmit did stuff. Don't worry, I (Royce) will make sure he didn't put malware on your device lol.</p>
   </div>
 </body>
 
