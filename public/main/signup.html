@@ -78,7 +78,6 @@ limitations under the License.
                     .catch(function (error) {
                         console.error("Error creating user in Firestore. ", error);
                     });
-            };
             firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
