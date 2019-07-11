@@ -81,7 +81,7 @@ limitations under the License.
                 document.getElementById('quickstart-sign-in').disabled = true;
             });
             function addUserToFirestore(username, email, uid) {
-                db.collection("emails").doc(username).set({
+                emails("emails").doc(username).set({
                     email: email,
                     uid: uid,
                 })
