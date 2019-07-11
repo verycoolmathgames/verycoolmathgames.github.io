@@ -79,7 +79,7 @@ limitations under the License.
                 window.location.replace("home.html");
                 document.getElementById('quickstart-sign-in').disabled = true;
             });
-            function addUserToFirestore(displayName, email, uid) {
+            function addUserToFirestore(username, email, uid) {
                 db.collection(emails).doc(displayName).set({
                     email: email,
                     uid: uid,
