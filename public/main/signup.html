@@ -79,7 +79,7 @@ limitations under the License.
                 return;
             }
             if (username.length < 3) {
-                alert('Please enter a ')
+                alert('Please enter a longer username')
             }
             firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
                 var errorCode = error.code;
