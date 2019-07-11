@@ -91,7 +91,7 @@ limitations under the License.
                     console.error("Error creating user in Firestore. ", error);
                 });
             };
-        }
+        };
 
         function initApp() {
             firebase.auth().onAuthStateChanged(function (user) {
