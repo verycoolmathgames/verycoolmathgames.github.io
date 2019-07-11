@@ -107,11 +107,6 @@ limitations under the License.
             document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
         }
 
-        var user = firebase.auth().currentUser;
-        var username;
-        var db = firebase.firestore();
-        var emails = db.collection("emails");
-
         window.onload = function () {
             getEmailFromUsername();
             initApp();
