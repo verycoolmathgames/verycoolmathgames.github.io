@@ -48,7 +48,6 @@
         var db = firebase.firestore();
         var users = db.collection("users");
 
-        if (user != null) {
             uid = user.uid;
 
         function getDisplayName(uid) {
