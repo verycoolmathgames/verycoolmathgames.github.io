@@ -85,7 +85,7 @@ limitations under the License.
         MAKE THIS WORK FOR SIGNING UP
         NEED TO FIND A WAY TO CHOOSE THE DOCID
         function addUserToFirestore(displayName, email, uid) {
-            db.collection(emails).set({
+            db.collection(emails).doc(set({
                 email: email,
                 uid: uid,
             })
