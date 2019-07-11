@@ -67,7 +67,7 @@ limitations under the License.
                     alert(errorMessage);
                 }
                 console.log(error);
-                addUserToFirestore
+                addUserToFirestore()
             });
             function addUserToFirestore(username, email, uid) {
                 emails("emails").doc(username).set({
