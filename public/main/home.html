@@ -60,6 +60,11 @@
             });
         });
 
+        function toggleSignIn() {
+                firebase.auth().signOut();
+                window.location.replace("https://verycoolmathgames.github.io");
+            };
+
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
