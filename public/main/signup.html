@@ -73,7 +73,7 @@ limitations under the License.
                 emails("emails").doc(username).set({
                     email: email,
                     uid: uid,
-                })
+                };)
                     .then(function (docRef) {
                         console.log("User created with displayName: ", docRef.id);
                     })
