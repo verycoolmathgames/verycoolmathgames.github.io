@@ -70,7 +70,7 @@ limitations under the License.
                 .catch(function (error) {
                     console.error("Error creating user in Firestore. ", error);
                 });
-                users.doc(username).set({
+                users.doc(uid).set({
                     email: email,
                     uid: uid,
                 })
