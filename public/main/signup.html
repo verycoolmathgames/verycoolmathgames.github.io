@@ -42,9 +42,9 @@ limitations under the License.
         });
 
         function handleSignUp() {
+            
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
-            var username = document.getElementById('username').value;
             var users = db.collection("users");
             var emails = db.collection("emails");
             if (email.length < 4) {
