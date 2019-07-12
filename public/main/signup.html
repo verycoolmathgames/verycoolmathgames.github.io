@@ -47,6 +47,10 @@ limitations under the License.
             var password = document.getElementById('password').value;
             var users = db.collection("users");
             var emails = db.collection("emails");
+            if (username.length < 3) {
+                alert('Please enter a longer username.');
+                return;
+            }
             if (email.length < 4) {
                 alert('Please enter an email address.');
                 return;
