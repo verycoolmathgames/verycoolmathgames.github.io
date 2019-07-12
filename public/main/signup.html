@@ -107,7 +107,7 @@ limitations under the License.
         function initApp() {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
-                    document.getElementById('')
+                    document.getElementById('quickstart-sign-up')
                     window.location.replace("home.html");
                 } else {
                     document.getElementById('quickstart-sign-in').textContent = 'Sign in';
