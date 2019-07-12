@@ -71,7 +71,7 @@ limitations under the License.
                     console.error("Error creating user in Firestore. ", error);
                 });
                 users.doc(uid).set({
-                    email: email,
+                    displayName: email,
                     uid: uid,
                 })
                 .then(function (docRef) {
