@@ -25,6 +25,7 @@
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase.js"></script>
 
   <script>
+    var user = firebase.auth()
     window.onload = function() {
       if (user) {
         window.location.replace("public/main/home.html");
