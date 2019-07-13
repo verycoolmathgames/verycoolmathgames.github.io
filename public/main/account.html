@@ -37,14 +37,14 @@
         var user = firebase.auth().currentUser;
 
         if(user != null){
-    var uid = user.uid;
-    var displayName = user.username;
-    var db = firebase.firestore();
-    var users = db.collection("users");
+            var uid = user.uid;
+            var displayName = user.username;
+            var db = firebase.firestore();
+            var users = db.collection("users");
 
-    var displayName = users.doc(uid);
-    var name = displayName(displayName);
-    var email = displayName(email);
+            var displayName = users.doc(uid);
+            var name = displayName(displayName);
+            var email = displayName(email);
         }
 
         function signOut() {
