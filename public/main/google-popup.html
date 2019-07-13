@@ -70,7 +70,14 @@ limitations under the License.
             });
             document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
             firebase.auth().onAuthStateChanged(function (user) {
-                
+                if (user != null) {
+                    user.providerData.forEach(function (profile) {
+                        var displayName = profile.displayName;
+                        console.log(displayName);
+                    });
+                } else {
+                    console.log("User is null, unable to get Google displayName.");
+                };
                 if (user) {
                     window.location.replace("home.html");
                 };
