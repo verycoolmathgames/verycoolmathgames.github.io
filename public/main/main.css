@@ -21,10 +21,6 @@ html, body {
 a {
   text-decoration: none;
 }
-li a {
-  text-decoration: underline;
-  color: #0288d1;
-}
 .mdl-card {
   overflow: visible;
 }
