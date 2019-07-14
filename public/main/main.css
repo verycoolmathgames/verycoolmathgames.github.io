@@ -29,7 +29,7 @@ html, body {
 }
 
 .signinoptions:hover {
-  background-color: 31a4e1ff;
+  background-color: $31a4e1ff;
 }
 .mdl-card {
   overflow: visible;
