@@ -62,7 +62,7 @@ limitations under the License.
                 alert('Please enter a password.');
                 return;
             }
-            firebase.auth().createUserWithEmailAndPassword(email, password, username, uid).catch(function (error) {
+            firebase.auth().createUserWithEmailAndPassword(email, password, username).catch(function (error) {
                 emails.doc(username).set({
                     email: email,
                     uid: uid,
