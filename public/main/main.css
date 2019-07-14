@@ -28,7 +28,7 @@ html, body {
   cursor: pointer;
 }
 
-.button:hover {
+.signinoptions:hover {
   background-color: green;
 }
 .mdl-card {
