@@ -52,7 +52,7 @@ limitations under the License.
                 firebase.auth().signOut();
             }
             document.getElementById('quickstart-sign-in').disabled = true;
-        }
+        };
 
         function initApp() {
             firebase.auth().onAuthStateChanged(function (user) {
