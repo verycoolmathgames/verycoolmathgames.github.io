@@ -20,7 +20,7 @@ html, body {
 }
 a {
   text-decoration: none;
-  font-size: 18
+  font-size: 18;
 }
 .mdl-card {
   overflow: visible;
