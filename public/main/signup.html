@@ -63,20 +63,6 @@ limitations under the License.
                 return;
             }
             firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-                emails.doc(username).set({
-                    email: email,
-                    uid: uid,
-                })
-                .then(function (docRef) {
-                    console.log("User created with displayName: ", docRef.id);
-                })
-                .catch(function (error) {
-                    console.error("Error creating user in Firestore. ", error);
-                });
-                users.doc(uid).set({
-                    displayName: username,
-                    email: email,
-                });
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 if (errorCode == 'auth/weak-password') {
