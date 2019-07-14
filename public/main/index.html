@@ -57,45 +57,7 @@ limitations under the License.
               </p>
               <button class="signinoptions" href="https://verycoolmathgames.github.io/">Return to Main Site</button>
 
-              <html>
-              
-              <head>
-                <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-                <script
-                  src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.y5hhWjOdu80.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNsKzxWFhezE2KkFP7auTmVDBiNEQ/cb=gapi.loaded_1"
-                  async=""></script>
-                <script
-                  src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.y5hhWjOdu80.O/m=client/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNsKzxWFhezE2KkFP7auTmVDBiNEQ/cb=gapi.loaded_0"
-                  async=""></script>
-                <script src="https://apis.google.com/js/api:client.js" gapi_processed="true"></script>
-                <script>
-                  var googleUser = {};
-                  var startApp = function () {
-                    gapi.load('auth2', function () {
-                      // Retrieve the singleton for the GoogleAuth library and set up the client.
-                      auth2 = gapi.auth2.init({
-              < !--[END pre - client_id] -->
-                        client_id: '831371170934-udapit5jhjj56pft5l2drc9gjhfeclf3.apps.googleusercontent.com',
-              < !--[START post - client_id] -->
-                        cookiepolicy: 'single_host_origin',
-                      // Request scopes in addition to 'profile' and 'email'
-                      //scope: 'additional_scope'
-                    });
-                    attachSignin(document.getElementById('customBtn'));
-                  });
-                };
 
-                  function attachSignin(element) {
-                    console.log(element.id);
-                    auth2.attachClickHandler(element, {},
-                      function (googleUser) {
-                        document.getElementById('name').innerText = "Signed in: " +
-                          googleUser.getBasicProfile().getName();
-                      }, function (error) {
-                        alert(JSON.stringify(error, undefined, 2));
-                      });
-                  }
-                </script>
                 <style type="text/css">
                   #customBtn {
                     display: inline-block;
