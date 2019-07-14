@@ -47,7 +47,7 @@ limitations under the License.
             var username = document.getElementById('username').value;
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
-            db = firebase.firestore();
+            var db = firebase.firestore();
             var users = db.collection("users");
             var emails = db.collection("emails");
             if (username.length < 3) {
