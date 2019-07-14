@@ -66,11 +66,11 @@ limitations under the License.
                 emails.doc(username).set({
                     email: email,
                     uid: user.uid,
-                })
+                });
                 users.doc(uid).set({
                     displayName: username,
                     email: email,
-                })
+                });
             }).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
