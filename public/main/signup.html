@@ -106,8 +106,6 @@ limitations under the License.
                 if (user) {
                     document.getElementById('quickstart-sign-up').disabled = true;
                     window.location.replace("home.html");
-                } else {
-                    document.getElementById('quickstart-sign-up').textContent = 'Sign Up';
                 }
             });
             document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
