@@ -73,12 +73,6 @@ limitations under the License.
                     displayName: username,
                     email: email,
                 })
-                .then(function (docRef) {
-                    console.log("User created with displayName: ", docRef.id);
-                })
-                .catch(function (error) {
-                    console.error("Error creating user in Firestore. ", error);
-                });
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 if (errorCode == 'auth/weak-password') {
