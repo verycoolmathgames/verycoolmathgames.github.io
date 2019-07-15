@@ -45,7 +45,7 @@ limitations under the License.
 
         function handleSignUp() {
             var username = document.getElementById('username').value;
-            var email = document.getElementById('email').value;
+            var givenemail = document.getElementById('email').value;
             var password = document.getElementById('password').value;
             var db = firebase.firestore();
             var users = db.collection("users");
