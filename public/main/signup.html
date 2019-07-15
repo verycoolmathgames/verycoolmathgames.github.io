@@ -63,7 +63,7 @@ limitations under the License.
                 return;
             }
 
-            firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
+            firebase.auth().createUserWithEmailAndPassword(email, temppassword).then(function () {
                 emails.doc(username).set({
                     email: email,
                     uid: user.uid,
