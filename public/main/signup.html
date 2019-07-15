@@ -83,7 +83,8 @@ limitations under the License.
                     }
                     console.log(error);
                 });
-                
+                window.location.replace("home.html");
+                document.getElementById('quickstart-sign-in').disabled = true;
             }).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
