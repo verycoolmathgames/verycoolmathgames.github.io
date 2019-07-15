@@ -76,6 +76,7 @@ limitations under the License.
                 });
                 console.log(tempemail);
                 console.log(typeof(tempemail));
+                var user = firebase.auth().currentUser;
                 emails.doc(tempusername).set({
                     email: tempemail,
                     uid: user.uid,
