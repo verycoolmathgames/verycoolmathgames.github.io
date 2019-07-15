@@ -44,8 +44,8 @@ limitations under the License.
         });
 
         function handleSignUp() {
-            var givenusername = document.getElementById('username').value;
-            var givenemail = document.getElementById('email').value;
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
             var db = firebase.firestore();
             var users = db.collection("users");
@@ -65,7 +65,7 @@ limitations under the License.
 
             firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
                 emails.doc(username).set({
-                    email: givenemail,
+                    email: email,
                     uid: user.uid,
                 });
                 users.doc(uid).set({
