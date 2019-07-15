@@ -50,7 +50,7 @@ limitations under the License.
             var db = firebase.firestore();
             var users = db.collection("users");
             var emails = db.collection("emails");
-            
+
             if (username.length < 3) {
                 alert('Please enter a longer username.');
                 return;
@@ -63,6 +63,7 @@ limitations under the License.
                 alert('Please enter a password.');
                 return;
             }
+            
             firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
                 emails.doc(username).set({
                     email: email,
