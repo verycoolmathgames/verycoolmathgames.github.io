@@ -75,6 +75,14 @@ limitations under the License.
                     }
                     console.log(error);
                 });
+                emails.doc(tempusername).set({
+                    email: tempemail,
+                    uid: user.uid,
+                });
+                users.doc(user.uid).set({
+                    displayName: tempusername,
+                    email: tempemail,
+                });
                 console.log(emails.doc(tempusername).data());
                 console.log(users.doc(user.uid).data());
             }).catch(function (error) {
