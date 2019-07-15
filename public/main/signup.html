@@ -70,7 +70,7 @@ limitations under the License.
                 });
                 users.doc(user.uid).set({
                     displayName: tempusername,
-                    email: email,
+                    email: tempemail,
                 });
                 firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
                     var errorCode = error.code;
