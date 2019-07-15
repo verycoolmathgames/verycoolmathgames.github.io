@@ -65,7 +65,7 @@ limitations under the License.
 
             firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
                 emails.doc(username).set({
-                    email: email,
+                    email: givenemail,
                     uid: user.uid,
                 });
                 users.doc(uid).set({
