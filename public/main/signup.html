@@ -82,7 +82,7 @@ limitations under the License.
                     }
                     console.log(error);
                 });
-                console.log(emails.doc(tempusername));
+                console.log(emails.doc(tempusername).data());
                 console.log(users.doc(user.uid));
             }).catch(function (error) {
                 var errorCode = error.code;
