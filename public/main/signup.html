@@ -99,8 +99,8 @@ limitations under the License.
         function initApp() {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
-                    document.getElementById('quickstart-sign-up').disabled = true;
-                    window.location.replace("home.html");
+                    // document.getElementById('quickstart-sign-up').disabled = true;
+                    // window.location.replace("home.html");
                 }
             });
             document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
