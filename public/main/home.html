@@ -85,7 +85,7 @@
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
 
-            urlParams.get('name');
+            var email = urlParams.get('name');
             signIn(email,password);
         };
 
