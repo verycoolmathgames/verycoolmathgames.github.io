@@ -37,29 +37,29 @@
         var db = firebase.firestore();
 
         function signIn(email, password) {
-                firebase.auth().signInWithEmailAndPassword(email, password);
-                var user = firebase.auth().currentUser;
+            firebase.auth().signInWithEmailAndPassword(email, password);
+            var user = firebase.auth().currentUser;
 
-                var uid = user.uid;
-                var password = user.password;
+            var uid = user.uid;
+            var password = user.password;
 
-                var users = db.collection("users");
+            var users = db.collection("users");
 
-                users.doc(uid).get().then(function (doc) {
-                    var displayName = doc.data().displayName;
-                    var email = doc.data().email;
+            users.doc(uid).get().then(function (doc) {
+                var displayName = doc.data().displayName;
+                var email = doc.data().email;
 
-                    console.log(displayName);
-                });
-            };
+                console.log(displayName);
+            });
+        };
 
-            window.onload = function () {
-                var urlParams = new URLSearchParams(window.location.search);
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
 
-                var URLEmail = urlParams.get('email');
-                var URLPassword = urlParams.get('password');
-                signIn(URLEmail, URLPassword);
-            };
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
+            signIn(URLEmail, URLPassword);
+        };
 
         if (user != null) {
             var uid = user.uid;
