@@ -56,7 +56,7 @@
 
             var users = db.collection("users");
             users.doc(uid).then(function (doc) {
-                var displayName = doc.data().displayName
+                var displayName = doc.data().displayName;
                 console.log(displayName);
             })
 
