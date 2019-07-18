@@ -38,7 +38,7 @@
 
         function signInRedirect(email, password) {
             firebase.auth().signInWithEmailAndPassword(email, password);
-        }
+        };
 
         if (user != null) {
             var uid = user.uid;
