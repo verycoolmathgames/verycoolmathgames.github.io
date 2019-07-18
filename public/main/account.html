@@ -56,20 +56,6 @@
             });
         };
 
-        window.onload = function () {
-            var urlParams = new URLSearchParams(window.location.search);
-
-            var URLEmail = urlParams.get('email');
-            var URLPassword = urlParams.get('password');
-            signIn(URLEmail, URLPassword);
-        };
-
-        function signOut() {
-            firebase.auth().signOut();
-            console.log("User signed out!");
-            window.location.replace("https://verycoolmathgames.github.io");
-        };
-
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
