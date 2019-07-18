@@ -35,29 +35,29 @@
 
         var user = firebase.auth().currentUser;
 
-            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-                .then(function () {
-                    return firebase.auth().signInWithEmailAndPassword(email, password);
-                })
-                .catch(function (error) {
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                });
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+            .then(function () {
+                return firebase.auth().signInWithEmailAndPassword(email, password);
+            })
+            .catch(function (error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+            });
 
-            if (user != null) {
-                var uid = user.uid;
+        if (user != null) {
+            var uid = user.uid;
 
-                var users = db.collection("users");
-                users.doc(uid).then(function (doc) {
-                    var displayName = doc.data().displayName;
-                    console.log(displayName);
-                });
+            var users = db.collection("users");
+            users.doc(uid).then(function (doc) {
+                var displayName = doc.data().displayName;
+                console.log(displayName);
+            });
 
-                document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
-            } else {
-                console.log("User is null, unable to return account information");
-                window.location.replace("index.html");
-            };
+            document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
+        } else {
+            console.log("User is null, unable to return account information");
+            window.location.replace("index.html");
+        };
 
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
                 .then(function () {
