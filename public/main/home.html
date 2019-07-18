@@ -52,7 +52,7 @@
             console.log("User is null, unable to return account information");
         };
 
-firebase.auth().signInWithEmailAndPassword(email, password);
+        firebase.auth().signInWithEmailAndPassword(email, password);
 
         var Announcements = db.collection("announcements");
 
