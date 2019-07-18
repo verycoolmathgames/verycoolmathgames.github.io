@@ -37,10 +37,10 @@
         var db = firebase.firestore();
 
         if (user != null) {
+                var uid = user.uid;
             var users = db.collection("users");
 
-            var uid = user.uid;
-            
+
             users.doc(uid).then(function (doc) {
                 if (doc.exists) {
                     console.log("Document data:", doc.data());
