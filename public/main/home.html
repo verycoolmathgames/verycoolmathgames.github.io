@@ -51,14 +51,14 @@
                 console.log(displayName);
             });
         };
-        
-        window.onload = function () {
-                var urlParams = new URLSearchParams(window.location.search);
 
-                var URLEmail = urlParams.get('email');
-                var URLPassword = urlParams.get('password');
-                signIn(URLEmail, URLPassword);
-            };
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
+            signIn(URLEmail, URLPassword);
+        };
 
 
         var Announcements = db.collection("announcements");
