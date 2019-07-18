@@ -37,7 +37,6 @@
         var db = firebase.firestore();
 
         if (user != null) {
-            
             firebase.auth().signInWithEmailAndPassword(email, password);
             var uid = user.uid;
             var password = user.password;
