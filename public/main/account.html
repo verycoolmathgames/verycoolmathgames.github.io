@@ -40,7 +40,6 @@
             var uid = user.uid;
 
             var users = db.collection("users");
-
             users.doc(uid).then(function (doc) {
                 if (doc.exists) {
                     console.log("Document data:", doc.data());
