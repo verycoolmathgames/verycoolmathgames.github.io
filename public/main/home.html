@@ -60,15 +60,6 @@
             signIn(URLEmail, URLPassword);
         };
 
-        function account() {
-            window.location.replace("account.html?email="+email+"&password="+password);
-        };
-
-        function signOut() {
-            firebase.auth().signOut();
-            window.location.replace("https://verycoolmathgames.github.io");
-        };
-
         function redirect(pagePath) {
             if (pagePath == signout.html) {
                 firebase.auth().signOut();
