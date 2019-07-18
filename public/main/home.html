@@ -42,13 +42,13 @@
             var users = db.collection("users");
             users.doc(uid).then(function (doc) {
                 var displayName = doc.data().displayName;
-                var global email = doc.data().email;
+                var email = doc.data().email;
                 console.log(displayName);
             });
 
             document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
         } else {
-            console.log("User is null, unable to return account information");
+            console.log("User is null, unable to return account information");\
         };
 
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
