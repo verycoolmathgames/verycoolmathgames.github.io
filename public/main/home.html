@@ -38,7 +38,7 @@
 
         function signInRedirect(email, password) {
             firebase.auth().signInWithEmailAndPassword(email, password);
-            
+
             if (user != null) {
                 var uid = user.uid;
                 var password = user.password;
@@ -51,8 +51,6 @@
 
                     console.log(displayName);
                 });
-
-                document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
             } else {
                 console.log("User is null, unable to return account information");
             };
