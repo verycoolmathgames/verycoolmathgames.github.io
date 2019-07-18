@@ -70,6 +70,7 @@
         };
 
         function redirect(pagePath) {
+            if (pagePath == signout.html)
             window.location.replace(pagePath+"?email=" + email + "&password=" + password);
             
         };
