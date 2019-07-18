@@ -58,7 +58,7 @@
         } else {
             console.log("User is null, unable to return account information");
             window.location.replace("email-password.html/?email=" + email + "&password=" + password);
-        };
+        };  
 
         function signOut() {
             firebase.auth().signOut();
