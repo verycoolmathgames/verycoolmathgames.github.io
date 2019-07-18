@@ -40,23 +40,7 @@
             firebase.auth().signInWithEmailAndPassword(email, password);
         };
 
-        if (user != null) {
-            var uid = user.uid;
-            var password = user.password;
-
-            var users = db.collection("users");
-
-            users.doc(uid).then(function (doc) {
-                var displayName = doc.data().displayName;
-                var email = doc.data().email;
-                
-                console.log(displayName);
-            });
-
-            document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
-        } else {
-            console.log("User is null, unable to return account information");
-        };
+        
 
         var Announcements = db.collection("announcements");
 
