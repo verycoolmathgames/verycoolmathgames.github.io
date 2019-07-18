@@ -41,11 +41,10 @@
             var password = user.password;
 
             var users = db.collection("users");
-            
+
             users.doc(uid).then(function (doc) {
                 var displayName = doc.data().displayName;
                 var email = doc.data().email;
-                firebase.auth().signInWithEmailAndPassword(email, password);
                 
                 console.log(displayName);
             });
