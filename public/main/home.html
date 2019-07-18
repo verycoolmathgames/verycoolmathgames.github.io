@@ -48,8 +48,7 @@
 
             document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
         } else {
-            console.log("User is null, unable to return account information");
-            window.location.replace("index.html");
+            console.log("User is null, unable to return account information");\
         };
 
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
