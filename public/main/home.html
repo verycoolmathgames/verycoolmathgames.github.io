@@ -45,13 +45,12 @@
                 var displayName = doc.data().displayName;
                 var email = doc.data().email;
                 firebase.auth().signInWithEmailAndPassword(email, password);
-
+                
                 console.log(displayName);
             });
 
             document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
         } else {
-            firebase.auth().signInWithEmailAndPassword(email, password);
             console.log("User is null, unable to return account information");
         };
 
