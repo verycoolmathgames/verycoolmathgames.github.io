@@ -37,7 +37,6 @@
 
         if (user != null) {
             var uid = user.uid;
-            var displayName = user.username;
             var db = firebase.firestore();
             var users = db.collection("users");
             var displayName = users.doc(uid);
