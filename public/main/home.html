@@ -33,6 +33,15 @@
             appId: "1:78626384450:web:5c1a5470485502ab"
         });
 
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+                .then(function () {
+                    return firebase.auth().signInWithEmailAndPassword(email, password);
+                })
+                .catch(function (error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                });
+
         var db = firebase.firestore();
         var Announcements = db.collection("announcements");
 
