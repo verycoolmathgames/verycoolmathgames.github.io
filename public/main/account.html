@@ -41,7 +41,7 @@
 
             var uid = user.uid;
             var displayName = users.doc(uid).data();
-            var email = displayName(email);
+            var email = displayName;
 
             document.getElementById("hellouser").innerHTML = "Hello, " + name;
         } else {
