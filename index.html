@@ -1,5 +1,19 @@
 
 <!DOCTYPE html>
+<!-- 
+/***
+ *    ███╗   ██╗ ██████╗ ████████╗███████╗███████╗   ██╗ ██████╗ 
+ *    ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝   ██║██╔═══██╗
+ *    ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗   ██║██║   ██║
+ *    ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║   ██║██║   ██║
+ *    ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║██╗██║╚██████╔╝
+ *    ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝╚═╝╚═╝ ╚═════╝ 
+ *         FAST        •        COOL       •        GAMES 
+ *    
+ *    AS A PROUD SPONSORSHIP OF THE OPENiNG OF THE VERY COOL THANKS FOR SHARING MATH GAMES ORGANIZATION
+ *                                                         
+ */
+ -->
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,7 +131,7 @@ nav{
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 140px;
+  top: 135px;
   background-color: #dedede;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -214,8 +228,23 @@ nav{
   background-color: black;
   border-radius: 10%;
 }
+.ping {
+	display: none;
+}
+}
+ping {
+	display:block;
+}
+body {
+	background-image: repeating-linear-gradient(to bottom, white, lightblue);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 </style>
+
+
   
 </head>
   <script>
@@ -243,7 +272,10 @@ nav{
 <body>
 
   <header>
-    
+
+<div class="orange">
+	<br><br><br><br><br>
+</div>
   <!--nav begin-->
     <nav>
 
@@ -260,7 +292,7 @@ nav{
       <!--Beginning of Dropdown-->
       <div class="dropdown">
         <a href="games/games.html" class="dropbtn navelement">Games</a>
-    
+     
         <div class="dropdown-content">
           <a href="games/popular.html">Popular Games</a>
           <a href="games/new.html">New Games</a>
@@ -285,7 +317,7 @@ nav{
       <!--Beginning of Dropdown-->
       <div class="dropdown">
         <a href="leaderboard/leaderboards.html" class="dropbtn navelement">Leaderboard</a>
-    
+     
         <div class="dropdown-content">
           <a href="leaderboard/weekly.html">This Week</a>
           <a href="leaderboard/monthly.html">This Month</a>
@@ -324,45 +356,48 @@ nav{
     </div>
     <!--End of Slideshow and Announcements Stuff-->
 
-    </article>
-
-    <script>
-
-      (
-        function (w,i,d,g,e,t,s) {
-          w[d] = w[d]||[];t= i.createElement(g);
-          t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-        }
-      )
-      (window, document, '_gscq','script','//widgets.getsitecontrol.com/185482/script.js');
-
-    </script>
-
-    <div id="chatter" style="position: fixed; width:74%; height: 55%; background-color: transparent; z-index:0;display:none; bottom: 20; right: 30;">
-
-      <br><br><br><br>
-      <iframe class="chatB" id="chatB" src="https://ickyalphanumericwebpages.roycea.repl.co/phone.php" frameborder="0" height="100%" width="100%" scrolling="no"></iframe>
-      <button id="closer" style="position: fixed; bottom:0; right:0; background-color: navy; color: white; display:none;" onclick="abcd()">X</button>
-
-      <script>
-
-        function openChat() {
-          document.getElementById("okk").style.display = "none";
-          document.getElementById("chatter").style.display = "block";
-          document.getElementById("chatB").style.display = "block";
-          document.getElementById("closer").style.display = "block";
-        }
-
-        function abcd() {
-          document.getElementById("okk").style.display = "block";
-          document.getElementById("chatter").style.display = "none";
-          document.getElementById("chatB").style.display = "none";
-          document.getElementById("closer").style.display = "none";
-        }
-
-      </script>
-
-    </div>
-
+  </article>
+<script>
+  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/185482/script.js');
+</script>
   </body>
+<div class="hi" id="main" style="position:fixed; bottom:0; right:0;border-top-left-radius: 20px; border: 2mm ridge blue; ">
+<button id="okk" style="background-color: navy;" onclick="openChat()">
+<i class='far fa-comment-dots' style='font-size:40px;color:white'></i>
+</button>
+</div>
+
+<div id="chatter" style="position: fixed; width:74%; height: 55%; background-color: transparent; z-index:0;display:none; bottom: 20; right: 30;"><br><br><br><br>
+ <iframe class="chatB" id="chatB" src="https://ickyalphanumericwebpages.roycea.repl.co/phone.php" frameborder="0" height="100%"
+        width="100%" scrolling="no"></iframe>
+		<button id="closer" style="position: fixed; bottom:0; right:0; background-color: navy; color: white; display:none;" onclick="abcd()">X</button>
+
+
+
+<script>
+	function openChat() {
+document.getElementById("okk").style.display = "none";
+document.getElementById("chatter").style.display = "block";
+document.getElementById("chatB").style.display = "block";
+document.getElementById("closer").style.display = "block";
+}
+	function abcd() {
+document.getElementById("okk").style.display = "block";
+document.getElementById("chatter").style.display = "none";
+document.getElementById("chatB").style.display = "none";
+document.getElementById("closer").style.display = "none";
+}
+
+
+</script>
+
+	
+</div>
+	<div class="ping" style="position: fixed; top:0; right:0;">
+			<button style="background-color: teal; border-bottom-left-radius: 20px;" onclick="window.location.href = 'https://verycoolthanksforsharing.firebaseapp.com/';">
+			&nbsp;>> </button></div>
+
+		
 </html>
