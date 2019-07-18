@@ -52,9 +52,7 @@
             console.log("User is null, unable to return account information");
         };
 
-        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-                .then(function () {
-                    return firebase.auth().signInWithEmailAndPassword(email, password);
+firebase.auth().signInWithEmailAndPassword(email, password);
 
         var Announcements = db.collection("announcements");
 
