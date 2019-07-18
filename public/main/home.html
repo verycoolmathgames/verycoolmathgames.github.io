@@ -37,7 +37,7 @@
 
         if (user != null) {
             var uid = user.uid;
-            var password = user.password
+            var password = user.password;
 
             var users = db.collection("users");
             users.doc(uid).then(function (doc) {
