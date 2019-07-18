@@ -38,6 +38,7 @@
         if (user != null) {
             var db = firebase.firestore();
             var users = db.collection("users");
+            var uid = user.uid;
             var displayName = users.doc(uid);
             var name = displayName(displayName);
             var email = displayName(email);
