@@ -40,7 +40,7 @@
             var users = db.collection("users");
 
             var uid = user.uid;
-            var displayName = users.document(uid);
+            var displayName = users.document(uid).get;
             var email = displayName(email);
 
             document.getElementById("hellouser").innerHTML = "Hello, " + name;
