@@ -61,21 +61,6 @@
             signIn(URLEmail, URLPassword);
         };
 
-        if (user != null) {
-            var uid = user.uid;
-
-            var users = db.collection("users");
-            users.doc(uid).then(function (doc) {
-                var displayName = doc.data().displayName;
-                console.log(displayName);
-            });
-
-            document.getElementById("hellouser").innerHTML = "Hello, " + displayName;
-        } else {
-            console.log("User is null, unable to return account information");
-            window.location.replace("email-password.html/?email=" + email + "&password=" + password);
-        };
-
         function signOut() {
             firebase.auth().signOut();
             console.log("User signed out!");
