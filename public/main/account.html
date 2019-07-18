@@ -44,9 +44,7 @@
             users.doc(uid).then(function (doc) {
                 var displayName = doc.data().displayName
                 console.log(displayName)
-            }).catch(function (error) {
-                console.log("Error getting document:", error);
-            });
+            })
 
 
             document.getElementById("hellouser").innerHTML = "Hello, " + name;
