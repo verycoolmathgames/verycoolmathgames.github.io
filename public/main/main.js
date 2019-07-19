@@ -45,8 +45,8 @@ function email() {
     });
 };
 
-function password(){
-    
+function password() {
+
 }
 
 window.onload = function () {
