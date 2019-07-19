@@ -37,8 +37,6 @@ function signIn(email, password, ep) {
 function email() {
     var user = auth().currentUser;
     var uid = user.uid;
-    var password = user.password;
-
     var users = db.collection("users");
     users.doc(uid).get().then(function (doc) {
         var displayName = doc.data().displayName;
