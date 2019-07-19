@@ -49,7 +49,7 @@ function password() {
     var user = auth().currentUser;
     var password = user.password;
     return password;
-}
+};
 
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search);
