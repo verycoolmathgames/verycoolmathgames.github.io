@@ -1,9 +1,9 @@
-var firebase = require("firebase/app");
+import { initializeApp, firestore, auth } from "firebase/app";
 
-require("firebase/auth");
-require("firebase/firestore");
+import "firebase/auth";
+import "firebase/firestore";
 
-firebase.initializeApp({
+initializeApp({
     apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
     authDomain: "verycoolthanksforsharing.firebaseapp.com",
     databaseURL: "https://verycoolthanksforsharing.firebaseio.com",
@@ -13,11 +13,11 @@ firebase.initializeApp({
     appId: "1:78626384450:web:5c1a5470485502ab"
 });
 
-var db = firebase.firestore();
+var db = firestore();
 
 function signIn(email, password) {
-    firebase.auth().signInWithEmailAndPassword(email, password);
-    var user = firebase.auth().currentUser;
+    auth().signInWithEmailAndPassword(email, password);
+    var user = auth().currentUser;
 
     var uid = user.uid;
     var password = user.password;
@@ -41,7 +41,7 @@ window.onload = function () {
 
 function redirect(pagePath) {
     if (pagePath == signout.html) {
-        firebase.auth().signOut();
+        auth().signOut();
         window.location.replace("https://verycoolmathgames.github.io");
     }
     else {
