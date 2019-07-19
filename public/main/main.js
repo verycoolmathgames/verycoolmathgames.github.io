@@ -32,7 +32,7 @@ function signIn(email, password, ep) {
 
         console.log(displayName);
     });
-    if (ep = )
+    if (ep = email)
 };
 
 window.onload = function () {
