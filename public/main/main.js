@@ -17,7 +17,7 @@ initializeApp({
 
 var db = firestore();
 
-function signIn(email, password) {
+function signIn(email, password, ) {
     auth().signInWithEmailAndPassword(email, password);
     var user = auth().currentUser;
 
