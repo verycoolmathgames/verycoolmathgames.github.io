@@ -46,7 +46,7 @@ function email() {
 };
 
 function password() {
-    
+    var user = auth.
 }
 
 window.onload = function () {
