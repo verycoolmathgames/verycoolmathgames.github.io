@@ -48,7 +48,7 @@ function email() {
 function password() {
     var user = auth().currentUser;
     var password = user.password;
-    ret
+    return password;
 }
 
 window.onload = function () {
