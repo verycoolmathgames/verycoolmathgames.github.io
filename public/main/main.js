@@ -35,6 +35,7 @@ function signIn(email, password, ep) {
 };
 
 function email() {
+    firebase.auth
     var user = firebase.auth().currentUser;
     var uid = user.uid;
 
