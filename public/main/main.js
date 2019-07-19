@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { initializeApp, firestore, auth } from "firebase/app";
 
 import "firebase/auth";
