@@ -28,7 +28,7 @@ function signIn(email, password) {
 
     users.doc(uid).get().then(function (doc) {
         var displayName = doc.data().displayName;
-        var email = doc.data().email;
+        global var email = doc.data().email;
 
         console.log(displayName);
     });
