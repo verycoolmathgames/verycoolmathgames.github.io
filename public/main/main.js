@@ -35,7 +35,7 @@ function signIn(email, password, ep) {
     });
 };
 
-function email() {
+function dis() {
     var user = auth().currentUser;
     var uid = user.uid;
 
