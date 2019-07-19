@@ -71,7 +71,7 @@ window.onload = function () {
 };
 
 function redirect(pagePath) {
-    if (pagePath === "signout.html") {
+    if (pagePath === "signout") {
         auth().signOut();
         window.location.replace("https://verycoolmathgames.github.io");
     }
