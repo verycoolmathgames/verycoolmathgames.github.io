@@ -46,7 +46,7 @@ function email() {
     });
 };
 
-function dis() {
+function displayName() {
     var user = auth().currentUser;
     var uid = user.uid;
 
