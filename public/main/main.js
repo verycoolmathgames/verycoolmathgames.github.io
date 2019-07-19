@@ -35,7 +35,12 @@ function signIn(email, password, ep) {
 };
 
 function email() {
-    
+    users.doc(uid).get().then(function (doc) {
+        var displayName = doc.data().displayName;
+        var email = doc.data().email;
+
+        console.log(displayName);
+    });
 };
 
 window.onload = function () {
