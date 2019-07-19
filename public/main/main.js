@@ -33,8 +33,8 @@ function signIn(email, password, ep) {
         console.log(displayName);
     });
     if (ep = "email") {
-
-    }
+        return email;
+    } else
 };
 
 window.onload = function () {
