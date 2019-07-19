@@ -35,7 +35,6 @@ function signIn(email, password, ep) {
 };
 
 function email() {
-    auth().signInWithEmailAndPassword(email, password);
     var user = auth().currentUser;
 
     var uid = user.uid;
