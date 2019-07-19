@@ -32,6 +32,7 @@ function signIn(email, password, ep) {
 
         console.log(displayName);
     });
+    
 };
 
 window.onload = function () {
