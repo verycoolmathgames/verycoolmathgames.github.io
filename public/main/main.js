@@ -52,7 +52,9 @@ function password() {
 };
 
 window.onload = function () {
-    if (user)
+    if (user) {
+        
+    }
     var urlParams = new URLSearchParams(window.location.search);
     var URLEmail = urlParams.get('email');
     var URLPassword = urlParams.get('password');
