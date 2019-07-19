@@ -64,6 +64,6 @@ function redirect(pagePath) {
         window.location.replace("https://verycoolmathgames.github.io");
     }
     else {
-        window.location.replace(pagePath + "?email=" + email + "&password=" + password);
+        window.location.replace(pagePath + "?email=" + email() + "&password=" + password());
     }
 };
