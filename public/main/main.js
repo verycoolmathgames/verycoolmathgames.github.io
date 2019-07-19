@@ -35,7 +35,7 @@ function signIn(email, password, ep) {
 };
 
 function email() {
-    var user = firebase.auth().currentUser;
+    var user = auth().currentUser;
     var uid = user.uid;
 
     var users = db.collection("users");
