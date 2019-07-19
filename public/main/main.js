@@ -45,6 +45,10 @@ function email() {
     });
 };
 
+function password(){
+    
+}
+
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search);
     var URLEmail = urlParams.get('email');
