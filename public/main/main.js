@@ -36,7 +36,7 @@ function signIn(email, password, ep) {
 
 function email() {
     
-}
+};
 
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search);
