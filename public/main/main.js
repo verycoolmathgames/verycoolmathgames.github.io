@@ -32,11 +32,6 @@ function signIn(email, password, ep) {
 
         console.log(displayName);
     });
-    if (ep = "email") {
-        return email;
-    } else {
-        return password;
-    }
 };
 
 
