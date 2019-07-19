@@ -31,7 +31,7 @@ function signIn(email, password, ep) {
         var email = doc.data().email;
 
         console.log(displayName);
-        console.log(email)
+        console.log(email);
     });
 };
 
