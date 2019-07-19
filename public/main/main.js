@@ -41,8 +41,7 @@ function email() {
     var users = db.collection("users");
     users.doc(uid).get().then(function (doc) {
         var email = doc.data().email;
-
-        console.log(displayName);
+        return email
     });
 };
 
