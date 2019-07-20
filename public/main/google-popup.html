@@ -51,7 +51,7 @@ limitations under the License.
                     var user = result.user;
                     var uid = user.uid;
                     var db = firebase.firestore();
-                    var emails = db.collection("emails"); // firebase.firestore().collection("emails")
+                    var emails = db.collection("emails");
                     var users = db.collection("users");
                     
                     firebase.auth().onAuthStateChanged(function (user) {
