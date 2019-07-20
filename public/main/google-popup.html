@@ -85,8 +85,8 @@ limitations under the License.
                                         }).catch(function (error) {
                                             console.error("Error writing document: ", error);
                                         });
-                                    }
-                                })
+                                    };
+                                });
 
                                 var fsemail = emails.doc(username).data();
                                 var fsuser = users.doc(uid).data();
