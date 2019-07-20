@@ -82,7 +82,6 @@
 
         function password() {
             signIn();
-            var user = firebase.auth().currentUser;
             var password = user.password;
             return password;
         };
