@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "verycoolthanksforsharing"
+  },
+  "targets": {
+    "verycoolthanksforsharing": {
+      "hosting": {
+        "verycoolchat": [
+          "verycoolchat"
+        ],
+        "verycoolthanksforsharing": [
+          "verycoolthanksforsharing"
+        ]
+      }
+    }
+  }
+}
