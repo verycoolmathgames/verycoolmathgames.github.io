@@ -4,7 +4,7 @@
  <head>
     <meta name="google-signin-scope" content="profile email">
  <script src="https://apis.google.com/js/platform.js" async defer></script>
- <meta name="google-signin-client_id" content="325763913847-tidhg175e0gs4nj29g8nbq5mm1jj2f35.apps.googleusercontent.com">
+<meta name="google-signin-client_id" content="866169268771-2m68jre9bbr7sqgh5cjuru0jtv7mthar.apps.googleusercontent.com">
   <style>
   
   </style>
@@ -18,36 +18,27 @@
  Sign out: <br>
   <a href="#" onclick="signOut();">Sign out</a>
  </body>
- <script>
-  GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
-if (acct != null) {
-  String personName = acct.getDisplayName();
-  String personGivenName = acct.getGivenName();
-  String personFamilyName = acct.getFamilyName();
-  String personEmail = acct.getEmail();
-  String personId = acct.getId();
-  Uri personPhoto = acct.getPhotoUrl();
-}
- </script>
-<script>
- function init() {
-  gapi.load('auth2', function() { // Ready. });
-}
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
 
-        // The ID token you need to pass to your backend:
+<script>
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+ 
+ // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
-      }
+}
  
  </script>
-  
+  <script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script> </body>
  </html>
