@@ -57,6 +57,7 @@ limitations under the License.
                             user.providerData.forEach(function (profile) {
                                 var username = profile.displayName;
                                 var email = profile.email
+                                
                                 var db = firebase.firestore();
                                 var emails = db.collection("emails"); // firebase.firestore().collection("emails")
                                 var users = db.collection("users"); // firebase.firestore().collection("users")
