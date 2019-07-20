@@ -4,7 +4,7 @@
  <head>
     <meta name="google-signin-scope" content="profile email">
  <script src="https://apis.google.com/js/platform.js" async defer></script>
- <meta name="78626384450-81p3oflff03kvj0grq046cdvbajfqtgu.apps.googleusercontent.com">
+<meta name="google-signin-client_id" content="78626384450-81p3oflff03kvj0grq046cdvbajfqtgu.apps.googleusercontent.com">
   <style>
   
   </style>
@@ -39,5 +39,12 @@
       }
  
  </script>
-  
+  <script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
  </html>
