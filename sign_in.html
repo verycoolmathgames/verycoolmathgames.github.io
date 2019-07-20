@@ -4,7 +4,7 @@
  <head>
     <meta name="google-signin-scope" content="profile email">
  <script src="https://apis.google.com/js/platform.js" async defer></script>
- <meta name="866169268771-2m68jre9bbr7sqgh5cjuru0jtv7mthar.apps.googleusercontent.com">
+ <meta name="78626384450-81p3oflff03kvj0grq046cdvbajfqtgu.apps.googleusercontent.com">
   <style>
   
   </style>
@@ -18,17 +18,7 @@
  Sign out: <br>
   <a href="#" onclick="signOut();">Sign out</a>
  </body>
- <script>
-  GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
-if (acct != null) {
-  String personName = acct.getDisplayName();
-  String personGivenName = acct.getGivenName();
-  String personFamilyName = acct.getFamilyName();
-  String personEmail = acct.getEmail();
-  String personId = acct.getId();
-  Uri personPhoto = acct.getPhotoUrl();
-}
- </script>
+
 <script>
  function init() {
   gapi.load('auth2', function() { // Ready. });
