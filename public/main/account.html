@@ -81,7 +81,6 @@
         };
 
         function displayName() {
-            signIn(email(), password());
 
             var users = db.collection("users");
             users.doc(uid).get().then(function (doc) {
