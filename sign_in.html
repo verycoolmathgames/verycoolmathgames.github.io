@@ -18,8 +18,21 @@
  Sign out: <br>
   <a href="#" onclick="signOut();">Sign out</a>
  </body>
- 
+ <script>
+  GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
+if (acct != null) {
+  String personName = acct.getDisplayName();
+  String personGivenName = acct.getGivenName();
+  String personFamilyName = acct.getFamilyName();
+  String personEmail = acct.getEmail();
+  String personId = acct.getId();
+  Uri personPhoto = acct.getPhotoUrl();
+}
+ </script>
 <script>
+ function init() {
+  gapi.load('auth2', function() { // Ready. });
+}
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
