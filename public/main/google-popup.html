@@ -64,7 +64,7 @@ limitations under the License.
 
                                 userDataEmails.get().then(function (doc) {
                                     if (!doc.exists) {
-                                        userData.set({
+                                        userDataEmails.set({
                                             email: email,
                                             uid: uid,
                                         }).then(function () {
