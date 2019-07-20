@@ -63,7 +63,7 @@
             users.doc(user.uid).get().then(function (doc) {
                 var displayName = doc.data().displayName;
             });
-            return displayName;
+            console.log(displayName);
         };
 
         function email() {
