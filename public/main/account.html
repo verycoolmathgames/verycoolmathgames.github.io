@@ -47,9 +47,9 @@
                 var users = db.collection("users");
                 users.doc(uid).get().then(function (doc) {
                     var displayName = doc.data().displayName.toString();
+                    return displayName;
                 });
             });
-            return displayName;
         };
 
         function email() {
