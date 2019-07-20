@@ -35,28 +35,6 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
 
-        window.onload = function () {
-            if (user) {
-                console.log("There is a user");
-            }
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email');
-            var URLPassword = urlParams.get('password');
-
-            firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword).then(function () {
-                var user = firebase.auth().currentUser;
-                var uid = user.uid;
-                console.log("user:", user);
-                console.log("uid: ", uid);
-
-                var users = db.collection("users");
-                users.doc(uid).get().then(function (doc) {
-                    var displayName = doc.data().displayName;
-                    console.log("displayName: ", displayName);
-                });
-            });
-        };
-
         function displayName() {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email');
