@@ -53,7 +53,7 @@ limitations under the License.
                     firebase.auth().onAuthStateChanged(function (user) {
                         var providerData = user.providerData;
 
-                        window.location.replace("home.html?email=" + email + "&password=password");
+                        window.location.replace("home.html?email="+ email + "&password=password");
                     });
                 }).catch(function (error) {
                     var errorCode = error.code;
