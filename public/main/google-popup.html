@@ -54,7 +54,6 @@ limitations under the License.
                     var emails = db.collection("emails"); // firebase.firestore().collection("emails")
                     var users = db.collection("users"); // firebase.firestore().collection("users")
                     
-
                     firebase.auth().onAuthStateChanged(function (user) {
                         if (user != null) {
                             user.providerData.forEach(function (profile) {
