@@ -55,6 +55,24 @@ limitations under the License.
                             user.providerData.forEach(function (profile) {
                                 console.log("displayName: " + profile.displayName);
                                 console.log("email: " + profile.email);
+
+                                emails.doc(permusername).set({
+                                    email: permemail,
+                                    uid: user.uid,
+                                }).then(function () {
+                                    console.log("Document successfully written!");
+                                }).catch(function (error) {
+                                    console.error("Error writing document: ", error);
+                                });
+
+                                users.doc(user.uid).set({
+                                    displayName: permusername,
+                                    email: permemail,
+                                }).then(function () {
+                                    console.log("Document successfully written!");
+                                }).catch(function (error) {
+                                    console.error("Error writing document: ", error);
+                                });
                                 //window.location.replace("home.html?email=" + email + "&password=password");
                             });
                         }
