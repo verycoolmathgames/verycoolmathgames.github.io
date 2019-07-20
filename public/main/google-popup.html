@@ -59,7 +59,7 @@ limitations under the License.
                             user.providerData.forEach(function (profile) {
                                 var username = profile.displayName;
                                 var email = profile.email
-                                var userData = emails.doc(username);
+                                var userDataEmail = emails.doc(username);
 
                                 userData.get().then(function (doc) {
                                     if (!doc.exists) {
