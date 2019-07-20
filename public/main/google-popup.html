@@ -76,14 +76,14 @@ limitations under the License.
 
                                 userDataUsers.get(uid).then(function (doc) {
                                     if (!doc.exists){
-                                    users.doc(uid).set({
-                                        displayName: username,
-                                        email: email,
-                                    }).then(function () {
-                                        console.log("Document successfully written!");
-                                    }).catch(function (error) {
-                                        console.error("Error writing document: ", error);
-                                    });
+                                        users.doc(uid).set({
+                                            displayName: username,
+                                            email: email,
+                                        }).then(function () {
+                                            console.log("Document successfully written!");
+                                        }).catch(function (error) {
+                                            console.error("Error writing document: ", error);
+                                        });
                                     }
                                 })
 
