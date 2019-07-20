@@ -45,7 +45,7 @@ limitations under the License.
         function toggleSignIn() {
             if (!firebase.auth().currentUser) {
                 var provider = new firebase.auth.GoogleAuthProvider();
-                
+
                 firebase.auth().signInWithPopup(provider).then(function (result) {
                     var token = result.credential.accessToken;
                     var user = result.user;
@@ -55,7 +55,6 @@ limitations under the License.
 
                         window.location.replace("home.html?email=" + email + "&password=password");
                     });
-
 
                     if (user != null) {
                         user.providerData.forEach(function (profile) {
