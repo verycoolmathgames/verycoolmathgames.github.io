@@ -1,25 +1,80 @@
 <html lang="en">
   <head>
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="325763913847-tidhg175e0gs4nj29g8nbq5mm1jj2f35.apps.googleusercontent.com">
+
+    <!--<meta name="google-signin-client_id" content="325763913847-tidhg175e0gs4nj29g8nbq5mm1jj2f35.apps.googleusercontent.com">-->
+
+    
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onGoogleLoadCallback" async defer></script>
   </head>
   <body>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+   <div class="row">
+                        <div id="unauth-buttons">
+                            <div class="col s6">
+                                <button id="fb-auth-btn" class="btn btn-block waves-effect waves-light" onclick="CH.doFbAuth();return false;">
+                                    <span class="socicon-facebook"></span>
+                                    <span style="font-size: 13px;">Sign in</span>
+                                </button>
+                            </div>
+                            <div class="col s6">
+                                <button id="google-auth-btn" class="btn btn-block waves-effect waves-light" onclick="_auth2.signIn();return false;">
+                                    <span class="socicon-google"></span>
+                                    <span style="font-size: 13px;">Sign in</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="authed-buttons">
+                            <div class="col s12">
+                                <button id="auth-logout-btn" class="btn btn-block waves-effect waves-light red darken-1" onclick="window.CH.doLogout();return false;">
+                                    <i class="material-icons">power_settings_new</i>
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
     <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      }
+        var _auth2 = null;
+    window.onGoogleLoadCallback = function(){
+       gapi.load('auth2', function () {
+            _auth2 = gapi.auth2.init({
+              client_id: chConfig.googleAppId,
+              scope: 'email profile',
+              fetch_basic_profile: false
+            })
+            _auth2.currentUser.listen(CH.doGoogleAuth);
+          })
+    }
     </script>
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
+    
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', chConfig.analyticsAppId, 'auto');
+          ga('send', 'pageview');
+
+    </script>
+	
+        
+    <base href="/">
   </body
