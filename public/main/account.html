@@ -57,6 +57,8 @@
             });
         };
 
+        
+
         function displayName() {
             var users = db.collection("users");
             users.doc(user.uid).get().then(function (doc) {
