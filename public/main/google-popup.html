@@ -61,7 +61,32 @@ limitations under the License.
                                 var email = profile.email
                                 var userData = emails.doc(username);
 
+                                userData.get().then(function (doc) {
+                                    if (doc.exists) {
+                                        console.log("Document data:", doc.data());
+                                        var email = doc.data().email;
+                                        var uid = doc.data().uid;
 
+                                        firebase.auth().signInWithEmailAndPassword(email, password)
+                                            .then(function () {
+                                                firebase.auth().onAuthStateChanged(function (user) {
+                                                    window.location.replace("home.html?email=" + email + "&password=" + password);
+                                                });
+                                            })
+                                            .catch(function (error) {
+                                                var errorCode = error.code;
+                                                var errorMessage = error.message;
+                                                if (errorCode === 'auth/wrong-password') {
+                                                    alert('Wrong password.');
+                                                } else {
+                                                    alert(errorMessage);
+                                                }
+                                                console.log(error);
+                                            });
+                                    } else {
+                                        console.log("Document does not exist!");
+                                        alert("User not found!");
+                                    }
 
                                 userData.set({
                                     email: email,
