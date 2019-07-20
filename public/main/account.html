@@ -35,7 +35,7 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
 
-        function getdisplayName() {
+        function displayName() {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email');
             var URLPassword = urlParams.get('password');
@@ -46,9 +46,7 @@
 
                 var users = db.collection("users");
                 users.doc(uid).get().then(function (doc) {
-                    var displayName = doc.data().displayName.toString;
-                    console.log
-                    console.log(typeof(displayName));
+                    var displayName = doc.data().displayName;
                 });
             });
             return displayName;
@@ -79,8 +77,8 @@
             }
         };
         
-        console.log("displayName: ", getdisplayName());
-        document.getElementById("hellouser").innerHTML = "Hello, " + getdisplayName();
+        console.log("displayName: ", displayName());
+        document.getElementById("hellouser").innerHTML = "Hello, " + displayName();
 
     </script>
 
