@@ -59,7 +59,6 @@
 
         function displayName() {
                 console.log("user:", user);
-
             var users = db.collection("users");
             users.doc(user.uid).get().then(function (doc) {
                 var displayName = doc.data().displayName;
