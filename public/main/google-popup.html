@@ -68,7 +68,7 @@ limitations under the License.
                                     console.error("Error writing document: ", error);
                                 });
 
-                                users.doc(user.uid).set({
+                                users.doc(uid).set({
                                     displayName: username,
                                     email: email,
                                 }).then(function () {
