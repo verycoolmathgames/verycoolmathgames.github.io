@@ -63,7 +63,14 @@ limitations under the License.
 
                                 userData.get().then(function (doc) {
                                     if (!doc.exists) {
-                                        
+                                        userData.set({
+                                            email: email,
+                                            uid: uid,
+                                        }, { merge: true }).then(function () {
+                                            console.log("Document successfully written!");
+                                        }).catch(function (error) {
+                                            console.error("Error writing document: ", error);
+                                        });
                                 };
 
                                 userData.set({
