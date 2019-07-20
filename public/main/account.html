@@ -47,7 +47,6 @@
                 var users = db.collection("users");
                 users.doc(uid).get().then(function (doc) {
                     var displayName = doc.data().displayName.toString();
-                    user.displayName = displayName;
                 });
             });
             return displayName;
@@ -78,6 +77,7 @@
             }
         };
         
+        console.log("displayName: ", getdisplayName());
         document.getElementById("hellouser").innerHTML = "Hello, " + getdisplayName();
 
     </script>
