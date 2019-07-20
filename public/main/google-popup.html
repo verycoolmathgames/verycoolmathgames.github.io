@@ -63,12 +63,7 @@ limitations under the License.
             }
         };
 
-        function initApp() {
-            firebase.auth().onAuthStateChanged(function (user) {
 
-
-                document.getElementById('quickstart-sign-in').disabled = false;
-            });
             document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
         };
 
