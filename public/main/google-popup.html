@@ -53,6 +53,7 @@ limitations under the License.
                     firebase.auth().onAuthStateChanged(function (user) {
                         if (user != null) {
                             user.providerData.forEach(function (profile) {
+                                var username = profile.displayName
                                 console.log("displayName: " + profile.displayName);
                                 console.log("email: " + profile.email);
 
