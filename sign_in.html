@@ -20,10 +20,7 @@
  </body>
 
 <script>
- function init() {
-  gapi.load('auth2', function() { // Ready. });
-}
-      function onSignIn(googleUser) {
+function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -46,5 +43,5 @@
       console.log('User signed out.');
     });
   }
-</script>
+</script> </body>
  </html>
