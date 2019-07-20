@@ -57,7 +57,7 @@ limitations under the License.
                     firebase.auth().onAuthStateChanged(function (user) {
                         if (user != null) {
                             var user = firebase.auth().currentUser;
-                            
+
                             user.providerData.forEach(function (profile) {
                                 var username = profile.displayName.toString();
                                 var email = profile.email.toString();
@@ -104,7 +104,7 @@ limitations under the License.
                                 console.log("user: " + fsuser);
 
                                 console.log("home.html?email=" + email + "&password=password");
-                                //window.location.replace("home.html?email=" + email + "&password=password");
+                                window.location.replace("home.html?email=" + email + "&password=password");
                             });
                         }
                     })
