@@ -49,7 +49,6 @@ limitations under the License.
                 firebase.auth().signInWithPopup(provider).then(function (result) {
                     var token = result.credential.accessToken;
                     var user = result.user;
-
                     firebase.auth().onAuthStateChanged(function (user) {
                         var providerData = user.providerData;
 
