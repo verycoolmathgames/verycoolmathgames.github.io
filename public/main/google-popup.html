@@ -75,14 +75,7 @@ limitations under the License.
                                 };
 
                                 userDataEmails
-                                userData.set({
-                                    email: email,
-                                    uid: uid,
-                                }, { merge: true }).then(function () {
-                                    console.log("Document successfully written!");
-                                }).catch(function (error) {
-                                    console.error("Error writing document: ", error);
-                                });
+
 
                                 users.doc(uid).set({
                                     displayName: username,
