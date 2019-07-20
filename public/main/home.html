@@ -60,7 +60,7 @@
         };
 
         function displayName() {
-            var user = auth().currentUser;
+            var user = firebase.auth().currentUser;
             var uid = user.uid;
 
             var users = db.collection("users");
