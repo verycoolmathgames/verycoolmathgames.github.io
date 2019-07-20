@@ -60,7 +60,7 @@ limitations under the License.
                                 var username = profile.displayName;
                                 var email = profile.email
                                 var userDataEmails = emails.doc(username);
-                                var userDataUsers = users.
+                                var userDataUsers = users.doc()
 
                                 userDataEmails.get().then(function (doc) {
                                     if (!doc.exists) {
