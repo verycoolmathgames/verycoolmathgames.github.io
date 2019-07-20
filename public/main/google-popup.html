@@ -62,7 +62,7 @@ limitations under the License.
                                 var userData = emails.doc(username);
 
                                 userData.get().then(function (doc) {
-                                    if (doc.!exists) {
+                                    if (doc.exists) {
                                         
                                     } else {
                                         console.log("Document does not exist!");
