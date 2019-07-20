@@ -59,7 +59,7 @@ limitations under the License.
                                 console.log("email: " + email);
 
                                 emails.doc(username).set({
-                                    email: permemail,
+                                    email: email,
                                     uid: user.uid,
                                 }).then(function () {
                                     console.log("Document successfully written!");
