@@ -46,6 +46,7 @@
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword).then(function () {
                 var user = firebase.auth().currentUser;
                 var uid = user.uid;
+                var uid = user.uid;
                 console.log("uid: ", uid);
 
                 var users = db.collection("users");
