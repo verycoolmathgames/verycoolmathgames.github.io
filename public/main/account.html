@@ -48,7 +48,7 @@
                     var user = firebase.auth().currentUser;
                     var uid = user.uid;
                     var password = user.password;
-                    console.log(uid)
+                    console.log(uid);
 
                     var users = db.collection("users");
                     users.doc(uid).get().then(function (doc) {
