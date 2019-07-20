@@ -61,7 +61,7 @@ limitations under the License.
                                 var email = profile.email
                                 var userDataEmail = emails.doc(username);
 
-                                userData.get().then(function (doc) {
+                                userDataEmail.get().then(function (doc) {
                                     if (!doc.exists) {
                                         userData.set({
                                             email: email,
