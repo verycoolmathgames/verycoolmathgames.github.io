@@ -77,13 +77,13 @@
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
 
-            return URLEmail;
+            return URLEmail.ti;
         };
 
         function password() {
             signIn();
             var password = user.password;
-            
+
             return password.toString();
         };
 
