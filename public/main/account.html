@@ -53,30 +53,6 @@
             });
         };
 
-        function signIn(email, password) {
-            var user = firebase.auth().currentUser;
-            if (!user) {
-                firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-                    var user = firebase.auth().currentUser;
-                    var uid = user.uid;
-                    var password = user.password;
-                    console.log(uid);
-
-                    var users = db.collection("users");
-                    users.doc(uid).get().then(function (doc) {
-                        var displayName = doc.data().displayName;
-                        var email = doc.data().email;
-
-                        console.log(displayName);
-                        console.log(email);
-                    });
-                });
-            } else {
-                console.log("User already signed in");
-                console.log(uid);
-            }
-        };
-
         function displayName() {
             var users = db.collection("users");
             users.doc(uid).get().then(function (doc) {
