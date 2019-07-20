@@ -64,7 +64,7 @@ limitations under the License.
                                 emails.doc(username).set({
                                     email: email,
                                     uid: uid,
-                                }).then(function () {
+                                }, { merge: true }).then(function () {
                                     console.log("Document successfully written!");
                                 }).catch(function (error) {
                                     console.error("Error writing document: ", error);
