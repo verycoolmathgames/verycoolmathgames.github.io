@@ -95,7 +95,7 @@
         Games.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var href = doc.data().href;
-                console.log(href.);
+                console.log(href.toString());
                 var announcement = document.createElement("div");
                 announcement.innerHTML = date[1] + "/" + date[2] + "/" + date[0] + ": " + text.toString();
                 announcement.className = "announcement";
