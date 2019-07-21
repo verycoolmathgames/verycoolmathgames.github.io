@@ -89,8 +89,6 @@
                     console.log(email);
                 });
             });
-            var user = firebase.auth().currentUser;
-            var uid = user.uid;
 
             var users = db.collection("users");
             users.doc(uid).get().then(function (doc) {
