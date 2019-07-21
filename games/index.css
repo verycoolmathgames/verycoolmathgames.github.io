@@ -119,7 +119,6 @@ img {
 
 article {
   width: 82%;
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
