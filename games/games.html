@@ -92,7 +92,7 @@
         };
 
         var Games = db.collection("games");
-        Games.orderBy("popularity", "asc").get().then((querySnapshot) => {
+        Games.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
                 var gameDesc = doc.data().gameDesc.toString();
