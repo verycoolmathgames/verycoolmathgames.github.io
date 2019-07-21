@@ -5,7 +5,7 @@ nav{
   flex-direction: row;
 }
 
-*:not(nav) {
+body:not(nav) {
   margin-top: 20px;
 }
 
