@@ -58,19 +58,6 @@
         };
 
         var Announcements = db.collection("announcements");
-
-        function addAnnouncement(date, text) {
-            Announcements.doc(date).add({
-                date: date,
-                text: text,
-            })
-            .then(function (docRef) {
-                console.log("Document written with ID: ", docRef.id);
-            })
-            .catch(function (error) {
-                console.error("Error adding document: ", error);
-            });
-        };
         db.collection("announcements").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
