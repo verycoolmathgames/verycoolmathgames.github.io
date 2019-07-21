@@ -5,7 +5,7 @@ nav{
   flex-direction: row;
 }
 
-nav:not
+nav:not()
 
 .logolight{
   width: 250px;
