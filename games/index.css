@@ -127,7 +127,10 @@ article {
   width: 100%;
 }
 
-#popular
+#popular {
+  
+  border-left: 7px solid #31a4e1ff
+}
 
 .game {
   color: #000000;
