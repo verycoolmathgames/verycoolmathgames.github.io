@@ -1,6 +1,6 @@
 nav{
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   display: flex;
   flex-direction: row;
 }
