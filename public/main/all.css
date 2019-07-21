@@ -1,11 +1,6 @@
 nav{
-  z-index: 1;
   display: flex;
   flex-direction: row;
-}
-
-*:not(nav) {
-  margin-top: 200px;
 }
 
 .logolight{
