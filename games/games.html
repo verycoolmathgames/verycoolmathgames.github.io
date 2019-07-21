@@ -91,6 +91,19 @@
             return URLpassword;
         };
 
+        var Announcements = db.collection("announcements").orderBy("number", "desc").limit(10);
+            Announcements.get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var date = doc.data().date;
+                    var text = doc.data().text;
+                    console.log(date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString());
+                    var announcement = document.createElement("div");
+                    announcement.innerHTML = date[1] + "/" + date[2] + "/" + date[0] + ": " + text.toString();
+                    announcement.className = "announcement";
+                    document.getElementById("announcements").appendChild(announcement);
+                });
+            });
+
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -226,7 +239,7 @@
         <div class="column">
             <h1>Recommended</h1>
         </div>
-        
+
     </article>
 
     <article>
