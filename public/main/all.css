@@ -35,7 +35,6 @@ nav{
   font-family: sans-serif;
   margin: 0;
   background: #20aaf3;
-  border-radius: 5px 5px 5px 5px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
