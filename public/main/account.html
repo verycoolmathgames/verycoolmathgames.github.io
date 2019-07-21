@@ -48,7 +48,7 @@
                 users.doc(uid).get().then(function (doc) {
                     var displayName = doc.data().displayName.toString();
                     var username = displayName.toString();
-                    return document.getElementsByTagName("h3").innerHTML = "Hello, " + username;
+                    return (document.getElementsByTagName("h3").innerHTML = "Hello, " + username;
                     console.log(username);
                 });
             });
