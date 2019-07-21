@@ -62,7 +62,7 @@
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
                 var text = doc.data().text;
-                console.log(date[0].toString(),date[1],date[2], ":", text.toString());
+                console.log(date[0].toString(),date[1].toString(),date[2], ":", text.toString());
             });
         });
 
