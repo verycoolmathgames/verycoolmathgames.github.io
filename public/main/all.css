@@ -5,6 +5,10 @@ nav{
   flex-direction: row;
 }
 
+article:not(.mdl-js) {
+  margin-top: 200px;
+}
+
 .logolight{
   width: 250px;
   height: 100px;
