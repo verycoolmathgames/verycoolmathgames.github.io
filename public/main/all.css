@@ -5,7 +5,7 @@ nav{
   flex-direction: row;
 }
 
-article:not(header) {
+*:not(header) {
   margin-top: 200px;
 }
 
