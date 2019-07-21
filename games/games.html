@@ -91,7 +91,7 @@
             return URLpassword;
         };
 
-        var Games = db.collection("announcements").orderBy("number", "desc").limit(10);
+        var Games = db.collection("games").orderBy("number", "desc").limit(10);
         Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
