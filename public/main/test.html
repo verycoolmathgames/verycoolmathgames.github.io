@@ -57,7 +57,7 @@
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
         };
 
-        var Announcements = db.collection("announcements").orderBy("number", "desc").limit();
+        var Announcements = db.collection("announcements").orderBy("number", "desc").limit(10);
         Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
