@@ -58,6 +58,7 @@
         };
 
         var Announcements = db.collection("announcements");
+        
         function addAnnouncement(date, text) {
             Announcements.doc(date).add({
                 date: date,
