@@ -1,7 +1,7 @@
 nav{
   display: flex;
   flex-direction: row;
-  align-items: flex;
+  align-items: flex-end;
 }
 
 .logolight{
