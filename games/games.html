@@ -103,7 +103,7 @@
                 game.innerHTML = name + ": " + gameDesc;
                 game.className = "game";
                 game.onclick = function() {
-                    gameRedirect(doc);
+                    gameRedirect(doc.id);
                 };
                 document.getElementById("popular").appendChild(game);
             });
