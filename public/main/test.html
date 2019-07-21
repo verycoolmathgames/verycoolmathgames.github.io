@@ -37,18 +37,6 @@
 
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
 
-        function email() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email').toString();
-            return URLEmail.toString();
-        };
-
-        function password() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLPassword = urlParams.get('password').toString();
-            return password.toString();
-        };
-
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
