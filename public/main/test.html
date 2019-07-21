@@ -62,7 +62,7 @@
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
                 var text = doc.data().text;
-                var annce = document.createElement("div");
+                var announcement = document.createElement("div");
                 btn.innerHTML = date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString();
                 document.getElementById("announcements").appendChild(btn);
             });
