@@ -73,7 +73,7 @@
         };
         db.collection("announcements").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                console.log(doc.id, "=>", doc.data().text);
+                console.log(doc.data, "=>", doc.data().text);
             });
         });
 
