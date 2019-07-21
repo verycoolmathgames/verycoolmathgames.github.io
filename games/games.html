@@ -104,7 +104,7 @@
                 game.innerHTML = name + ": " + gameDesc;
                 game.className = "game";
                 game.onclick = function() {
-                    redirect(href);
+                    gameRedirect(href);
                 };
                 document.getElementById("popular").appendChild(game);
             });
