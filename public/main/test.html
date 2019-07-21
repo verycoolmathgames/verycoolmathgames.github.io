@@ -66,7 +66,7 @@
                 console.log(date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString());
                 console.log(number);
                 var announcement = document.createElement("div");
-                announcement.style = number;
+                announcement.style = "order: numeber;";
                 announcement.innerHTML = date[1] + "/" + date[2] + "/" + date[0] + ": " + text.toString();
                 announcement.className = "announcement";
                 document.getElementById("announcements").appendChild(announcement);
