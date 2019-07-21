@@ -63,7 +63,7 @@
                 var date = doc.data().date;
                 var text = doc.data().text;
                 var announcement = document.createElement("div");
-                btn.innerHTML = date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString();
+                announcement.innerHTML = date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString();
                 document.getElementById("announcements").appendChild(btn);
             });
         });
