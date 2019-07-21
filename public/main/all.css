@@ -4,7 +4,9 @@ nav{
   flex-direction: row;
 }
 
-*:not(.dropdown)
+*:not(.dropdown) {
+  margin
+}
 
 .logolight{
   width: 250px;
