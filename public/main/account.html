@@ -37,7 +37,7 @@
 
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
             .then(function () {
-                return firebase.auth().signInWithEmailAndPassword(email, password);
+                return firebase.auth().signInWithEmailAndPassword(email(), password);
             })
             .catch(function (error) {
                 var errorCode = error.code;
