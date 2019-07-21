@@ -7,7 +7,6 @@ nav{
   width: 250px;
   height: 100px;
 }
-
 .navelement{
   color: #ffffff;
   background-color: #ffffff;
@@ -24,7 +23,6 @@ nav{
   background-color: #000000;
   border-radius: 10%;
 }
-
 .dropdown .dropbtn {
   font-size: 16px;
   float: left;
