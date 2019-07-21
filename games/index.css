@@ -119,7 +119,7 @@ img {
 
 article {
   width: 82%;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -128,7 +128,7 @@ article {
 .column {
   width: 100%;
   border-left: 7px solid #31a4e1ff;
-  border-right: 7px solid #31a4e1ff;
+  border-right: 5px solid #31a4e1ff;
 }
 
 .game {
