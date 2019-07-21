@@ -1,7 +1,6 @@
 nav{
   display: flex;
   flex-direction: row;
-  
   vertical-align: baseline;
 }
 
