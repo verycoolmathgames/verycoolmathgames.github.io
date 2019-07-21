@@ -94,7 +94,7 @@
         var Games = db.collection("games");
         Games.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                var text = doc.data().text;
+                var href = doc.data().text;
                 console.log(date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString());
                 var announcement = document.createElement("div");
                 announcement.innerHTML = date[1] + "/" + date[2] + "/" + date[0] + ": " + text.toString();
