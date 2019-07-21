@@ -2,7 +2,6 @@ nav{
   display: flex;
   flex-direction: row;
 }
-
 .logolight{
   width: 250px;
   height: 100px;
