@@ -34,52 +34,52 @@
         });
 
         var user = firebase.auth().currentUser;
-            var db = firebase.firestore();
+        var db = firebase.firestore();
 
-            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
 
-            function getdisplayName() {
-                var urlParams = new URLSearchParams(window.location.search);
-                var URLEmail = urlParams.get('email');
-                var URLPassword = urlParams.get('password');
+        function getdisplayName() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
 
-                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword).then(function () {
-                    var user = firebase.auth().currentUser;
-                    var uid = user.uid;
+            firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword).then(function () {
+                var user = firebase.auth().currentUser;
+                var uid = user.uid;
 
-                    var users = db.collection("users");
-                    users.doc(uid).get().then(function (doc) {
-                        var displayName = doc.data().displayName.toString();
-                        var username = displayName.toString();
-                        document.getElementById("hellouser").innerHTML = "Hello, " + username;
-                    });
+                var users = db.collection("users");
+                users.doc(uid).get().then(function (doc) {
+                    var displayName = doc.data().displayName.toString();
+                    var username = displayName.toString();
+                    document.getElementById("hellouser").innerHTML = "Hello, " + username;
                 });
-            };
+            });
+        };
 
-            function email() {
+        function email() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            return URLEmail.toString();
+        };
+
+        function password() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLPassword = urlParams.get('password').toString();
+            return password.toString();
+        };
+
+        function redirect(pagePath) {
+            if (pagePath === "signout") {
+                firebase.auth().signOut();
+                window.location.replace("https://verycoolmathgames.github.io");
+            } else {
                 var urlParams = new URLSearchParams(window.location.search);
                 var URLEmail = urlParams.get('email').toString();
-                return URLEmail.toString();
-            };
-
-            function password() {
-                var urlParams = new URLSearchParams(window.location.search);
                 var URLPassword = urlParams.get('password').toString();
-                return password.toString();
-            };
 
-            function redirect(pagePath) {
-                if (pagePath === "signout") {
-                    firebase.auth().signOut();
-                    window.location.replace("https://verycoolmathgames.github.io");
-                } else {
-                    var urlParams = new URLSearchParams(window.location.search);
-                    var URLEmail = urlParams.get('email').toString();
-                    var URLPassword = urlParams.get('password').toString();
-
-                    window.location.replace(pagePath + "?email=" + URLEmail + "&password=" + URLPassword);
-                };
+                window.location.replace(pagePath + "?email=" + URLEmail + "&password=" + URLPassword);
             };
+        };
 
         var db = firebase.firestore();
 
