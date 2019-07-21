@@ -58,7 +58,7 @@
         };
 
         var Announcements = db.collection("announcements");
-        db.collection("announcements").get().then((querySnapshot) => {
+        Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
                 var text = doc.data().text;
