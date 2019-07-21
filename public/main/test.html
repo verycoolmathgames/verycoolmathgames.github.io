@@ -60,7 +60,7 @@
         var Announcements = db.collection("announcements");
         Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                var date = doc.data().date.toString();
+                var date = doc.data().date;
                 var text = doc.data().text.toString();
                 console.log(date[0],"/",date[1].toString(),"/",date[2].toString(), ":", text.toString());
                 var btn = document.createElement("BUTTON");
