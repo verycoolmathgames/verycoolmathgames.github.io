@@ -103,7 +103,7 @@
                 var game = document.createElement("p");
                 game.innerHTML = name + ": " + gameDesc;
                 game.className = "game";
-                game.onclick = function() {
+                game.onclick = function(href) {
                     redirect(href);
                 };
                 document.getElementById("popular").appendChild(game);
