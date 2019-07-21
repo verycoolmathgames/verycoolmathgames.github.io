@@ -92,7 +92,7 @@
         };
 
         var Games = db.collection("games");
-        Announcements.get().then((querySnapshot) => {
+        Games.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
                 var text = doc.data().text;
