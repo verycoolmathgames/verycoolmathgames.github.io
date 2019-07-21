@@ -94,7 +94,7 @@
             var users = db.collection("users");
             users.doc(uid).get().then(function (doc) {
                 var displayName = doc.data().displayName.toString();
-                var username = 
+                var username = displayName.toString();
             });
             return displayName;
         };
