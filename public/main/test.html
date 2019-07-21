@@ -69,16 +69,6 @@
             firebase.auth().signInWithEmailAndPassword(email, password);
         };
 
-
-
-
-        function password() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLPassword = urlParams.get('password').toString();
-
-            return URLpassword;
-        };
-
         var Announcements = db.collection("announcements");
             function addAnnouncement(date, text) {
                 Announcements.doc(date).add({
