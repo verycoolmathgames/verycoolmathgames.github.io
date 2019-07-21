@@ -91,7 +91,7 @@
             return URLpassword;
         };
 
-        var Games = db.collection("games").so;
+        var Games = db.collection("games").order;
         Games.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
