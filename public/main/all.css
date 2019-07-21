@@ -4,10 +4,6 @@ nav{
   flex-direction: row;
 }
 
-*:not(.fullnav) {
-  margin-top: 10%;
-}
-
 .logolight{
   width: 250px;
   height: 100px;
