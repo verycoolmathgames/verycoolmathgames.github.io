@@ -74,7 +74,7 @@
         db.collection("announcements").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
-                
+                var text = doc.data().text;
                 console.log(doc.data().date[0],  ":", doc.data().text.toString());
             });
         });
