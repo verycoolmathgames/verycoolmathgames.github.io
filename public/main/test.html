@@ -58,7 +58,7 @@
         };
 
         var Announcements = db.collection("announcements");
-        
+
         function addAnnouncement(date, text) {
             Announcements.doc(date).add({
                 date: date,
@@ -166,6 +166,18 @@
                     <a href="memes/popular.html">Popular Memes</a>
                     <a href="memes/new.html">New Memes</a>
                     <a href="memes/rcmmnd.html">Your Recommendations</a>
+                </div>
+            </div>
+            <!--End of Dropdown-->
+
+            <!--Beginning of Dropdown-->
+            </a>
+            <div class="dropdown">
+                <a href="articles/articles.html" class="dropbtn navelement">Articles</a>
+                <div class="dropdown-content">
+                    <a href="articles/popular.html">Popular Articles</a>
+                    <a href="articles/new.html">New Articles</a>
+                    <a href="articles/rcmmnd.html">Your Recommendations</a>
                 </div>
             </div>
             <!--End of Dropdown-->
