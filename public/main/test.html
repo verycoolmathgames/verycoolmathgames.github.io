@@ -61,7 +61,7 @@
         Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var date = doc.data().date;
-                var text = doc.data().text.toString();
+                var text = doc.data().text;
                 console.log(date[0],"/",date[1].toString(),"/",date[2].toString(), ":", text.toString());
                 var btn = document.createElement("BUTTON");
                 btn.innerHTML = "CLICK ME";
