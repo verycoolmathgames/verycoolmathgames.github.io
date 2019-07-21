@@ -2,10 +2,12 @@ nav{
   display: flex;
   flex-direction: row;
 }
+
 .logolight{
   width: 250px;
   height: 100px;
 }
+
 .navelement{
   color: #ffffff;
   background-color: #ffffff;
@@ -14,6 +16,7 @@ nav{
   vertical-align: bottom;
   border-radius: 15px;
 }
+
 .menuLink{
   color: #000000;
   margin:1%;
