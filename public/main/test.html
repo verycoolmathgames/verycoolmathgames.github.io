@@ -63,7 +63,7 @@
                 var date = doc.data().date;
                 var text = doc.data().text;
                 var announcement = document.createElement("div");
-                console.log()
+                console.log(date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString())
                 announcement.innerHTML = date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString();
                 announcement.className = "announcement";
                 document.getElementById("announcements").appendChild(announcement);
