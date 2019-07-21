@@ -94,7 +94,7 @@
         var Games = db.collection("games");
         Games.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                var name = doc.data().;
+                var name = doc.data().name.toString;
                 var href = doc.data().href.toString();
                 var gameDescription = doc.data().gameDesc.toString();
                 console.log(href.toString());
