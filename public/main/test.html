@@ -64,7 +64,7 @@
                 var text = doc.data().text;
                 console.log(date[0] + "/" + date[1] + "/" + date[2] + ": " + text.toString());
                 var announcement = document.createElement("div");
-                announcement.style = "line-height: 50px;";
+                announcement.style = "";
                 announcement.innerHTML = date[1] + "/" + date[2] + "/" + date[0] + ": " + text.toString();
                 announcement.className = "announcement";
                 document.getElementById("announcements").appendChild(announcement);
