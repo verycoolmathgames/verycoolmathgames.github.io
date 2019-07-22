@@ -122,13 +122,18 @@
                 var gameDesc = doc.data().gameDesc.toString();
                 console.log(name.toString());
                 console.log(gameDesc.toString());
-                var game = document.createElement("div");
+
+                var outerDiv = document.createElement("div");
+                document.getElementById("popular").appendChild(outerDiv);
+                outerDiv.id = "outer";
+
+                var game = document.createElement("p");
                 game.innerHTML = name + ": " + gameDesc;
                 game.className = "game";
                 game.onclick = function () {
                     gameRedirect(doc.id);
                 };
-                document.getElementById("new").appendChild(game);
+                document.getElementById("outer").appendChild(game);
             });
         });
 
