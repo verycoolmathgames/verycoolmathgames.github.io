@@ -111,45 +111,70 @@ limitations under the License.
                 });
             } else {
                 firebase.auth().signOut();
-                var user = firebase.auth().currentUser;
+                var provider = new firebase.auth.GoogleAuthProvider();
 
-                user.providerData.forEach(function (profile) {
-                    var username = profile.displayName.toString();
-                    var email = profile.email.toString();
-                    var userDataEmails = emails.doc(username);
-                    var userDataUsers = users.doc(uid);
+                firebase.auth().signInWithPopup(provider).then(function (result) {
+                    var token = result.credential.accessToken;
+                    var user = result.user;
+                    var uid = user.uid.toString();
+                    var db = firebase.firestore();
+                    var emails = db.collection("emails");
+                    var users = db.collection("users");
 
-                    userDataEmails.get(username.toString()).then(function (doc) {
-                        if (!doc.exists) {
-                            userDataEmails.set({
-                                email: email,
-                                uid: uid,
-                            }).then(function () {
-                                console.log("Document successfully written!");
-                            }).catch(function (error) {
-                                console.error("Error writing document: ", error);
+                    firebase.auth().onAuthStateChanged(function (user) {
+                        if (user != null) {
+                            var user = firebase.auth().currentUser;
+
+                            user.providerData.forEach(function (profile) {
+                                var username = profile.displayName.toString();
+                                var email = profile.email.toString();
+                                var userDataEmails = emails.doc(username);
+                                var userDataUsers = users.doc(uid);
+
+                                userDataEmails.get(username.toString()).then(function (doc) {
+                                    if (!doc.exists) {
+                                        userDataEmails.set({
+                                            email: email,
+                                            uid: uid,
+                                        }).then(function () {
+                                            console.log("Document successfully written!");
+                                        }).catch(function (error) {
+                                            console.error("Error writing document: ", error);
+                                        });
+                                    } else {
+                                        console.log("Emails doc already exists, skipped writing.");
+                                    }
+                                });
+
+                                userDataUsers.get(uid).then(function (doc) {
+                                    if (!doc.exists) {
+                                        userDataUsers.set({
+                                            displayName: username,
+                                            email: email,
+                                        }).then(function () {
+                                            console.log("Document successfully written!");
+                                        }).catch(function (error) {
+                                            console.error("Error writing document: ", error);
+                                        });
+                                    } else {
+                                        console.log("Users doc already exists, skipped writing.");
+                                    }
+                                });
+
+                                window.location.replace("home.html?email=" + email + "&password=password" + "&mode=light");
                             });
-                        } else {
-                            console.log("Emails doc already exists, skipped writing.");
                         }
-                    });
-
-                    userDataUsers.get(uid).then(function (doc) {
-                        if (!doc.exists) {
-                            userDataUsers.set({
-                                displayName: username,
-                                email: email,
-                            }).then(function () {
-                                console.log("Document successfully written!");
-                            }).catch(function (error) {
-                                console.error("Error writing document: ", error);
-                            });
-                        } else {
-                            console.log("Users doc already exists, skipped writing.");
-                        }
-                    });
-
-                    window.location.replace("home.html?email=" + email + "&password=password" + "&mode=light");
+                    })
+                }).catch(function (error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    var email = error.email;
+                    var credential = error.credential;
+                    if (errorCode === 'auth/account-exists-with-different-credential') {
+                        alert('You have already signed up with a different authentication provider for that email.');
+                    } else {
+                        console.error(error);
+                    }
                 });
             }
         };
