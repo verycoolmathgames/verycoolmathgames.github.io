@@ -118,6 +118,7 @@ img {
 }
 
 article {
+  margin-left
   width: 82%;
   display: flex;
   flex-direction: row;
