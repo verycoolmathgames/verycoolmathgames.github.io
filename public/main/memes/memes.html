@@ -97,23 +97,23 @@
 
         var Memes = db.collection("memes");
         Memes.orderBy("editor").get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    var name = doc.data().name.toString();
-                    var gameDesc = doc.data().gameDesc.toString();
+            querySnapshot.forEach((doc) => {
+                var name = doc.data().name.toString();
+                var gameDesc = doc.data().gameDesc.toString();
 
-                    var outerDiv = document.createElement("div");
-                    document.getElementById("recommended").appendChild(outerDiv);
-                    outerDiv.id = "outer" + name + "recommended";
+                var outerDiv = document.createElement("div");
+                document.getElementById("recommended").appendChild(outerDiv);
+                outerDiv.id = "outer" + name + "recommended";
 
-                    var game = document.createElement("p");
-                    game.innerHTML = name + ": " + gameDesc;
-                    game.className = "game";
-                    game.onclick = function () {
-                        gameRedirect(doc.id);
-                    };
-                    document.getElementById(outerDiv.id).appendChild(game);
-                });
+                var game = document.createElement("p");
+                game.innerHTML = name + ": " + gameDesc;
+                game.className = "game";
+                game.onclick = function () {
+                    gameRedirect(doc.id);
+                };
+                document.getElementById(outerDiv.id).appendChild(game);
             });
+        });
 
         function gameRedirect(docid) {
             var urlParams = new URLSearchParams(window.location.search);
