@@ -117,7 +117,7 @@
             });
         });
 
-        Memes.orderBy("upvotes").get().then((querySnapshot) => {
+        Memes.orderBy("").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
                 var memeDesc = doc.data().gameDesc.toString();
