@@ -44,7 +44,6 @@ limitations under the License.
 
         function toggleSignIn() {
             if (!firebase.auth().currentUser) {
-                
                 var provider = new firebase.auth.GoogleAuthProvider();
 
                 firebase.auth().signInWithPopup(provider).then(function (result) {
