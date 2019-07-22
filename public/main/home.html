@@ -54,6 +54,11 @@
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email');
             var URLPassword = urlParams.get('password');
+            
+            var mode = urlParams.get("darkmode");
+            if (mode == "dark") {
+                document.getElementByTagName("html").id = "dark";
+            }
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
         };
 
