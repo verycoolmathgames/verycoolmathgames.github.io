@@ -140,25 +140,25 @@
         });
 
         Memes.orderBy("releaseDate").get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    var title = doc.data().title.toString();
-                    var memeDesc = doc.data().gameDesc.toString();
-                    var memeRef = doc.data().memeRef.toString();
-                    var upvotes = doc.data().upvotes.toString();
+            querySnapshot.forEach((doc) => {
+                var title = doc.data().title.toString();
+                var memeDesc = doc.data().gameDesc.toString();
+                var memeRef = doc.data().memeRef.toString();
+                var upvotes = doc.data().upvotes.toString();
 
-                    var outerDiv = document.createElement("div");
-                    document.getElementById("new").appendChild(outerDiv);
-                    outerDiv.id = "outer" + releaseDate;
+                var outerDiv = document.createElement("div");
+                document.getElementById("new").appendChild(outerDiv);
+                outerDiv.id = "outer" + releaseDate;
 
-                    var meme = document.createElement("p");
-                    meme.innerHTML = title;
-                    meme.className = "meme";
-                    meme.onclick = function () {
-                        memeRedirect(memeRef);
-                    };
-                    document.getElementById(outerDiv.id).appendChild(meme);
-                });
+                var meme = document.createElement("p");
+                meme.innerHTML = title;
+                meme.className = "meme";
+                meme.onclick = function () {
+                    memeRedirect(memeRef);
+                };
+                document.getElementById(outerDiv.id).appendChild(meme);
             });
+        });
 
         function memeRedirect(docid) {
             var urlParams = new URLSearchParams(window.location.search);
