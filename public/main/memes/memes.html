@@ -99,7 +99,7 @@
         Games.orderBy("popularity").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
-                var gameDesc = doc.data().gameDesc.toString();
+                var memeDesc = doc.data().gameDesc.toString();
                 console.log(name.toString());
                 console.log(gameDesc.toString());
                 var game = document.createElement("p");
