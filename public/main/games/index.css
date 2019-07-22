@@ -129,7 +129,11 @@ article {
     width: 100%;
     text-align: center;
 }
-
+#new {
+  
+    border-left: 2px solid #31a4e1ff;
+    border-right: 2px solid #31a4e1ff;
+}
 
 .game {
     border-left: 2px solid #31a4e1ff;
