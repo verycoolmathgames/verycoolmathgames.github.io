@@ -36,7 +36,6 @@
 
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
-    
         db.enablePersistence()
             .catch(function (err) {
                 if (err.code == 'failed-precondition') {
