@@ -50,8 +50,6 @@
                     }
                 });
 
-        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
-
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
