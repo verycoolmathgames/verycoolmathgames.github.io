@@ -96,7 +96,7 @@
         };
 
         var Memes = db.collection("memes");
-        Games.orderBy("editor").get().then((querySnapshot) => {
+        Memes.orderBy("editor").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var name = doc.data().name.toString();
                     var gameDesc = doc.data().gameDesc.toString();
