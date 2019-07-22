@@ -99,6 +99,7 @@
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
                 var gameDesc = doc.data().gameDesc.toString();
+                
                 var outerDiv = document.createElement("div");
                 document.getElementById("popular").appendChild(outerDiv);
                 outerDiv.id = "outer" + name + "popular";
