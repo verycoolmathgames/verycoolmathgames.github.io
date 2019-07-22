@@ -35,6 +35,8 @@
 
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
+        
+            var Memes = db.collection("memes");
         db.enablePersistence();
 
         function redirect(pagePath) {
@@ -94,7 +96,7 @@
 
             return URLpassword;
         };
-        
+
         Memes.orderBy("upvotes").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
