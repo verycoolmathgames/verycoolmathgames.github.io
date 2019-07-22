@@ -131,7 +131,7 @@
                 var meme = document.createElement("p");
                 meme.innerHTML = name;
                 meme.className = "meme";
-                game.onclick = function () {
+                meme.onclick = function () {
                     memeRedirect(memeRef);
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
