@@ -116,6 +116,7 @@
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
         });
+        
         Memes.orderBy("upvotes").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var name = doc.data().name.toString();
