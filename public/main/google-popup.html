@@ -111,7 +111,46 @@ limitations under the License.
                 });
             } else {
                 firebase.auth().signOut();
-                
+                var user = firebase.auth().currentUser;
+
+                user.providerData.forEach(function (profile) {
+                    var username = profile.displayName.toString();
+                    var email = profile.email.toString();
+                    var userDataEmails = emails.doc(username);
+                    var userDataUsers = users.doc(uid);
+
+                    userDataEmails.get(username.toString()).then(function (doc) {
+                        if (!doc.exists) {
+                            userDataEmails.set({
+                                email: email,
+                                uid: uid,
+                            }).then(function () {
+                                console.log("Document successfully written!");
+                            }).catch(function (error) {
+                                console.error("Error writing document: ", error);
+                            });
+                        } else {
+                            console.log("Emails doc already exists, skipped writing.");
+                        }
+                    });
+
+                    userDataUsers.get(uid).then(function (doc) {
+                        if (!doc.exists) {
+                            userDataUsers.set({
+                                displayName: username,
+                                email: email,
+                            }).then(function () {
+                                console.log("Document successfully written!");
+                            }).catch(function (error) {
+                                console.error("Error writing document: ", error);
+                            });
+                        } else {
+                            console.log("Users doc already exists, skipped writing.");
+                        }
+                    });
+
+                    window.location.replace("home.html?email=" + email + "&password=password" + "&mode=light");
+                });
             }
         };
 
