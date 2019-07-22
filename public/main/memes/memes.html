@@ -37,7 +37,6 @@
         var db = firebase.firestore();
         var Memes = db.collection("memes");
         db.enablePersistence()
-            });
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
