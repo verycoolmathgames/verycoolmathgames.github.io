@@ -32,7 +32,15 @@ limitations under the License.
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
 
-  <script
+  <script>
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.Local)
+      .then(function () {
+        return firebase.auth().signInWithEmailAndPassword(email, password);
+      })
+      .catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });</script>
 
 </head>
 
