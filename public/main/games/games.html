@@ -37,7 +37,7 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
         
-            db.enablePersistence()
+{            db.enablePersistence()
                 .catch(function (err) {
                     if (err.code == 'failed-precondition') {
                         // Multiple tabs open, persistence can only be enabled
@@ -48,7 +48,7 @@
                         // features required to enable persistence
                         // ...
                     }
-                });
+                });}
 
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
 
