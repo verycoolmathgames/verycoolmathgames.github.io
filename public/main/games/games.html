@@ -40,17 +40,18 @@
         var Games = db.collection("games");
 
         function redirect(pagePath) {
-            if (pagePath === "signout") {
-                firebase.auth().signOut();
-                window.location.replace("https://verycoolmathgames.github.io");
-            } else {
-                var urlParams = new URLSearchParams(window.location.search);
-                var URLEmail = urlParams.get('email').toString();
-                var URLPassword = urlParams.get('password').toString();
+                if (pagePath === "signout") {
+                    firebase.auth().signOut();
+                    window.location.replace("https://verycoolmathgames.github.io");
+                } else {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var URLEmail = urlParams.get('email').toString();
+                    var URLPassword = urlParams.get('password').toString();
+                    var mode = urlParams.get('mode').toString();
 
-                window.location.replace("../" + pagePath + "?email=" + URLEmail + "&password=" + URLPassword);
+                    window.location.replace(pagePath + "?email=" + URLEmail + "&password=" + URLPassword + "&mode=" + mode);
+                };
             };
-        };
 
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
