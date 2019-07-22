@@ -123,11 +123,6 @@ article {
   flex-direction: row;
   justify-content: space-around;
 }
-
-.column {
-  text-align: center;
-  width: 100%;
-}
 .column {
     height: 1200px;
     width: 100%;
