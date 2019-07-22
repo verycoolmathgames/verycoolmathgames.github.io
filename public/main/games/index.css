@@ -144,15 +144,3 @@ article {
   line-height: 40px;
   font-size: 25px;
 }
-
-#outer {
-  background-color: white;
-  border-bottom: 1px solid gray;
-  color: black;
-  width: 100%;
-  float: center;
-  margin-right: 2px;
-  text-align: left;
-  line-height: 40px;
-  font-size: 25px;
-}
