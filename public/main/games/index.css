@@ -128,10 +128,6 @@ article {
   text-align: center;
   width: 100%;
 }
-
-.game {
-  color: #000000;
-}
 .column {
     position: absolute;
     z-index: 1;
