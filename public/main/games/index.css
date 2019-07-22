@@ -125,9 +125,9 @@ article {
   justify-content: space-around;
 }
 .column {
-    height: 1200px;
-    width: 100%;
-    text-align: center;
+  height: 1200px;
+  width: 100%;
+  text-align: center;
 }
 #new {
   border-left:1px solid gray;
