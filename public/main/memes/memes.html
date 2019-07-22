@@ -118,6 +118,27 @@
         });
 
         Memes.orderBy("upvotes").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var name = doc.data().name.toString();
+                var memeDesc = doc.data().gameDesc.toString();
+                var memeRef = doc.data().memeRef.toString();
+                var upvotes = doc.data().upvotes.toString();
+
+                var outerDiv = document.createElement("div");
+                document.getElementById("trending").appendChild(outerDiv);
+                outerDiv.id = "outer" + "trending" + upvotes;
+
+                var game = document.createElement("p");
+                game.innerHTML = name;
+                game.className = "meme";
+                game.onclick = function () {
+                    memeRedirect(memeRef);
+                };
+                document.getElementById(outerDiv.id).appendChild(meme);
+            });
+        });
+
+        Memes.orderBy("upvotes").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var name = doc.data().name.toString();
                     var memeDesc = doc.data().gameDesc.toString();
@@ -137,27 +158,6 @@
                     document.getElementById(outerDiv.id).appendChild(meme);
                 });
             });
-
-            Memes.orderBy("upvotes").get().then((querySnapshot) => {
-                    querySnapshot.forEach((doc) => {
-                        var name = doc.data().name.toString();
-                        var memeDesc = doc.data().gameDesc.toString();
-                        var memeRef = doc.data().memeRef.toString();
-                        var upvotes = doc.data().upvotes.toString();
-
-                        var outerDiv = document.createElement("div");
-                        document.getElementById("trending").appendChild(outerDiv);
-                        outerDiv.id = "outer" + "trending" + upvotes;
-
-                        var game = document.createElement("p");
-                        game.innerHTML = name;
-                        game.className = "meme";
-                        game.onclick = function () {
-                            memeRedirect(memeRef);
-                        };
-                        document.getElementById(outerDiv.id).appendChild(meme);
-                    });
-                });
 
         function memeRedirect(docid) {
             var urlParams = new URLSearchParams(window.location.search);
