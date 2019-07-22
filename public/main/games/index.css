@@ -129,10 +129,6 @@ article {
     width: 100%;
     text-align: center;
 }
-#new {
-    border-left: 2px solid gray;
-    border-right: 2px solid gray;
-}
 
 .game {
     border-bottom: 1px solid gray;
