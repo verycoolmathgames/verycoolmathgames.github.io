@@ -137,7 +137,6 @@ article {
 .game {
     background-color: white;
     color: black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width: 100%; 
     float: center;
     margin-right: 2px;
