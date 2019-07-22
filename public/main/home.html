@@ -53,7 +53,9 @@
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
             var mode = urlParams.get("darkmode");
-            if (mode == "dark")
+            if (mode == "dark") {
+                
+            }
             var URLEmail = urlParams.get('email');
             var URLPassword = urlParams.get('password');
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
