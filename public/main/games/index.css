@@ -132,7 +132,7 @@ article {
     position: absolute;
     z-index: 1;
     height: 1200px;
-    width: 18%;
+    width: 100%;
 }
 .game {
     border-top: 5px solid #31a4e1ff;
