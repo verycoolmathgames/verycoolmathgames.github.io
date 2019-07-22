@@ -93,15 +93,6 @@ limitations under the License.
                                         console.log("Users doc already exists, skipped writing.");
                                     }
                                 });
-
-                                var fsemail = userDataEmails.data();
-                                var fsuser = userDataUsers.data();
-
-                                console.log("displayName: " + username);
-                                console.log("emails: " + emails);
-                                console.log("email: " + fsemail);
-                                console.log("users: " + users);
-                                console.log("user: " + fsuser);
                                 
                                 window.location.replace("home.html?email=" + email + "&password=password" + "&mode=light");
                             });
