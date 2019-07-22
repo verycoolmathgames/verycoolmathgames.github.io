@@ -38,7 +38,6 @@
             var Games = db.collection("games");
         db.enablePersistence();
 
-
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
