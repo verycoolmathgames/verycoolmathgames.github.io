@@ -41,7 +41,7 @@
 
         var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
         var storageRef = storage.ref();
-        var memes = storageRef.child()
+        var memes = storageRef.child('memes')
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
