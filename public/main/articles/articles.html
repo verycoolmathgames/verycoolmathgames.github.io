@@ -1,0 +1,269 @@
+<html class="mdl-js">
+
+<head>
+
+    <title>Thanks for Sharing</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg"
+        type="image/x-icon">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script defer="" src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+
+    <script>
+
+        firebase.initializeApp({
+            apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
+            authDomain: "verycoolthanksforsharing.firebaseapp.com",
+            databaseURL: "https://verycoolthanksforsharing.firebaseio.com",
+            projectId: "verycoolthanksforsharing",
+            storageBucket: "verycoolthanksforsharing.appspot.com",
+            messagingSenderId: "78626384450",
+            appId: "1:78626384450:web:5c1a5470485502ab"
+        });
+
+        var user = firebase.auth().currentUser;
+        var db = firebase.firestore();
+
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+
+        function redirect(pagePath) {
+            if (pagePath === "signout") {
+                firebase.auth().signOut();
+                window.location.replace("https://verycoolmathgames.github.io");
+            } else {
+                var urlParams = new URLSearchParams(window.location.search);
+                var URLEmail = urlParams.get('email').toString();
+                var URLPassword = urlParams.get('password').toString();
+
+                window.location.replace(pagePath + "?email=" + URLEmail + "&password=" + URLPassword);
+            };
+        };
+
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
+            firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
+        };
+
+        function getdisplayName() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
+            firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+                var user = firebase.auth().currentUser;
+                var uid = user.uid;
+                var users = db.collection("users");
+
+                users.doc(uid).get().then(function (doc) {
+                    var displayName = doc.data().displayName;
+                    var displayName = doc.data().displayName.toString();
+                    var username = displayName.toString();
+                    return username;
+                });
+            });
+        };
+
+        function email() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+
+            return URLEmail;
+        };
+
+        function password() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLPassword = urlParams.get('password').toString();
+
+            return URLpassword;
+        };
+
+        var Games = db.collection("games");
+        Games.orderBy("popularity").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var name = doc.data().name.toString();
+                var gameDesc = doc.data().gameDesc.toString();
+                console.log(name.toString());
+                console.log(gameDesc.toString());
+                var game = document.createElement("p");
+                game.innerHTML = name + ": " + gameDesc;
+                game.className = "game";
+                game.onclick = function () {
+                    gameRedirect(doc.id);
+                };
+                document.getElementById("popular").appendChild(game);
+            });
+        });
+
+        function gameRedirect(docid) {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            var URLPassword = urlParams.get('password').toString();
+
+            window.location.replace("playgame.html?email=" + URLEmail + "&password=" + URLPassword + "&game=" + docid);
+        };
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-143389600-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-143389600-1');
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #31a4e1ff;
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1080bcff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <!--nav begin-->
+        <nav>
+
+            <!--Beginning of Logo-->
+            <a onclick="redirect('home.html')">
+                <img class="logolight" src="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg">
+            </a>
+            <!--End of Logo-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a class="dropbtn navelement" onclick="redirect('home.html')">Home</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a onclick="redirect('games/games.html')" class="dropbtn navelement">Games</a>
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a onclick="redirect('games/popular.html')">Popular Games</a>
+                    <a onclick="redirect('games/new.html')">New Games</a>
+                    <a onclick="redirect('games/rcmmnd.html')">Your Recommendations</a>
+                </div>
+                </a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a onclick="redirect('memes/memes.html')" class="dropbtn navelement">Memes</a>
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a onclick="redirect('memes/popular.html')">Popular Games</a>
+                    <a onclick="redirect('memes/new.html')">New Games</a>
+                    <a onclick="redirect('memes/rcmmnd.html')">Your Recommendations</a>
+                </div>
+                </a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            </a>
+            <div class="dropdown">
+                <a onclick="redirect('articles/articles.html')" class="dropbtn navelement">Articles</a>
+                <div class="dropdown-content">
+                    <a onclick="redirect('articles/popular.html')">Popular Articles</a>
+                    <a onclick="redirect('articles/new.html')">New Articles</a>
+                    <a onclick="redirect('articles/rcmmnd.html')">Your Recommendations</a>
+                </div>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a onclick="redirect('leaderboard/leaderboards.html')" class="dropbtn navelement">Leaderboard</a>
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a onclick="redirect('leaderboard/weekly.html')">This Week</a>
+                    <a onclick="redirect('leaderboard/monthly.html')">This Month</a>
+                    <a onclick="redirect('leaderboard/alltime.html')">All Time</a>
+                    <a onclick="redirect('leaderboard/games.html')">Game Leaderboards</a>
+                </div>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a class="dropbtn navelement" onclick="redirect('account.html')">Account</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a class="dropbtn navelement" onclick="redirect('signout')">Sign Out</a>
+            </div>
+            <!--End of Dropdown-->
+
+        </nav>
+        <!--nav end-->
+
+    </header>
+
+    <article>
+
+        <div class="column" id="popular">
+            <h1>Popular</h1>
+        </div>
+
+
+        <div class="column">
+            <h1>New</h1>
+        </div>
+
+
+        <div class="column">
+            <h1>Recommended</h1>
+        </div>
+
+    </article>
+
+    <article>
+
+        <!--Chat-->
+        <div class="chatextreme">
+            <iframe class="chat" src="https://ickyalphanumericwebpages.roycea.repl.co" frameborder="0" height="100%"
+                width="330px" scrolling="no" background-color="aliceblue"></iframe>
+        </div>
+        <!--End of Announcements and Chat Stuff-->
+
+    </article>
+
+</body>
+
+</html>
