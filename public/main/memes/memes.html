@@ -75,24 +75,6 @@
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
         };
 
-        function getdisplayName() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email');
-            var URLPassword = urlParams.get('password');
-            firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
-                var user = firebase.auth().currentUser;
-                var uid = user.uid;
-                var users = db.collection("users");
-
-                users.doc(uid).get().then(function (doc) {
-                    var displayName = doc.data().displayName;
-                    var displayName = doc.data().displayName.toString();
-                    var username = displayName.toString();
-                    return username;
-                });
-            });
-        };
-
         function email() {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
