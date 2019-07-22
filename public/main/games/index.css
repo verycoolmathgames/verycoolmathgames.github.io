@@ -134,15 +134,15 @@ article {
   border-right:1px solid gray;
 }
 .game {
-    background-color: white;
-    border-bottom: 1px solid gray;
-    color: black;
-    width: 100%;
-    float: center;
-    margin-right: 2px;
-    text-align: left;
-    line-height: 40px;
-    font-size: 25px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  color: black;
+  width: 100%;
+  float: center;
+  margin-right: 2px;
+  text-align: left;
+  line-height: 40px;
+  font-size: 25px;
 }
 
 .game {
