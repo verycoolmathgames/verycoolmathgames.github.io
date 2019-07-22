@@ -93,7 +93,8 @@
         function uploadMeme(url, title, description) {
             Memes.add({
                 url: url,
-                title
+                title: title,
+                description: description
             });
             var memeRef = storageRef.child('memes/' + title)
         }
