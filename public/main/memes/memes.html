@@ -111,7 +111,7 @@
                 game.innerHTML = name;
                 game.className = "meme";
                 game.onclick = function () {
-                    memeRedirect();
+                    memeRedirect(meme);
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
