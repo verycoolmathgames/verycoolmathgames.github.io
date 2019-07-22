@@ -107,7 +107,7 @@
         });
 
         var Games = db.collection("games");
-        Games.orderBy("").get().then((querySnapshot) => {
+        Games.orderBy("releaseDate").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
                 var gameDesc = doc.data().gameDesc.toString();
