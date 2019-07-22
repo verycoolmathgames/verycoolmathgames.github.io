@@ -89,7 +89,7 @@
             return URLpassword;
         };
 
-        var Games = db.collection("games");
+        var Memes = db.collection("games");
         Games.orderBy("popularity").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
