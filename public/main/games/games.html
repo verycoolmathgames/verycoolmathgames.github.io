@@ -119,15 +119,13 @@
                 var gameDesc = doc.data().gameDesc.toString();
                 console.log(name.toString());
                 console.log(gameDesc.toString());
-                var outerDiv = document.getElementById("new").appendChild(document.createElement("div"));
-                outerDiv.className = "outer";
-                var game = document.createElement("p");
+                var game = document.createElement("div");
                 game.innerHTML = name + ": " + gameDesc;
                 game.className = "game";
                 game.onclick = function () {
                     gameRedirect(doc.id);
                 };
-                document.getElementsByClassName("outer").appendChild(game);
+                document.getElementById("new").appendChild(game);
             });
         });
 
@@ -137,15 +135,13 @@
                 var gameDesc = doc.data().gameDesc.toString();
                 console.log(name.toString());
                 console.log(gameDesc.toString());
-                var outerDiv = document.getElementById("e").appendChild(document.createElement("div"));
-                outerDiv.className = "outer";
                 var game = document.createElement("p");
                 game.innerHTML = name + ": " + gameDesc;
                 game.className = "game";
                 game.onclick = function () {
                     gameRedirect(doc.id);
                 };
-                document.getElementsByClassName("outer").appendChild(game);
+                document.getElementById("recommended").appendChild(game);
             });
         });
 
