@@ -166,7 +166,7 @@
         function memeRedirect(ref) {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
-            var URLUsername = urlParams.get('username').to
+            var URLUsername = urlParams.get('username').toString();
             var URLPassword = urlParams.get('password').toString();
 
             window.location.replace("viewmeme.html?email=" + URLEmail + "&username=" + username + "&password=" + URLPassword + "&meme_ref=" + ref);
