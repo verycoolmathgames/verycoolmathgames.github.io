@@ -129,8 +129,6 @@ article {
   width: 100%;
 }
 .column {
-    position: absolute;
-    z-index: 1;
     height: 1200px;
     width: 100%;
     text-align: center
