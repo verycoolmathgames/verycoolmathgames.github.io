@@ -106,6 +106,23 @@
             });
         });
 
+        var Games = db.collection("games");
+            Games.orderBy("popularity").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var name = doc.data().name.toString();
+                    var gameDesc = doc.data().gameDesc.toString();
+                    console.log(name.toString());
+                    console.log(gameDesc.toString());
+                    var game = document.createElement("p");
+                    game.innerHTML = name + ": " + gameDesc;
+                    game.className = "game";
+                    game.onclick = function () {
+                        gameRedirect(doc.id);
+                    };
+                    document.getElementById("popular").appendChild(game);
+                });
+            });
+
         function gameRedirect(docid) {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
