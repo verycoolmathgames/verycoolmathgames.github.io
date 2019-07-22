@@ -52,10 +52,10 @@
 
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
-            
+
             var mode = urlParams.get("darkmode");
             if (mode == "dark") {
-                document.getElementByTagName("html").class = "dark";
+                document.getElementByTagName("html").appId = "dark";
             }
 
             var URLEmail = urlParams.get('email');
