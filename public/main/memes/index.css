@@ -118,17 +118,29 @@ img {
 }
 
 article {
+  margin-left: 2%;
   width: 82%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .column {
-  text-align: center;
+  height: 1200px;
   width: 100%;
+  text-align: center;
 }
-
+#new {
+  border-left:1px solid gray;
+  border-right:1px solid gray;
+}
 .game {
-  color: #000000;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  color: black;
+  width: 100%;
+  float: center;
+  margin-right: 2px;
+  text-align: left;
+  line-height: 40px;
+  font-size: 25px;
 }
