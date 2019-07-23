@@ -64,7 +64,7 @@ limitations under the License.
                                 var userDataEmails = emails.doc(username).data();
                                 var userDataUsers = users.doc(uid);
 
-                                userDataEmails.get(u.then(function (doc) {
+                                userDataEmails.get().then(function (doc) {
                                     if (!doc.exists) {
                                         userDataEmails.set({
                                             email: email,
