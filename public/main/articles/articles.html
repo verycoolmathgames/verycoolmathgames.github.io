@@ -105,49 +105,6 @@
             });
         });
 
-        Articles.orderBy("releaseDate").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                var title = doc.data().title.toString();
-                var articleRef = doc.data().articleRef.toString();
-                var upvotes = doc.data().upvotes.toString();
-                var releaseDate = doc.data().releaseDate.toString();
-
-                var outerDiv = document.createElement("div");
-                document.getElementById("new").appendChild(outerDiv);
-                outerDiv.id = "outer" + releaseDate;
-
-                var article = document.createElement("p");
-                article.innerHTML = title;
-                article.className = "article";
-                article.onclick = function () {
-                    memeRedirect(articleRef);
-                };
-                document.getElementById(outerDiv.id).appendChild(article);
-            });
-        });
-
-        Articles.orderBy("views").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                var title = doc.data().title.toString();
-                var memeDesc = doc.data().gameDesc.toString();
-                var articleRef = doc.data().articleRef.toString();
-                var upvotes = doc.data().upvotes.toString();
-                var releaseDate = doc.data().releaseDate.toString();
-
-                var outerDiv = document.createElement("div");
-                document.getElementById("popular").appendChild(outerDiv);
-                outerDiv.id = "outer" + views;
-
-                var article = document.createElement("p");
-                article.innerHTML = title;
-                article.className = "article";
-                article.onclick = function () {
-                    articleRedirect(articleRef);
-                };
-                document.getElementById(outerDiv.id).appendChild(article);
-            });
-        });
-
         function articleRedirect(ref) {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
