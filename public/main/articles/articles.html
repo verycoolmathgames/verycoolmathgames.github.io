@@ -108,7 +108,6 @@
         Articles.orderBy("releaseDate").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
-                var memeDesc = doc.data().gamDesc.toString();
                 var articleRef = doc.data().articleRef.toString();
                 var upvotes = doc.data().upvotes.toString();
                 var releaseDate = doc.data().releaseDate.toString();
