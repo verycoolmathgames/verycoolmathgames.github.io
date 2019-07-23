@@ -141,7 +141,7 @@
                 outerDiv.id = "outer" + title + "mostViewed";
 
                 var article = document.createElement("p");
-                article.innerHTML = title;
+                article.innerHTML = author + ": " + title;
                 article.className = "article";
                 article.onclick = function () {
                     articleRedirect(articleRef);
