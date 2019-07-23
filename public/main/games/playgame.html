@@ -69,8 +69,7 @@
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
             db.collection("gameSources").doc(game).get().then(function (doc) {
-                var displayName = doc.data().displayName;
-                return displayName;
+                var source 
             });
         };
 
@@ -185,7 +184,7 @@
     </header>
 
     <article id="allstuff">
-        
+
     </article>
     <br>
     <br>
