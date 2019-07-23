@@ -108,6 +108,7 @@
             var task = articleRef.put(article).then(function (snapshot) {
                 task.on('state_changed',
                     function complete() {
+                        console.log('Uploaded a blob or file!');
                         articleRedirect(title);
                     }
                 );
