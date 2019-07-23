@@ -20,7 +20,7 @@ body {
 }
 #allstuff {
   margin-left: 0%;
-  width
+  width: 82;
   display: flex;
   flex-direction: column;
 }
