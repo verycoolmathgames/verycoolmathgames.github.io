@@ -40,7 +40,6 @@
         db.enablePersistence();
 
         var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
-        var storageRef = storage.ref();
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
