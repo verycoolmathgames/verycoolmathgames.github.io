@@ -96,7 +96,7 @@ limitations under the License.
 
                                 firebase.auth().createUserWithEmailAndPassword(permemail, "password").then(function () {
                                     firebase.auth().signOut();
-                                    firebase.auth().signInWithEmailAndPassword(permemail, permpassword).catch(function (error) {
+                                    firebase.auth().signInWithEmailAndPassword(permemail, "password).catch(function (error) {
                                         var errorCode = error.code;
                                         var errorMessage = error.message;
                                         alert(errorMessage);
