@@ -131,7 +131,7 @@ limitations under the License.
                                 var userDataEmails = emails.doc(username);
                                 var userDataUsers = users.doc(uid);
 
-                                userDataEmails.get(username.toString()).then(function (doc) {
+                                userDataEmails.get().then(function (doc) {
                                     if (!doc.exists) {
                                         userDataEmails.set({
                                             email: email,
@@ -171,7 +171,7 @@ limitations under the License.
                     var email = error.email;
                     var credential = error.credential;
                     if (errorCode === 'auth/account-exists-with-different-credential') {
-                        alert('You have already signed up with a different authentication provider for that email.');
+                        alert('You have already signed up with a different method for that email. If you want to merge your Google account with an Email/Password account, go to the Account page.');
                     } else {
                         console.error(error);
                     }
