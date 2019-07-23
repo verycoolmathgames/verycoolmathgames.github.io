@@ -99,7 +99,7 @@
             var releaseDate = year + "/" + month + "/" + day;
 
             var fso = CreateObject("Scripting.FileSystemObject");
-            var s = fso.CreateTextFile("C:\test.txt", True);
+            var s = fso.CreateTextFile("", True);
             s.writeline();
             s.Close();
 
