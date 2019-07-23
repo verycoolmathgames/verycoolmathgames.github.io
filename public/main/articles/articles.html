@@ -96,7 +96,7 @@
                 outerDiv.id = "outer" + title + "mostLiked";
 
                 var article = document.createElement("p");
-                article.innerHTML = authortitle;
+                article.innerHTML = author + ":" title;
                 article.className = "article";
                 article.onclick = function () {
                     articleRedirect(articleRef);
