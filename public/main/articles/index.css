@@ -1,3 +1,9 @@
+.account {
+  padding-left: 37%;
+  color: #31a4e1ff;
+  background-color: aliceblue
+}
+
 .button{
   text-decoration: none;
   color: #000000;
@@ -16,10 +22,12 @@ body {
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px};
+  .text {font-size: 11px}
 }
 #text {
-  width: 88%;
+  margin-left: 0%;
+  margin-right: 95%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
