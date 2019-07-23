@@ -105,7 +105,7 @@
             var article = new Blob(textArr, { type: 'text/plain' });
             var articleRef = storage.ref('articles/' + title);
             
-            arti.putString(message).then(function (snapshot) {
+            articleRef.putString(message).then(function (snapshot) {
                 console.log('Uploaded a raw string!');
                 //articleRedirect(title);
             });
