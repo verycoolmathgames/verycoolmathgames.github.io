@@ -77,6 +77,11 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
+            if (URLPassword == "password") {
+                alert("You are not actually signed in right now, I will add functionality later.");
+            } else {
+                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
+            }
         };
 
         getdisplayName();
@@ -176,7 +181,7 @@
     </header>
 
     <h3>
-        
+
     </h3>
 
     <article>
