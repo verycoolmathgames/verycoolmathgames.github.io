@@ -94,7 +94,8 @@
             var fileButton = document.getElementById('fileUpload');
 
             fileButton.addEventListener('change', function(e)) {
-                var file = e.target.files
+                var file = e.target.files[0];
+                
             }
 
             Memes.add({
