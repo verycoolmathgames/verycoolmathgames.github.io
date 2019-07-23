@@ -89,7 +89,6 @@
         function uploadArticle() {
             var title = document.getElementById('title').value.toString();
             var text = document.getElementById('text').value.toString();
-            var textArr = Array[text];
             var tagsRaw = document.getElementById('tags').value.toString();
             var tags = tagsRaw.split(', ');
             
@@ -99,7 +98,7 @@
             var month = d.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
 
-            var myBlob = new Blob, { type: 'text/plain' });
+            var myBlob = new Blob(array[text], { type: 'text/plain' }); // the blob
 
             var article = "";
             var articleRef = storage.ref('articles/' + title);
