@@ -98,7 +98,7 @@
                 var article = document.createElement("p");
                 article.innerHTML = title;
                 article.className = "article";
-                meme.onclick = function () {
+                article.onclick = function () {
                     memeRedirect(memeRef);
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
