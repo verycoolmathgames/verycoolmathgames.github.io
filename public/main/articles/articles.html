@@ -100,7 +100,7 @@
             });
         });
 
-        Memes.orderBy("releaseDate").get().then((querySnapshot) => {
+        Article.orderBy("releaseDate").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var memeDesc = doc.data().gameDesc.toString();
