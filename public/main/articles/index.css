@@ -42,6 +42,7 @@ body {
   width: 95%;
   align-self: center;
   resize: none;
+  font-size: 24px;
 }
 #tags {
   border: 2px solid #36baff;
