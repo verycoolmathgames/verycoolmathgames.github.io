@@ -129,13 +129,13 @@
                 article.innerHTML = author + ": " + title;
                 article.className = "article";
                 article.onclick = function () {
-                    articleRedirect(title);
+                    articleRedirect(tit);
                 };
-                document.getElementById(outerDiv.id).appendChild(art;icle);
+                document.getElementById(outerDiv.id).appendChild(article);
             });
         });
 
-        Art;icles.orderBy("views").get().then((querySnapshot) => {
+        Articles.orderBy("views").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var likes = doc.data().likes.toString();
