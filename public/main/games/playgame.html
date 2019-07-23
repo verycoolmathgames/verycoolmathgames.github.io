@@ -68,7 +68,7 @@
             } else {
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
-            var gameSrc = db.collection("gameSources").doc();
+            var gameSrc = db.collection("gameSources").doc(game);
         };
 
         function email() {
