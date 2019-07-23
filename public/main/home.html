@@ -35,7 +35,7 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
         db.enablePersistence()
-        
+
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
@@ -57,6 +57,7 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
+            
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
         };
         function getdisplayName() {
