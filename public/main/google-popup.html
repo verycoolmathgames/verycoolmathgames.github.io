@@ -161,6 +161,24 @@ limitations under the License.
                                     }
                                 });
 
+                                irebase.auth().signInWithEmailAndPassword(email, password)
+                                    .then(function () {
+                                        firebase.auth().onAuthStateChanged(function (user) {
+                                            var username = document.getElementById('username').value.toString();
+                                            window.location.replace("home.html?email=" + email + "&username=" + username + "&password=" + password + "&mode=light");
+                                        });
+                                    })
+                                    .catch(function (error) {
+                                        var errorCode = error.code;
+                                        var errorMessage = error.message;
+                                        if (errorCode === 'auth/wrong-password') {
+                                            alert('Wrong password.');
+                                        } else {
+                                            alert(errorMessage);
+                                        }
+                                        console.log(error);
+                                    });
+
                                 window.location.replace("home.html?email=" + email + "&username=" + username + "&password=password" + "&mode=light");
                             });
                         }
