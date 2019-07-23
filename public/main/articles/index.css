@@ -30,6 +30,7 @@ body {
   align-items: center;
 }
 #title {
+  
   border: 2px solid #36baff;
   resize: none;
 }
