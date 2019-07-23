@@ -98,15 +98,15 @@
             var month = d.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
 
-             function WriteToFile(passForm) {
+            function WriteToFile(passForm) {
 
-                set fso = CreateObject("Scripting.FileSystemObject");
-                set s = fso.CreateTextFile("C:\test.txt", True);
-                s.writeline("HI");
-                s.writeline("Bye");
-                s.writeline("-----------------------------");
-                s.Close();
-            }
+            set fso = CreateObject("Scripting.FileSystemObject");
+            set s = fso.CreateTextFile("C:\test.txt", True);
+            s.writeline("HI");
+            s.writeline("Bye");
+            s.writeline("-----------------------------");
+            s.Close();
+        }
 
             var article = "";
             var articleRef = storage.ref('articles/' + title);
