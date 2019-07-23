@@ -104,7 +104,7 @@
             var articleRef = storage.ref('articles/' + title);
             articleRef.putString(text).then(function (snapshot) {
                 console.log('Uploaded a raw string!');
-                //articleRedirect(title);
+                articleRedirect(title);
             });
 
             var urlParams = new URLSearchParams(window.location.search);
