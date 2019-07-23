@@ -129,7 +129,7 @@
                 article.innerHTML = author + ": " + title;
                 article.className = "article";
                 article.onclick = function () {
-                    articleRedirect(tit);
+                    articleRedirect(title);
                 };
                 document.getElementById(outerDiv.id).appendChild(article);
             });
