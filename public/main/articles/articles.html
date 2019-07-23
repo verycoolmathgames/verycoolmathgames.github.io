@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" href="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg" type="image/x-icon">
+    <link rel="icon" href="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg"
+        type="image/x-icon">
 
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script defer="" src="https://code.getmdl.io/1.1.3/material.min.js"></script>
@@ -36,6 +37,7 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
         db.enablePersistence();
+        var Memes = db.collection("memes");
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
@@ -48,7 +50,7 @@
                 var URLPassword = urlParams.get('password').toString();
                 var mode = urlParams.get('mode').toString();
 
-                window.location.replace("../" + pagePath + "?email=" + URLEmail + "&username=" + username + "&password=" + URLPassword + "&mode=" + mode);
+                window.location.replace("../" + pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
             };
         };
 
@@ -62,24 +64,6 @@
                 document.getElementByTagName("html").id = "dark";
             }
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
-        };
-
-        function getdisplayName() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email');
-            var URLPassword = urlParams.get('password');
-            firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
-                var user = firebase.auth().currentUser;
-                var uid = user.uid;
-                var users = db.collection("users");
-
-                users.doc(uid).get().then(function (doc) {
-                    var displayName = doc.data().displayName;
-                    var displayName = doc.data().displayName.toString();
-                    var username = displayName.toString();
-                    return username;
-                });
-            });
         };
 
         function email() {
@@ -96,30 +80,80 @@
             return URLpassword;
         };
 
-        var Games = db.collection("games");
-        Games.orderBy("popularity").get().then((querySnapshot) => {
+        Memes.orderBy("upvotes").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                var name = doc.data().name.toString();
-                var gameDesc = doc.data().gameDesc.toString();
-                console.log(name.toString());
-                console.log(gameDesc.toString());
-                var game = document.createElement("p");
-                game.innerHTML = name + ": " + gameDesc;
-                game.className = "game";
-                game.onclick = function () {
-                    gameRedirect(doc.id);
+                var title = doc.data().title.toString();
+                var memeDesc = doc.data().gameDesc.toString();
+                var memeRef = doc.data().memeRef.toString();
+                var upvotes = doc.data().upvotes.toString();
+                var releaseDate = doc.data().releaseDate.toString();
+
+                var outerDiv = document.createElement("div");
+                document.getElementById("trending").appendChild(outerDiv);
+                outerDiv.id = "outer" + upvotes;
+
+                var meme = document.createElement("p");
+                meme.innerHTML = title;
+                game.className = "meme";
+                meme.onclick = function () {
+                    memeRedirect(memeRef);
                 };
-                document.getElementById("popular").appendChild(game);
+                document.getElementById(outerDiv.id).appendChild(meme);
             });
         });
 
-        function gameRedirect(docid) {
+        Memes.orderBy("releaseDate").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var title = doc.data().title.toString();
+                var memeDesc = doc.data().gameDesc.toString();
+                var memeRef = doc.data().memeRef.toString();
+                var upvotes = doc.data().upvotes.toString();
+                var releaseDate = doc.data().releaseDate.toString();
+
+                var outerDiv = document.createElement("div");
+                document.getElementById("new").appendChild(outerDiv);
+                outerDiv.id = "outer" + releaseDate;
+
+                var meme = document.createElement("p");
+                meme.innerHTML = title;
+                meme.className = "meme";
+                meme.onclick = function () {
+                    memeRedirect(memeRef);
+                };
+                document.getElementById(outerDiv.id).appendChild(meme);
+            });
+        });
+
+        Memes.orderBy("views").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var title = doc.data().title.toString();
+                var memeDesc = doc.data().gameDesc.toString();
+                var memeRef = doc.data().memeRef.toString();
+                var upvotes = doc.data().upvotes.toString();
+                var releaseDate = doc.data().releaseDate.toString();
+
+                var outerDiv = document.createElement("div");
+                document.getElementById("popular").appendChild(outerDiv);
+                outerDiv.id = "outer" + views;
+
+                var meme = document.createElement("p");
+                meme.innerHTML = title;
+                meme.className = "meme";
+                meme.onclick = function () {
+                    memeRedirect(memeRef);
+                };
+                document.getElementById(outerDiv.id).appendChild(meme);
+            });
+        });
+
+        function memeRedirect(ref) {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
             var URLUsername = urlParams.get('username').toString();
             var URLPassword = urlParams.get('password').toString();
+            var mode = urlParams.get('mode').toString();
 
-            window.location.replace("playgame.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&game=" + docid);
+            window.location.replace("viewmeme.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&meme_ref=" + ref);
         };
 
     </script>
@@ -157,79 +191,80 @@
 <body>
 
     <header>
-    
+
         <!--nav begin-->
         <nav>
-    
+
             <!--Beginning of Logo-->
             <a onclick="redirect('home.html')">
                 <img class="logolight" src="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg">
             </a>
             <!--End of Logo-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             <div class="dropdown">
                 <a class="dropbtn navelement" onclick="redirect('home.html')">Home</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             <div class="dropdown">
                 <a onclick="redirect('games/games.html')" class="dropbtn navelement">Games</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             <div class="dropdown">
                 <a onclick="redirect('memes/memes.html')" class="dropbtn navelement">Memes</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             </a>
             <div class="dropdown">
                 <a onclick="redirect('articles/articles.html')" class="dropbtn navelement">Articles</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             <div class="dropdown">
                 <a onclick="redirect('leaderboard/leaderboards.html')" class="dropbtn navelement">Leaderboard</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             <div class="dropdown">
                 <a class="dropbtn navelement" onclick="redirect('account.html')">Account</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
-    
+
             <!--Beginning of Dropdown-->
             <div class="dropdown">
                 <a class="dropbtn navelement" onclick="redirect('signout')">Sign Out</a>
             </div>
             <!--End of Dropdown-->
-    
+
         </nav>
         <!--nav end-->
-    
+
     </header>
 
     <article>
 
-        <div class="column" id="popular">
-            <h1></h1>
+        <div class="column" id="trending">
+            <h1>Trending</h1>
         </div>
 
 
-        <div class="column" id="">
+        <div class="column" id="new">
             <h1>Newest</h1>
         </div>
 
 
-        <div class="column">
-            <h1>Recommended</h1>
+        <div class="column" id="popular">
+            <h1>Popular</h1>
         </div>
+
 
     </article>
 
