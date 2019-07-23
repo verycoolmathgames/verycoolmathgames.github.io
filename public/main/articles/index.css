@@ -26,11 +26,11 @@ body {
   flex-direction: column;
 }
 #text {
-  border: 2px solid black;
+  border: 2px solid #36baff;
   resize: none;
 }
 #allstuff > button {
   width: 25%;
   align-content: center;
-  background-color: #31a4e1ff;
+  background-color: #00a7ff;
 }
