@@ -28,7 +28,7 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 #title {
-  
+  box-align: center;
   border: 2px solid #36baff;
   resize: none;
 }
