@@ -94,7 +94,8 @@ limitations under the License.
                                     }
                                 });
                             });
-                                                            firebase.auth().signOut();
+                            
+                            firebase.auth().signOut();
                             firebase.auth().createUserWithEmailAndPassword(email, "googleauthuser").then(function () {
                                 firebase.auth().signInWithEmailAndPassword(email, "googleauthuser").catch(function (error) {
                                     var errorCode = error.code;
