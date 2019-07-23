@@ -125,22 +125,25 @@ article {
   justify-content: space-around;
 }
 .column {
-  height: 1200px;
-  width: 100%;
-  text-align: center;
+    height: 1200px;
+    width: 100%;
+    text-align: center;
+    border-left: 2px solid #31a4e1ff;
+    border-right: 2px solid #31a4e1ff;
+    border-top: 5px solid #31a4e1ff;
 }
-#new {
-  border-left:1px solid gray;
-  border-right:1px solid gray;
-}
-.meme {
-  background-color: white;
-  border-bottom: 1px solid gray;
-  color: black;
-  width: 100%;
-  float: center;
-  margin-right: 2px;
-  text-align: left;
-  line-height: 40px;
-  font-size: 25px;
+.game {
+    border-top: 5px solid #31a4e1ff;
+    border-bottom: 5px solid #31a4e1ff;
+    border-left: 2px solid #31a4e1ff;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100%;
+    float: center;
+    margin-right: 2px;
+    margin-bottom: 5%;
+    text-align: left;
+    line-height: 50px;
+    font-size: 25px;
 }
