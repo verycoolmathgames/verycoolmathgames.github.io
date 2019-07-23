@@ -100,9 +100,8 @@
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
-            
+
             var articleRef = storage.ref('articles/' + title);
-            
             articleRef.putString(text).then(function (snapshot) {
                 console.log('Uploaded a raw string!');
                 //articleRedirect(title);
