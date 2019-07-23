@@ -70,7 +70,7 @@
             }
             db.collection("gameSources").doc(game).get().then(function (doc) {
                 var gameSrc = doc.data().gameSrc.toString();
-                document.getElementById("gameiframe").src
+                document.getElementById("gameiframe").src = 
             });
         };
 
