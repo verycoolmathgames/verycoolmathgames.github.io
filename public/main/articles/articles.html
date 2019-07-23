@@ -43,7 +43,13 @@
                 firebase.auth().signOut();
                 window.location.replace("https://verycoolmathgames.github.io");
             } else if (pagePath ==="writearticle.html") {
+                var urlParams = new URLSearchParams(window.location.search);
+                var URLEmail = urlParams.get('email').toString();
+                var URLUsername = urlParams.get('username').toString();
+                var URLPassword = urlParams.get('password').toString();
+                var mode = urlParams.get('mode').toString();
 
+                window.location.replace("../" + pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
             } else {
                 var urlParams = new URLSearchParams(window.location.search);
                 var URLEmail = urlParams.get('email').toString();
