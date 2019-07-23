@@ -99,20 +99,7 @@
 
             var submit = document.getElementById('submit');
 
-            submit.addEventListener('click', function (e) {
-                var file = e.target.files[0];
-                var articles = storage.ref('articles/' + title);
-                var task = articles.put(file);
-                task.on('state_changed',
-                    function progress(snapshot) {
-                        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                        uploader.value = percentage;
-                    },
-                    function complete() {
-                        articleRedirect(articleId);
-                    }
-                );
-            });
+            submit.addEventListener('click', 
 
             articles.add({
                 title: title,
