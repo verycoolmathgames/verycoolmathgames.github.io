@@ -128,26 +128,26 @@
         });
 
         Articles.orderBy("likes").get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    var title = doc.data().title.toString();
-                    var articleRef = doc.data().articleRef.toString();
-                    var likes = doc.data().likes.toString();
-                    var releaseDate = doc.data().releaseDate.toString();
-                    var author = doc.data().author.toString();
+            querySnapshot.forEach((doc) => {
+                var title = doc.data().title.toString();
+                var articleRef = doc.data().articleRef.toString();
+                var likes = doc.data().likes.toString();
+                var releaseDate = doc.data().releaseDate.toString();
+                var author = doc.data().author.toString();
 
-                    var outerDiv = document.createElement("div");
-                    document.getElementById("mostLiked").appendChild(outerDiv);
-                    outerDiv.id = "outer" + title + "mostLiked";
+                var outerDiv = document.createElement("div");
+                document.getElementById("mostLiked").appendChild(outerDiv);
+                outerDiv.id = "outer" + title + "mostLiked";
 
-                    var article = document.createElement("p");
-                    article.innerHTML = title;
-                    article.className = "article";
-                    article.onclick = function () {
-                        articleRedirect(articleRef);
-                    };
-                    document.getElementById(outerDiv.id).appendChild(article);
-                });
+                var article = document.createElement("p");
+                article.innerHTML = title;
+                article.className = "article";
+                article.onclick = function () {
+                    articleRedirect(articleRef);
+                };
+                document.getElementById(outerDiv.id).appendChild(article);
             });
+        });
 
         function articleRedirect(ref) {
             var urlParams = new URLSearchParams(window.location.search);
