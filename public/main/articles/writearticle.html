@@ -100,7 +100,7 @@
 
             var file = "";
             
-            var article = storage.ref('articles/' + title);
+            var articleRef = storage.ref('articles/' + title);
             article.put(file);
 
             articles.add({
