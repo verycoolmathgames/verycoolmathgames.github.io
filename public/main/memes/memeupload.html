@@ -99,7 +99,7 @@
                 uploaderMame: URLUsername
             });
             var file = "";
-            var storageRef = storage.ref();
+            var storageRef = storage.ref('memes/');
             var memeRef = storageRef.child(title);
             var memesRef = storageRef.child('memes/' + title);
             var uploadTask = storageRef.child('images/mountains.jpg').put(file);
