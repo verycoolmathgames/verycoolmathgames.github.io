@@ -102,12 +102,12 @@
             var article = new Blob(textArr, { type: 'text/plain' });
             var articleRef = storage.ref('articles/' + title);
             
-            var task = articleRef.put(article);
-            task.on('state_changed',
-                function complete() {
-                    articleRedirect(title);
-                }
-            );
+            // var task = articleRef.put(article);
+            // task.on('state_changed',
+            //     function complete() {
+            //         articleRedirect(title);
+            //     }
+            // );
 
             articles.add({
                 title: title,
