@@ -19,7 +19,7 @@ body {
   .text {font-size: 11px}
 }
 #text {
-  margin-left: 0%;
+  margin-left: 2%;
   margin-right: 95%;
   width: 100%;
   display: flex;
