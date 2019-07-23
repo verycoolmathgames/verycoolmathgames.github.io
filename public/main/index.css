@@ -21,3 +21,23 @@ body {
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+/* Class for Announcements */
+.pink {
+  position: relative;
+  top: 4000;
+  left: 20;
+  width: 20%;
+  height: 2000px;
+  background-color: light-gray;
+  color: white;
+}
+.chatextreme {
+  position: fixed;
+  top: 100;
+  right:0;
+}
+.abc{
+	position: relative;
+	height: 1500px;
+}
