@@ -20,6 +20,7 @@ body {
 }
 #allstuff {
   margin-left: 0%;
+  width
   display: flex;
   flex-direction: column;
 }
