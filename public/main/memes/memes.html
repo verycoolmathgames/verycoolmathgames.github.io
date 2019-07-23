@@ -130,7 +130,7 @@
         Memes.orderBy("views").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
-                var memeDesc = doc.data().gameDesc.toString();
+                var memeDesc = doc.data().memeDesc.toString();
                 var memeRef = doc.data().memeRef.toString();
                 var upvotes = doc.data().upvotes.toString();
                 var releaseDate = doc.data().releaseDate.toString();
