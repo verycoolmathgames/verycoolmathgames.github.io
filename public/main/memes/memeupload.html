@@ -99,7 +99,7 @@
                 var memes = storage.ref('memes/' + title);
                 var task = memes.put(file);
 
-                task.on('state')
+                task.on('state_changed')
             });
 
             Memes.add({
