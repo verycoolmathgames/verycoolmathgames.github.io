@@ -99,8 +99,8 @@
             var releaseDate = year+"/"+month+"/"+day;
 
             var article = "";
-            
             var articleRef = storage.ref('articles/' + title);
+
             var task = articleRef.put(article);
             task.on('state_changed',
                 function complete() {
