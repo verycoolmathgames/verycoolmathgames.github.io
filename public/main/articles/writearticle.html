@@ -99,8 +99,7 @@
             var month = d.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
 
-            var myBlob = new Blob(textArr, { type: 'text/plain' });
-
+            var article = new Blob(textArr, { type: 'text/plain' });
             var articleRef = storage.ref('articles/' + title);
 
             var task = articleRef.put(article);
