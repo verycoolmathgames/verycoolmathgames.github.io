@@ -35,7 +35,7 @@
       font-weight: bold;
       font-size: 16px;
       margin: 0 0 8px;
-    }
+    } 
 
     #message h1 {
       font-size: 22px;
