@@ -69,7 +69,8 @@
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
             db.collection("gameSources").doc(game).get().then(function (doc) {
-                var gameSrc = doc.data().s
+                var gameSrc = doc.data().gameSrc.toString();
+                
             });
         };
 
