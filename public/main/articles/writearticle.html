@@ -92,7 +92,8 @@
             var tagsRaw = document.getElementById('tags').value.toString();
             var tags = tagsRaw.split(', ');
             var today = new Date();
-            var day = String(today.getDate()).padStart(2, '0');
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d.getMonth() + 1;
             var month = String(today.getMonth() + 1).padStart(2, '0');
             var year = today.getFullYear();
             var releaseDate = mm + '/' + dd + '/' + yyyy;
