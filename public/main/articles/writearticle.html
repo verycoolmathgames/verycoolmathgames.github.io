@@ -93,7 +93,7 @@
             var tags = tagsRaw.split(', ');
             var releaseDate = doc.data().releaseDate.toString();
 
-            var memes = storage.ref('articles/' + title);
+            var articles = storage.ref('articles/' + title);
 
             articles.add({
                 title: title,
