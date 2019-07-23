@@ -101,6 +101,7 @@
             var storageRef = storage.ref();
             var memeRef = storageRef.child(title);
             var memesRef = storageRef.child('memes/' + title);
+            var uploadTask = storageRef.child('images/mountains.jpg').put(file);
         };
 
     </script>
