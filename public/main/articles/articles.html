@@ -86,7 +86,7 @@
         Articles.orderBy("likes").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
-                var articleDesc = doc.data().gameDesc.toString();
+                var articleDesc = doc.data().articleDesc.toString();
                 var articleRef = doc.data().memeRef.toString();
                 var upvotes = doc.data().upvotes.toString();
                 var releaseDate = doc.data().releaseDate.toString();
