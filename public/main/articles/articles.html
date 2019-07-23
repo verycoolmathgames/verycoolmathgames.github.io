@@ -117,13 +117,13 @@
                 document.getElementById("new").appendChild(outerDiv);
                 outerDiv.id = "outer" + releaseDate;
 
-                var meme = document.createElement("p");
-                meme.innerHTML = title;
-                meme.className = "meme";
-                meme.onclick = function () {
+                var article = document.createElement("p");
+                article.innerHTML = title;
+                article.className = "article";
+                article.onclick = function () {
                     memeRedirect(memeRef);
                 };
-                document.getElementById(outerDiv.id).appendChild(meme);
+                document.getElementById(outerDiv.id).appendChild(article);
             });
         });
 
@@ -139,13 +139,13 @@
                 document.getElementById("popular").appendChild(outerDiv);
                 outerDiv.id = "outer" + views;
 
-                var meme = document.createElement("p");
-                meme.innerHTML = title;
-                meme.className = "meme";
-                meme.onclick = function () {
+                var article = document.createElement("p");
+                article.innerHTML = title;
+                article.className = "article";
+                article.onclick = function () {
                     memeRedirect(memeRef);
                 };
-                document.getElementById(outerDiv.id).appendChild(meme);
+                document.getElementById(outerDiv.id).appendChild(article);
             });
         });
 
