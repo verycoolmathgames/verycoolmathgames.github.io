@@ -99,7 +99,7 @@
 
             var submit = document.getElementById('submit');
 
-            fileButton.addEventListener('change', function (e) {
+            submit.addEventListener('change', function (e) {
                 var file = e.target.files[0];
                 var articles = storage.ref('articles/' + title);
                 var task = articles.put(file);
