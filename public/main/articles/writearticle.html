@@ -91,8 +91,7 @@
             var text = document.getElementById('text').value.toString();
             var tagsRaw = document.getElementById('tags').value.toString();
             var tags = tagsRaw.split(', ');
-            var updateTimestamp = 
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            var updateTimestamp = timestamp: firebase.firestore.FieldValue.serverTimestamp()
             
 
             var article = storage.ref('articles/' + title);
