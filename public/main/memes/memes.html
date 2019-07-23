@@ -49,7 +49,7 @@
                 var URLPassword = urlParams.get('password').toString();
                 var mode = urlParams.get('mode').toString();
 
-                window.location.replace("../" + pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
+                window.location.replace("?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
             } else {
                 var urlParams = new URLSearchParams(window.location.search);
                 var URLEmail = urlParams.get('email').toString();
