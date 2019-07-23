@@ -122,7 +122,7 @@
             });
         });
 
-        Memes.orderBy("views").get().then((querySnapshot) => {
+        Articles.orderBy("views").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var memeDesc = doc.data().gameDesc.toString();
