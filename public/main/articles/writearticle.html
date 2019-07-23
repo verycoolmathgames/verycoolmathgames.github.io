@@ -93,7 +93,7 @@
             var tags = tagsRaw.split(', ');
             var updateTimestamp = docRef.update({
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            });
+            
 
             var article = storage.ref('articles/' + title);
 
