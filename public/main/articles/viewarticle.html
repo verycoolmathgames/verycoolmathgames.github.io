@@ -36,7 +36,7 @@
 
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
-        var Memes = db.collection("memes");
+        var articles = db.collection("articles");
         db.enablePersistence();
 
         var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
@@ -88,37 +88,37 @@
 
         // article properties
         var title = doc.data().title.toString();
-        var memeDesc = doc.data().gameDesc.toString();
-        var memeRef = doc.data().memeRef.toString();
+        var articleDesc = doc.data().gameDesc.toString();
+        var articleRef = doc.data().articleRef.toString();
         var upvotes = doc.data().upvotes.toString();
         var releaseDate = doc.data().releaseDate.toString();
 
-        function uploadMeme() {
+        function uploadarticle() {
             var title = document.getElementById('title').value.toString();
             var description = document.getElementById('description').value.toString();
-            var memeId = URLUsername + "_" + title;
+            var articleId = URLUsername + "_" + title;
 
             var uploader = document.getElementById('progressBar');
             var fileButton = document.getElementById('fileUpload');
 
             fileButton.addEventListener('change', function (e) {
                 var file = e.target.files[0];
-                var memes = storage.ref('memes/' + title);
-                var task = memes.put(file);
+                var articles = storage.ref('articles/' + title);
+                var task = articles.put(file);
                 task.on('state_changed',
                     function progress(snapshot) {
                         var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                         uploader.value = percentage;
                     },
                     function complete() {
-                        memeRedirect(memeId);
+                        articleRedirect(articleId);
                     }
                 );
             });
 
-            Memes.add({
+            articles.add({
                 title: title,
-                id: memeId,
+                id: articleId,
                 description: description,
                 uploaderMame: URLUsername,
                 upvotes: 1,
@@ -126,14 +126,14 @@
             });
         };
 
-        function memeRedirect(memeId) {
+        function articleRedirect(articleId) {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
             var URLUsername = urlParams.get('username').toString();
             var URLPassword = urlParams.get('password').toString();
             var mode = urlParams.get('mode').toString();
 
-            window.location.replace("viewmeme.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&article=" + memeId);
+            window.location.replace("viewarticle.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&article=" + articleId);
         };
 
     </script>
@@ -204,7 +204,7 @@
 
             <!--Beginning of Dropdown-->
             <div class="dropdown">
-                <a onclick="redirect('memes/memes.html')" class="dropbtn navelement">Memes</a>
+                <a onclick="redirect('articles/articles.html')" class="dropbtn navelement">articles</a>
             </div>
             <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
 
