@@ -92,6 +92,9 @@
         var releaseDate = doc.data().releaseDate.toString();
         */
 
+        var submit = document.getElementById('submit');
+            submit.addEventListener('click', submitArticle, false);
+
         function uploadArticle() {
             var title = document.getElementById('title').value.toString();
             var articleId = URLUsername + "_" + title;
