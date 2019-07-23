@@ -33,10 +33,10 @@
             appId: "1:78626384450:web:5c1a5470485502ab"
         });
 
-        firebase.firestore().enablePersistence();
 
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
+            firebase.firestore().enablePersistence();
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
