@@ -40,6 +40,7 @@ body {
   width: 95%;
   align-self: center;
   resize: none;
+  height: ;
 }
 #tags {
   border: 2px solid #36baff;
