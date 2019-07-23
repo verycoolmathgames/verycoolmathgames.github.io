@@ -123,7 +123,12 @@
         };
 
         function memeRedirect(memeId) {
-            
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            var URLUsername = urlParams.get('username').toString();
+            var URLPassword = urlParams.get('password').toString();
+
+            window.location.replace("playgame.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&game=" + docid);
         };
 
     </script>
