@@ -94,39 +94,6 @@
         var releaseDate = doc.data().releaseDate.toString();
         */
 
-        function uploadarticle() {
-            var title = document.getElementById('title').value.toString();
-            var description = document.getElementById('description').value.toString();
-            var articleId = URLUsername + "_" + title;
-
-            var uploader = document.getElementById('progressBar');
-            var fileButton = document.getElementById('fileUpload');
-
-            fileButton.addEventListener('change', function (e) {
-                var file = e.target.files[0];
-                var articles = storage.ref('articles/' + title);
-                var task = articles.put(file);
-                task.on('state_changed',
-                    function progress(snapshot) {
-                        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                        uploader.value = percentage;
-                    },
-                    function complete() {
-                        articleRedirect(articleId);
-                    }
-                );
-            });
-
-            articles.add({
-                title: title,
-                id: articleId,
-                description: description,
-                uploaderName: URLUsername,
-                upvotes: 1,
-                views: 1
-            });
-        };
-
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
