@@ -33,6 +33,7 @@ body {
   resize: none;
 }
 #tags {
+  border: 2px solid #36baff;
 
 }
 #allstuff > button {
