@@ -97,10 +97,8 @@
             var fileButton = document.getElementById('fileUpload');
             fileButton.addEventListener('change', function(e) {
                 var file = e.target.files[0];
-
                 var memes = storage.ref('memes/' + title);
                 var task = memes.put(file);
-
                 task.on('state_changed',
 
                     function progress(snapshot) {
