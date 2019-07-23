@@ -72,6 +72,10 @@
                 document.getElementByTagName("html").id = "dark";
             }
             firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
+            setTimeout(function () {
+
+                document.getElementById("2").src = " https://ickyalphanumericwebpages--roycea.repl.co/?uname=" + username + "&rname=Website&enSubmit=Enter";
+            }, 3000);
         };
 
         function getdisplayName() {
