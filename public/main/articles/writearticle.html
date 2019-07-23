@@ -99,12 +99,12 @@
             var releaseDate = year+"/"+month+"/"+day;
             
             var article = storage.ref('articles/' + title);
-            
+
             articles.add({
                 title: title,
                 tags: tags,
                 uploaderName: URLUsername,
-                releaseDate = releaseDate,
+                releaseDate: releaseDate,
                 upvotes: 1,
                 views: 1
             });
