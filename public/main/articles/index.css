@@ -34,7 +34,7 @@ body {
   resize: none;
   width: 40%;
   text-align: center;
-  height: 15;
+  height: 15px;
 }
 #text {
   border: 2px solid #36baff;
