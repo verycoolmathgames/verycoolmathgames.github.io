@@ -42,7 +42,11 @@
             if (pagePath === "signout") {
                 firebase.auth().signOut();
                 window.location.replace("https://verycoolmathgames.github.io");
-            } else {
+            } else if {
+                if(pagePath === "signout") {
+                firebase.auth().signOut();
+                window.location.replace("https://verycoolmathgames.github.io");
+            }else {
                 var urlParams = new URLSearchParams(window.location.search);
                 var URLEmail = urlParams.get('email').toString();
                 var URLUsername = urlParams.get('username').toString();
