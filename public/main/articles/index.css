@@ -80,7 +80,7 @@ article {
   height: 35px;
   font-size: 15px;
 }
-#allstuff > a {
+#allstuff > button {
   width: 25%;
   height: 45px;
   font-size: 25px;
