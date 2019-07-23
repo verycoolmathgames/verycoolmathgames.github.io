@@ -104,7 +104,7 @@ limitations under the License.
                     var email = error.email;
                     var credential = error.credential;
                     if (errorCode === 'auth/account-exists-with-different-credential') {
-                        alert('You have already signed up with a different authentication provider for that email.');
+                        alert('You have already signed up with a different method for that email.');
                     } else {
                         console.error(error);
                     }
