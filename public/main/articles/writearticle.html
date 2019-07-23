@@ -99,7 +99,7 @@
             var releaseDate = year + "/" + month + "/" + day;
 
             var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-            var oMyBlob = new Blob(aFileParts, { type: 'text/html' }); // the blob
+            var myBlob = new Blob(aFileParts, { type: 'text/html' }); // the blob
 
             var article = "";
             var articleRef = storage.ref('articles/' + title);
