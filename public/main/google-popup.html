@@ -146,7 +146,7 @@ limitations under the License.
                                     }
                                 });
 
-                                userDataUsers.get(uid).then(function (doc) {
+                                userDataUsers.get().then(function (doc) {
                                     if (!doc.exists) {
                                         userDataUsers.set({
                                             displayName: username,
