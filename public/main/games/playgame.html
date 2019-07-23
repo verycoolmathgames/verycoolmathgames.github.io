@@ -58,9 +58,10 @@
 
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email');
-            var URLPassword = urlParams.get('password');
-            var mode = urlParams.get("darkmode");
+            var URLEmail = urlParams.get('email').toString();
+            var URLUsername = urlParams.get('username').toString();
+            var URLPassword = urlParams.get('password').toString();
+            var mode = urlParams.get('mode').toString();
             var game = urlParams.get('game');
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
@@ -70,7 +71,7 @@
             } else {
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
-            
+
         };
 
         function email() {
