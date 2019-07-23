@@ -25,7 +25,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-""
+#title {
+  
+}
 #text {
   border: 2px solid #36baff;
   resize: none;
