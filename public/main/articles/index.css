@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 #title {
-  margin-left: 38
+  margin-left: 38%;
   border: 2px solid #36baff;
   resize: none;
 }
