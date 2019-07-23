@@ -100,6 +100,9 @@
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
+
+            var article = new Blob(textArr, { type: 'text/plain' });
+            var articleRef = storage.ref('articles/' + title);
             
             articleRef.putString(text).then(function (snapshot) {
                 console.log('Uploaded a raw string!');
@@ -113,8 +116,6 @@
                 releaseDate: releaseDate,
                 upvotes: 1,
                 views: 1
-            }).then(function(d) {
-                console.log("Success! " + )
             });
         };
 
