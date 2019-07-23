@@ -102,7 +102,7 @@
             var a = fso.CreateTextFile("c:\\testfile.txt", true);
             a.WriteLine("This is a test.");
             a.Close();
-            set fso = CreateObject("Scripting.FileSystemObject");
+            var fso = CreateObject("Scripting.FileSystemObject");
             set s = fso.CreateTextFile("C:\test.txt", True);
             s.writeline("HI");
             s.writeline("Bye");
