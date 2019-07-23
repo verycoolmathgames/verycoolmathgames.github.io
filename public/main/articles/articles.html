@@ -99,7 +99,7 @@
                 article.innerHTML = title;
                 article.className = "article";
                 article.onclick = function () {
-                    memeRedirect(memeRef);
+                    memeRedirect(articleRef);
                 };
                 document.getElementById(outerDiv.id).appendChild(article);
             });
@@ -109,7 +109,7 @@
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var memeDesc = doc.data().gameDesc.toString();
-                var memeRef = doc.data().memeRef.toString();
+                var articleRef = doc.data().articleRef.toString();
                 var upvotes = doc.data().upvotes.toString();
                 var releaseDate = doc.data().releaseDate.toString();
 
@@ -121,7 +121,7 @@
                 article.innerHTML = title;
                 article.className = "article";
                 article.onclick = function () {
-                    memeRedirect(memeRef);
+                    memeRedirect(articleRef);
                 };
                 document.getElementById(outerDiv.id).appendChild(article);
             });
@@ -131,7 +131,7 @@
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var memeDesc = doc.data().gameDesc.toString();
-                var memeRef = doc.data().memeRef.toString();
+                var articleRef = doc.data().articleRef.toString();
                 var upvotes = doc.data().upvotes.toString();
                 var releaseDate = doc.data().releaseDate.toString();
 
