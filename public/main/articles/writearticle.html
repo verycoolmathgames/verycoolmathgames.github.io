@@ -101,7 +101,7 @@
             var article = "";
             
             var articleRef = storage.ref('articles/' + title);
-            articleRef.put(article);
+            var task = articleRef.put(article);
 
             articles.add({
                 title: title,
