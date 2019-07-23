@@ -58,9 +58,9 @@
                 document.getElementByTagName("html").id = "dark";
             }
             if (URLPassword == "password") {
-
+                firebase.auth().
             } else{
-            firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
+                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
         };
         function getdisplayName() {
