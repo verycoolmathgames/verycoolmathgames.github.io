@@ -103,7 +103,7 @@
                 task.on('state_changed',
 
                     function progress(snapshot) {
-                        var percentage = snapshot.bytesTransferred / snapshot.totalByts;
+                        var percentage = snapshot.bytesTransferred / snapshot.totalBytes;
                     },
 
                     function error(err) {
