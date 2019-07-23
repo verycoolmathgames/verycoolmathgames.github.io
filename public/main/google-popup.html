@@ -98,7 +98,7 @@ limitations under the License.
                                 .then(function () {
                                     firebase.auth().onAuthStateChanged(function (user) {
                                         var username = document.getElementById('username').value.toString();
-                                        window.location.replace("home.html?email=" + email + "&username=" + username + "&password=" + "&mode=light");
+                                        window.location.replace("home.html?email=" + email + "&username=" + username + "&password=password" + "&mode=light");
                                     });
                                 })
                                 .catch(function (error) {
