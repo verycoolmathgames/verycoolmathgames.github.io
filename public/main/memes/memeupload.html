@@ -105,11 +105,9 @@
                         var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                         uploader.value = percentage;
                     },
-
                     function complete() {
                         memeRedirect(memeId);
                     }
-
                 );
             });
 
