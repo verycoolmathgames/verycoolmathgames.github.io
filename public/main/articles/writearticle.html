@@ -103,9 +103,7 @@
             a.WriteLine("This is a test.");
             a.Close();
             set fso = CreateObject("Scripting.FileSystemObject");
-            05
             set s = fso.CreateTextFile("C:\test.txt", True);
-            06
             s.writeline("HI");
             s.writeline("Bye");
             s.writeline("-----------------------------");
