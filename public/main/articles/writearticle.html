@@ -104,7 +104,7 @@
             var task = articleRef.put(article);
             task.on('state_changed',
                 function complete() {
-                    articleRedirect(articleId);
+                    articleRedirect(title);
                 }
             );
 
