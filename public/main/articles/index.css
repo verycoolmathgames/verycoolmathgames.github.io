@@ -28,7 +28,6 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 #title {
-  padding-right: 50%;
   border: 2px solid #36baff;
   resize: none;
 }
