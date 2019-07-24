@@ -102,30 +102,6 @@
         });
 
         function uploadMeme() {
-            var title = document.getElementById('title').value.toString();
-            var description = document.getElementById('description').value.toString();
-            var memeId = URLUsername + "_" + title;
-
-            var date = new Date();
-            var day = date.getDate();
-            var year = date.getFullYear();
-            var month = date.getMonth() + 1;
-            var releaseDate = year + "/" + month + "/" + day;
-
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLUsername = urlParams.get('username').toString();
-
-            Memes.add({
-                title: title,
-                id: memeId,
-                releaseDate: releaseDate,
-                description: description,
-                uploaderName: URLUsername,
-                upvotes: 1,
-                views: 1
-            }).then(function () {
-                memeRedirect(memeId);
-            });
         };
 
         function memeRedirect(memeId) {
