@@ -41,7 +41,7 @@
         // var username = user.displayName;
         console.log(user);
         console.log(firebase.auth().currentUser);
-        console.log(username);
+        // console.log(username);
         
         var users = db.collection("users");
         var displayName = users.doc(uid).get().data().displayName;
