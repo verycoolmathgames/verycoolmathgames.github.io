@@ -219,7 +219,7 @@ article {
   background-color: #00a7ff;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-#allstuf > .hidden {
+/* #allstuf > .hidden {
   opacity: 0;
   cursor: pointer;
   right: 0;
@@ -242,7 +242,7 @@ article {
   text-align:center;
   float:center;
   cursor:pointer;
-}
+} */
 #hide input[type=file] {
 display:none;
 margin:10px;
