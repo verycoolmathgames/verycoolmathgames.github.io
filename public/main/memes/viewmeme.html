@@ -46,7 +46,7 @@
         var urlParams = new URLSearchParams(window.location.search);
         var memeid = urlParams.get('meme_ref')
 
-        var pathReference = storage.ref('images/' + id);
+        var pathReference = storage.ref('images/' + memeid);
 
         var title = document.getElementById('title');
 
