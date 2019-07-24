@@ -3,17 +3,21 @@
   color: #000000;
   font-family: courier;
 }
+
 .chat {
   position: fixed;
   top: 0;
   right:0;
 }
+
 *{
   box-sizing: border-box;
 }
+
 body {
   font-family: Verdana, sans-serif;
 }
+
 article {
   margin-left: 2%;
   width: 82%;
@@ -22,27 +26,27 @@ article {
   justify-content: space-around;
 }
 .column {
-  height: 1200px;
-  width: 100%;
-  text-align: center;
-  border-left: 2px solid #31a4e1ff;
-  border-right: 2px solid #31a4e1ff;
-  border-top: 5px solid #31a4e1ff;
+    height: 1200px;
+    width: 100%;
+    text-align: center;
+    border-left: 2px solid #31a4e1ff;
+    border-right: 2px solid #31a4e1ff;
+    border-top: 5px solid #31a4e1ff;
 }
 .meme {
-  border-top: 5px solid #31a4e1ff;
-  border-bottom: 5px solid #31a4e1ff;
-  border-left: 2px solid #31a4e1ff;
-  background-color: white;
-  color: black;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  width: 100%;
-  float: center;
-  margin-right: 2px;
-  margin-bottom: 5%;
-  text-align: left;
-  line-height: 50px;
-  font-size: 25px;
+    border-top: 5px solid #31a4e1ff;
+    border-bottom: 5px solid #31a4e1ff;
+    border-left: 2px solid #31a4e1ff;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100%;
+    float: center;
+    margin-right: 2px;
+    margin-bottom: 5%;
+    text-align: left;
+    line-height: 50px;
+    font-size: 25px;
 }
 article {
   margin-left: 2%;
