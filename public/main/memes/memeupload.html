@@ -104,6 +104,9 @@
         function uploadMeme() {
             var title = document.getElementById('title').value.toString();
             var description = document.getElementById('description').value.toString();
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLUsername = urlParams.get('username').toString();
             var memeId = URLUsername + "_" + title;
 
             var date = new Date();
