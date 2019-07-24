@@ -90,17 +90,6 @@
         var fileButton = document.getElementById('fileUpload');
         var title = document.getElementById('title').value.toString();
 
-        fileButton.addEventListener('change', function (e) {
-            var file = e.target.files[0];
-            var memes = storage.ref('memes/' + title);
-            var task = memes.put(file);
-            task.on('state_changed',
-                function progress(snapshot) {
-                    uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                }
-            );
-        });
-
         function memeRedirect(memeId) {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email').toString();
