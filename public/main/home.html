@@ -23,7 +23,6 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
 
     <script>
-
         firebase.initializeApp({
             apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
             authDomain: "verycoolthanksforsharing.firebaseapp.com",
@@ -33,29 +32,66 @@
             messagingSenderId: "78626384450",
             appId: "1:78626384450:web:5c1a5470485502ab"
         });
-
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
-
+        db.enablePersistence()
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
                 window.location.replace("https://verycoolmathgames.github.io");
             } else {
                 var urlParams = new URLSearchParams(window.location.search);
+                var URLEmail = urlParams.get('email').toString();
+                var URLUsername = urlParams.get('username').toString();
+                var URLPassword = urlParams.get('password').toString();
                 var mode = urlParams.get('mode').toString();
-                window.location.replace(pagePath + "&mode=" + mode);
-            }
+                window.location.replace(pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
+            };
         };
-
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
             var mode = urlParams.get("darkmode");
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
+            if (URLPassword == "password") {
+                alert("You are not actually signed in right now, I will add functionality later.");
+            } else {
+                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
+            }
         };
-
+        function getdisplayName() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
+            if (URLPassword == "password") {
+                alert("You are not actually signed in right now, I will add functionality later.");
+            } else {
+                firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+                    var user = firebase.auth().currentUser;
+                    var uid = user.uid;
+                    var users = db.collection("users");
+                    users.doc(uid).get().then(function (doc) {
+                        var displayName = doc.data().displayName;
+                        var displayName = doc.data().displayName.toString();
+                        var username = displayName.toString();
+                        return username;
+                    });
+                });
+            }
+        };
+        function email() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            return URLEmail;
+        };
+        function password() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLPassword = urlParams.get('password').toString();
+            return URLpassword;
+        };
         var Announcements = db.collection("announcements").orderBy("number", "desc").limit(10);
         Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
@@ -68,7 +104,6 @@
                 document.getElementById("announcements").appendChild(announcement);
             });
         });
-
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
