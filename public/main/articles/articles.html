@@ -130,6 +130,7 @@
                 article.className = "article";
                 article.onclick = function () {
                     articleRedirect(title);
+                    return doc.update("views", firebase.firestore.FieldValue.increment(1));
                 };
                 document.getElementById(outerDiv.id).appendChild(article);
             });
