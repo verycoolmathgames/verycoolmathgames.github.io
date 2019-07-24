@@ -47,7 +47,7 @@
             var memeRef = storage.ref('images/' + memeid);
 
             var title = document.getElementById('title');
-            var meme
+            var meme = Memes.where("id", "==", memeid);
             title.value = Memes.where("id", "==", memeid);
         }
 
