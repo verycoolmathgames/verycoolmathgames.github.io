@@ -39,6 +39,8 @@
         var db = firebase.firestore();
 
         
+            var urlParams = new URLSearchParams(window.location.search);
+            var mode = urlParams.get('mode').toString();
 
         var uid = user.uid;
         var username = user.displayName;
