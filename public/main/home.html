@@ -56,18 +56,6 @@
             }
         };
 
-            firebase.auth().signInWithEmailAndPassword(user.email, user.password).then(function () {
-                var user = firebase.auth().currentUser;
-                var uid = user.uid;
-                var users = db.collection("users");
-                users.doc(uid).get().then(function (doc) {
-                    var displayName = doc.data().displayName;
-                    var displayName = doc.data().displayName.toString();
-                    var username = displayName.toString();
-                    return username;
-                });
-            });
-
         var Announcements = db.collection("announcements").orderBy("number", "desc").limit(10);
         Announcements.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
