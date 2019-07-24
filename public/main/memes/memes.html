@@ -90,7 +90,7 @@
             });
         });
 
-        Memes.orderBy("releaseDate").get().then((querySnapshot) => {
+        Memes.orderBy("releaseDate", "desc").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var memeDesc = doc.data().description.toString();
