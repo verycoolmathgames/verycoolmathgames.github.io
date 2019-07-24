@@ -223,6 +223,7 @@ article {
   width: 263px;
 }
 .uploadContainer {
+  background: transparent url(http://i.stack.imgur.com/BT5AB.png);
 }
 .uploadContainer input {
   opacity: 0;
