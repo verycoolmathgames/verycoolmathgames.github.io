@@ -63,7 +63,7 @@ body {
 #back {
   justify-content: left;
   background-color:aliceblue;
-  border: 1px solid #8cd4fc;
+  border: 1px solid #dae7ee;
   border-radius: 3px;
 }
 #back:hover {
