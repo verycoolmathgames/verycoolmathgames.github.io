@@ -87,7 +87,25 @@
         };
 
         window.onload = {
-            
+            var uploader = document.getElementById('progressBar');
+            var fileButton = document.getElementById('fileUpload');
+
+            fileButton.addEventListener('change', function (e) {
+                var file = e.target.files[0];
+
+                var title = document.getElementById('title').value.toString();
+                var urlParams = new URLSearchParams(window.location.search);
+                var URLUsername = urlParams.get('username').toString();
+                var memeId = URLUsername + "_" + title;
+
+                var memes = storage.ref('memes/' + title);
+                var task = memes.put(file);
+                task.on('state_changed',
+                    function progress(snapshot) {
+                        uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    }
+                );
+            });
         }
 
         var uploader = document.getElementById('progressBar');
