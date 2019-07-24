@@ -53,7 +53,8 @@ body {
 }
 #title {
   color: #36baff;
-  resize: none;88
+  resize: none;
+  width: 90%;
   text-align: center;
   height: 50px;
   font-size: 24px;
