@@ -91,6 +91,12 @@
             var description = document.getElementById('description').value.toString();
             var memeId = URLUsername + "_" + title;
 
+            var date = new Date();
+            var day = date.getDate();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var releaseDate = year + "/" + month + "/" + day;
+
             var uploader = document.getElementById('progressBar');
             var fileButton = document.getElementById('fileUpload');
 
