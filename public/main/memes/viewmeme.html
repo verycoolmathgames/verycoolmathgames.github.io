@@ -62,7 +62,7 @@
             var memeTitle = meme.data().title;
             console.log(memeTitle);
 
-            Memes.where("capital", "==", true)
+            Memes.where("id", "==", true)
                 .get()
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {
