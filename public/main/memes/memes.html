@@ -142,8 +142,7 @@
             var mode = urlParams.get('mode').toString();
 
             var washingtonRef = db.collection("cities").doc("DC");
-
-            // Set the "capital" field of the city 'DC'
+            
             return washingtonRef.update({
                 capital: true
             })
