@@ -45,9 +45,9 @@
             var urlParams = new URLSearchParams(window.location.search);
             var memeid = urlParams.get('meme_ref')
             var memeRef = storage.ref('images/' + memeid);
+            var meme = Memes.where("id", "==", memeid);
 
             var title = document.getElementById('title');
-            var meme = Memes.where("id", "==", memeid);
             title.value = Memes.where("id", "==", memeid);
         }
 
