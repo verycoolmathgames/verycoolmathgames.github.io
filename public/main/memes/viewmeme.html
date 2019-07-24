@@ -55,8 +55,6 @@
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
 
-            
-
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var memeTitle = doc.data().title;
@@ -67,7 +65,7 @@
 
                     var description = document.getElementById('description');
                     description.innerHTML = memeDesc; var Memes = db.collection("memes");
-                    
+
                     var memeRef = storage.ref('images/' + memeid);
 
                     memeRef.getDownloadURL().then(function (url) {
