@@ -63,7 +63,7 @@ body {
   justify-content: left;
   background-color:aliceblue;
   border: 1px solid #36baff;
-  border-radius: 1px;
+  border-radius: 3px;
 }
 #back:hover {
   background-color: rgb(157, 206, 250);
