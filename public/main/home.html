@@ -48,7 +48,7 @@
         console.log(username);
         
         var users = db.collection("users");
-        docRef.get().then(function (doc) {
+        display.get().then(function (doc) {
                 if (doc.exists) {
                     console.log("Document data:", doc.data());
                 } else {
