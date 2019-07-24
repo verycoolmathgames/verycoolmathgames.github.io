@@ -100,6 +100,11 @@
             var uploader = document.getElementById('progressBar');
             var fileButton = document.getElementById('fileUpload');
 
+            
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            var URLUsername = urlParams.get('username').toString();
+
             fileButton.addEventListener('change', function (e) {
                 var file = e.target.files[0];
                 var memes = storage.ref('memes/' + title);
