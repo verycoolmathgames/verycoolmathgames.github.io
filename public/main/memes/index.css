@@ -78,7 +78,7 @@ body {
 #description {
   resize: none;
   width: 69%;
-  
+  font-size: 18;
   background-color: aliceblue;
   align-self: center;
   text-align: left;
