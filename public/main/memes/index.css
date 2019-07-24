@@ -221,7 +221,7 @@ article {
 }
 #allstuf > .hidden {
   position: absolute;
-  z-index: 1000;
+  z-index: -1000;
   opacity: 0;
   cursor: pointer;
   right: 0;
