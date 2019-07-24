@@ -56,7 +56,6 @@
             var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
             var Memes = db.collection("memes");
 
-            var urlParams = new URLSearchParams(window.location.search);
             var memeid = urlParams.get('meme_ref');
             var memeRef = storage.ref('images/' + memeid);
             var meme = Memes.where("id", "==", memeid);
