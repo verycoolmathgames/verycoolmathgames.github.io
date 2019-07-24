@@ -58,25 +58,25 @@
             var Memes = db.collection("memes");
             var memeRef = storage.ref('images/' + memeid);
 
-                Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
-                    querySnapshot.forEach(function (doc) {
-                        var memeTitle = doc.data().title;
-                        var memeDesc = doc.data().description;
-                        console.log(doc.data());
-                        var title = document.getElementById('title');
-                        title.innerHTML = getMeme("title");
-                        var description = document.getElementById('description');
-                        description.innerHTML = getMeme("description");
-                        if(something == "title") {
-                            console.log(memeTitle);
-                        } else {
-                            console.log(memeDesc);
-                        };
-                    });
-                }).catch(function (error) {
-                    console.log("Error getting documents: ", error);
+            Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    var memeTitle = doc.data().title;
+                    var memeDesc = doc.data().description;
+                    console.log(doc.data());
+                    var title = document.getElementById('title');
+                    title.innerHTML = getMeme("title");
+                    var description = document.getElementById('description');
+                    description.innerHTML = getMeme("description");
+                    if(something == "title") {
+                        console.log(memeTitle);
+                    } else {
+                        console.log(memeDesc);
+                    };
                 });
-            };
+            }).catch(function (error) {
+                console.log("Error getting documents: ", error);
+            });
+        };
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
