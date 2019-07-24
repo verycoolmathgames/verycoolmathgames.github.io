@@ -150,10 +150,6 @@
             .then(function () {
                 console.log("Document successfully updated!");
             });
-            .catch(function (error) {
-                // The document probably doesn't exist.
-                console.error("Error updating document: ", error);
-            });
 
             window.location.replace("viewmeme.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&meme_ref=" + ref);
         };
