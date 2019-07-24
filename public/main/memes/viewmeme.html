@@ -56,7 +56,7 @@
             }
 
             var Memes = db.collection("memes");
-            var memeRef = storage.ref('images/' + memeid).get;
+            var memeRef = storage.ref('images/' + memeid).getDownloadUrl;
 
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
