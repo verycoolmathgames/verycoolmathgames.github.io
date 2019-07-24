@@ -39,6 +39,7 @@
         db.enablePersistence()
 
         var uid = user.uid;
+        
         var users = db.collection("users");
 
         var displayName = users.doc(uid).get().data().displayName;
