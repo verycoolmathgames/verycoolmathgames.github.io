@@ -228,6 +228,11 @@
         var mode = urlParams.get('mode').toString();
 
         var disqus_config = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            var URLUsername = urlParams.get('username').toString();
+            var URLPassword = urlParams.get('password').toString();
+            var mode = urlParams.get('mode').toString();
             this.page.url = "https://verycoolmathgames.github.io/articles/viewmeme.html" + "?email=" + URLEmail + " & username=" + URLUsername + " & password=" + URLPassword + " & mode=" + mode;
         };
 
