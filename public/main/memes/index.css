@@ -241,6 +241,6 @@ article {
   padding:5px 10px;
   position:relative;
   text-align:center;
-  float:left;
+  float:center;
   cursor:pointer;
 }
