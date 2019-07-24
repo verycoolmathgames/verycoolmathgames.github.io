@@ -60,10 +60,10 @@
             var memeRef = storage.ref('images/' + memeid);
 
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
-                    querySnapshot.forEach(function (doc) {
-                        var memeTitle = meme.data().title;
-                        console.log(memeTitle);
-                    });
+                querySnapshot.forEach(function (doc) {
+                    var memeTitle = meme.data().title;
+                    console.log(memeTitle);
+                });
                 }).catch(function (error) {
                     console.log("Error getting documents: ", error);
                 });
