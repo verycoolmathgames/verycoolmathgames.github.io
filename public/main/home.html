@@ -37,7 +37,6 @@
         var user = firebase.auth().currentUser;
         firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
         var db = firebase.firestore();
-
         
         var urlParams = new URLSearchParams(window.location.search);
         var mode = urlParams.get('mode').toString();
