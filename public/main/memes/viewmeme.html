@@ -62,6 +62,7 @@
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var memeTitle = doc.data().title;
+                    var memeDesc 
                     console.log(memeTitle);
                 });
             }).catch(function (error) {
