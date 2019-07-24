@@ -37,8 +37,6 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
         db.enablePersistence()
-
-        firebase.auth().signInWithEmailAndPassword(user.email, user.password).then(function () {
             var user = firebase.auth().currentUser;
             var uid = user.uid;
             var users = db.collection("users");
@@ -48,7 +46,6 @@
                 var username = displayName.toString();
                 return username;
             });
-        });
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
