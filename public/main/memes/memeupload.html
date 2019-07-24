@@ -108,6 +108,8 @@
             var month = date.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
 
+            filename.split('.').pop();
+
             Memes.add({
                 title: title,
                 id: memeId,
