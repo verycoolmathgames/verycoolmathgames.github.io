@@ -62,6 +62,7 @@
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var memeTitle = meme.data().title;
+                    title.innerHTML = meme.data().title;
                     console.log(memeTitle);
                 });
             }).catch(function (error) {
@@ -70,7 +71,6 @@
 
 
             var title = document.getElementById('title');
-            title.innerHTML = meme.data().title;
             console.log(meme);
         };
 
