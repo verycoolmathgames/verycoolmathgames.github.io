@@ -100,30 +100,30 @@
             var uploader = document.getElementById('progressBar');
             var fileButton = document.getElementById('fileUpload');
 
-                fileButton.addEventListener('change', function (e) {
-                    var file = e.target.files[0];
-                    var memes = storage.ref('memes/' + title);
-                    var task = memes.put(file);
-                    task.on('state_changed',
-                        function progress(snapshot) {
-                            uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                        },
-                        function complete() {
-                            memeRedirect(memeId);
-                        }
-                    );
-                });
-                Memes.add({
-                    title: title,
-                    id: memeId,
-                    releaseDate: releaseDate,
-                    description: description,
-                    uploaderName: URLUsername,
-                    upvotes: 1,
-                    views: 1
-                }).then(function() {
-                    memeRedirect(memeId);
-                });
+            fileButton.addEventListener('change', function (e) {
+                var file = e.target.files[0];
+                var memes = storage.ref('memes/' + title);
+                var task = memes.put(file);
+                task.on('state_changed',
+                    function progress(snapshot) {
+                        uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    },
+                    function complete() {
+                        memeRedirect(memeId);
+                    }
+                );
+            });
+            Memes.add({
+                title: title,
+                id: memeId,
+                releaseDate: releaseDate,
+                description: description,
+                uploaderName: URLUsername,
+                upvotes: 1,
+                views: 1
+            }).then(function() {
+                memeRedirect(memeId);
+            });
         };
 
         function memeRedirect(memeId) {
