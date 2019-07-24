@@ -107,9 +107,6 @@
                 task.on('state_changed',
                     function progress(snapshot) {
                         uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    },
-                    function complete() {
-                        memeRedirect(memeId);
                     }
                 );
             });
