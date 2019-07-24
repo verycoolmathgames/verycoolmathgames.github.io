@@ -62,7 +62,7 @@ body {
 #back {
   justify-content: left;
   background-color:aliceblue;
-  border
+  border: 
 }
 #back:hover {
   background-color: rgb(157, 206, 250);
