@@ -41,7 +41,7 @@
         var uid = user.uid;
         var users = db.collection("users");
 
-        users.doc(uid).get().data().displayName;
+        var displayName = users.doc(uid).get().data().displayName;
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
