@@ -76,5 +76,5 @@ body {
   resize: none;
   width: 89%;
   background-color: aliceblue;
-  align
+  align-self: center;
 }
