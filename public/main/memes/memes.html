@@ -87,15 +87,7 @@
                 meme.onclick = function () {
                     memeRedirect(memeRef);
 
-                    return washingtonRef.update({
-                        views: clicks + 1
-                    })
-                    .then(function () {
-                        console.log("Document successfully updated!");
-                    })
-                    .catch(function (error) {
-                        console.error("Error updating document: ", error);
-                    });
+                    return shard_ref.update("count", firebase.firestore.FieldValue.increment(1));
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
