@@ -70,6 +70,7 @@ body {
 }
 .round {
   box-align: center;
+  width: 
   border: 1px solid lightgray;
   border-radius: 15px 15px 15px 15px;
 }
