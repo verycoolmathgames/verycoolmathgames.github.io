@@ -68,6 +68,17 @@
 
                     var description = document.getElementById('description');
                     description.innerHTML = memeDesc;
+                    var memeRef = storage.ref('images/' + memeid);
+
+                    memeRef.getDownloadURL().then(function (url) {
+                        var image = document.getElementById('image');
+                        image.src = url;
+                    }).catch(function (error) {
+                        var image = document.getElementById('image');
+                        image.src = "somethingismissing.jpg";
+
+                        console.log("Error getting image source: ", error)
+                    });
                 });
             }).catch(function (error) {
                 console.log("Error getting documents: ", error);
