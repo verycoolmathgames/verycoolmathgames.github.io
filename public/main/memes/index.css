@@ -111,6 +111,8 @@ border-top: 5px solid #31a4e1ff;
 }
 #back:hover {
   background-color: rgb(157, 206, 250);
+  border: 1px solid #dae7ee;
+  border-radius: 3px;
 }
 .memeimg {
   width: 49%;
