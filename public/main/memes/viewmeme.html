@@ -48,7 +48,7 @@
             var meme = Memes.where("id", "==", memeid);
 
             var title = document.getElementById('title');
-            title.value = meme.data().title;
+            title.innerHTML = meme.data().title;
             console.log(meme);
         }
 
