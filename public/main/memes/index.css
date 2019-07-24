@@ -244,3 +244,7 @@ article {
   float:center;
   cursor:pointer;
 }
+input[type='file']{
+  color:blue;
+  font-size:25px;
+}
