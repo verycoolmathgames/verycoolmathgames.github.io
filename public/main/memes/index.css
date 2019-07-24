@@ -225,6 +225,7 @@ article {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 .uploadContainer {
+  background-color: #00a7ff;
   background: transparent url(http://i.stack.imgur.com/BT5AB.png);
 }
 .uploadContainer input {
