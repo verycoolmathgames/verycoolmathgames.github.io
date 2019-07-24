@@ -40,8 +40,8 @@
 
         var uid = user.uid;
         var users = db.collection("users");
-        
-        users.doc(uid).get().then(function (doc) {
+
+        users.doc(uid).get().data().displayName(function (doc) {
             var displayName = doc.data().displayName;
             var displayName = doc.data().displayName.toString();
             var username = displayName.toString();
