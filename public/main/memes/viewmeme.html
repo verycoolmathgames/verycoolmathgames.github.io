@@ -48,7 +48,7 @@
         var memeRef = storage.ref('images/' + memeid);
 
         var title = document.getElementById('title');
-        title.value = Memes.where("");
+        title.value = Memes.where("id");
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
