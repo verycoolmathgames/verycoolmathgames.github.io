@@ -35,6 +35,8 @@
         });
 
         var user = firebase.auth().currentUser;
+            var username = user.displayName;
+            console.log(username);
         var db = firebase.firestore();
 
         var uid = user.uid;
