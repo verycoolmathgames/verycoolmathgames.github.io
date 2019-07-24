@@ -56,17 +56,7 @@
             }
 
             var Memes = db.collection("memes");
-            var memeRef = storage.ref('images/' + memeid);
-
-            memeRef.getDownloadURL().then(function (url) {
-                var image = document.getElementById('image');
-                image.src = url;
-            }).catch(function (error) {
-                var image = document.getElementById('image');
-                image.src = "somethingismissing.jpg";
-                
-                console.log("Error getting image source: ", error)
-            });
+            
 
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
