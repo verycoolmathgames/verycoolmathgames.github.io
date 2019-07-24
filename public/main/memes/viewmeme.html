@@ -62,7 +62,7 @@
                 var img = document.getElementById('myimg');
                 img.src = url;
             }).catch(function (error) {
-                console.log("Error getting image source: ")
+                console.log("Error getting image source: ", error)
             });
 
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
