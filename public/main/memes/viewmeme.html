@@ -59,7 +59,6 @@
             var memeRef = storage.ref('images/' + memeid);
 
             memeRef.getDownloadURL().then(function (url) {
-                // Or inserted into an <img> element:
                 var img = document.getElementById('myimg');
                 img.src = url;
             }).catch(function (error) {
