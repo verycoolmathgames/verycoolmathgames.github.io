@@ -35,12 +35,12 @@
         });
 
         var user = firebase.auth().currentUser;
-            var username = user.displayName;
-            console.log(username);
         var db = firebase.firestore();
 
         var uid = user.uid;
-
+        var username = user.displayName;
+        console.log(username);
+        
         var users = db.collection("users");
 
         var displayName = users.doc(uid).get().data().displayName;
