@@ -68,7 +68,7 @@
                     var description = document.getElementById('description');
                     description.innerHTML = memeDesc;
 
-                    var memeRef = storage.ref('images/' + memeTitle + "." + imgType);
+                    var memeRef = storage.ref('memes/' + memeTitle + "." + imgType);
 
                     memeRef.getDownloadURL().then(function (url) {
                         var image = document.getElementById('image');
