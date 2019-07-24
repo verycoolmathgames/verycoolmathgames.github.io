@@ -86,13 +86,11 @@
             return URLpassword;
         };
 
-        // Meme properties
-
         function uploadMeme() {
             var title = document.getElementById('title').value.toString();
             var description = document.getElementById('description').value.toString();
             var memeId = URLUsername + "_" + title;
-            
+
             var releaseDate = doc.data().releaseDate.toString();
 
             var uploader = document.getElementById('progressBar');
