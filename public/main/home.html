@@ -44,7 +44,6 @@
         console.log(username);
         
         var users = db.collection("users");
-
         var displayName = users.doc(uid).get().data().displayName;
         console.log(displayName);
 
