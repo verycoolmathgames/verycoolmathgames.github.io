@@ -221,14 +221,14 @@ article {
 }
 .file_button_container,
 .file_button_container input {
-     height: 47px;
-     width: 263px;
- }
+    height: 47px;
+    width: 263px;
+}
 
- .file_button_container {
-     background: transparent url(http://i.stack.imgur.com/BT5AB.png) left top no-repeat;
- }
+.file_button_container {
+    background: transparent url(http://i.stack.imgur.com/BT5AB.png) left top no-repeat;
+}
 
- .file_button_container input {
-     opacity: 0;
+.file_button_container input {
+    opacity: 0;
  }
