@@ -87,7 +87,7 @@
                 meme.onclick = function () {
                     memeRedirect(memeRef);
 
-                    return doc.update("count", firebase.firestore.FieldValue.increment(1));
+                    return doc.update("views", firebase.firestore.FieldValue.increment(1));
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
