@@ -101,7 +101,7 @@
             var fileButton = document.getElementById('fileUpload');
             var submitButton = document.getElementById('submit');
 
-            submitButton.addEventListener('click')
+            submitButton.addEventListener('click', function)
             fileButton.addEventListener('change', function(e) {
                 var file = e.target.files[0];
                 var memes = storage.ref('memes/' + title);
