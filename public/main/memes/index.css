@@ -70,7 +70,7 @@ body {
 }
 .round {
   align-content: center;
-  ali
+  align-items: center;
   border: 1px solid lightgray;
   border-radius: 15px 15px 15px 15px;
 }
