@@ -74,7 +74,6 @@
                 var img = document.getElementById('myimg');
                 img.src = url;
             }).catch(function (error) {
-  // Handle any errors
   )};
 
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
