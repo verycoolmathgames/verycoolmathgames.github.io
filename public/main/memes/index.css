@@ -220,8 +220,6 @@ article {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 #allstuf > .hidden {
-  position: absolute;
-  z-index: -1000;
   opacity: 0;
   cursor: pointer;
   right: 0;
