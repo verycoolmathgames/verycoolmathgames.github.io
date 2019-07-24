@@ -36,8 +36,8 @@
 
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
-        var Memes = db.collection("memes");
         db.enablePersistence();
+            var Memes = db.collection("memes");
 
         var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
 
@@ -114,7 +114,7 @@
                 );
             });
 
-            
+
 
             Memes.add({
                 title: title,
