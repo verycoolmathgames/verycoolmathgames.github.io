@@ -182,7 +182,7 @@ article {
   width: 263px;
 }
 .uploadContainer {
-  background: transparent url(../../../images/uploadmeme.png);
+  background: transparent url(uploadmeme.png);
 }
 .uploadContainer input {
   opacity: 0;
