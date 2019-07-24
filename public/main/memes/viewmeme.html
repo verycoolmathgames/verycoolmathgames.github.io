@@ -63,6 +63,7 @@
                 
                 image.src = url;
             }).catch(function (error) {
+                var image = document.getElementById('image');
                 
                 console.log("Error getting image source: ", error)
             });
