@@ -222,6 +222,15 @@ article {
 #allstuf > .hidden {
   position: absolute;
   z-index: -1;
+  position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
 }
 #allstuff > .hider {
   width: 25%;
