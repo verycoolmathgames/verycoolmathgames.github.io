@@ -59,16 +59,16 @@
             var memeRef = storage.ref('images/' + memeid);
 
             function getMeme() {
-            Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
-                querySnapshot.forEach(function (doc) {
-                    var memeTitle = doc.data().title;
-                    var memeDesc = doc.data().description;
-                    console.log(memeTitle);
-                    console.log(memeDesc);
+                Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
+                    querySnapshot.forEach(function (doc) {
+                        var memeTitle = doc.data().title;
+                        var memeDesc = doc.data().description;
+                        console.log(memeTitle);
+                        console.log(memeDesc);
+                    });
+                }).catch(function (error) {
+                    console.log("Error getting documents: ", error);
                 });
-            }).catch(function (error) {
-                console.log("Error getting documents: ", error);
-            });
             }
 
             var title = document.getElementById('title');
