@@ -155,26 +155,3 @@ article {
   height: 50px;
   font-size: 24px;
 }
-#text {
-  border: 2px solid #36baff;
-  width: 95%;
-  align-self: center;
-  resize: none;
-  font-size: 16px;
-}
-#tags {
-  border: 2px solid #36baff;
-  align-self: left;
-  width: 49%;
-  height: 35px;
-  font-size: 15px;
-}
-#allstuff > button {
-  width: 25%;
-  height: 45px;
-  font-size: 25px;
-  color: rgb(228, 220, 220);
-  align-content: center;
-  background-color: #00a7ff;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
