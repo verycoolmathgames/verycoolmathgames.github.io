@@ -91,12 +91,12 @@
                     return washingtonRef.update({
                         capital: true
                     })
-                        .then(function () {
-                            console.log("Document successfully updated!");
-                        })
-                        .catch(function (error) {
-                            console.error("Error updating document: ", error);
-                        });
+                    .then(function () {
+                        console.log("Document successfully updated!");
+                    })
+                    .catch(function (error) {
+                        console.error("Error updating document: ", error);
+                    });
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
