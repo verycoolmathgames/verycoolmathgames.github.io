@@ -67,8 +67,6 @@
                         var username = displayName.toString();
                         return username;
                     });
-                });
-            }
         };
 
         var Announcements = db.collection("announcements").orderBy("number", "desc").limit(10);
