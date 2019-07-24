@@ -36,7 +36,6 @@
 
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
-        db.enablePersistence()
 
         var uid = user.uid;
         var username = user.displayName;
