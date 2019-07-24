@@ -141,18 +141,6 @@
             var URLPassword = urlParams.get('password').toString();
             var mode = urlParams.get('mode').toString();
 
-            var washingtonRef = db.collection("cities").doc("DC");
-            
-            return washingtonRef.update({
-                capital: true
-            })
-            .then(function () {
-                console.log("Document successfully updated!");
-            })
-            .catch(function (error) {
-                console.error("Error updating document: ", error);
-            });
-
             window.location.replace("viewmeme.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&meme_ref=" + ref);
         };
 
