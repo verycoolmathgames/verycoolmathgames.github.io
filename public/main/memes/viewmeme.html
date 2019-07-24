@@ -52,6 +52,7 @@
             } else {
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
+            
             var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
             var Memes = db.collection("memes");
 
