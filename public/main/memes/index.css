@@ -108,6 +108,8 @@ border-top: 5px solid #31a4e1ff;
 #back {
   justify-content: left;
   background-color:aliceblue;
+  border: 1px solid #dae7ee;
+  border-radius: 3px;
 }
 #back:hover {
   background-color: rgb(157, 206, 250);
