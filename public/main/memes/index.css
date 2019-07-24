@@ -61,5 +61,5 @@ body {
 }
 .viewmeme > .back_title > .dropdown {
   justify-content: left;
-  style="background-color:aliceblue;"
+  background-color:aliceblue;
 }
