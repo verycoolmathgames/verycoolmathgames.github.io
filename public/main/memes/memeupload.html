@@ -106,7 +106,6 @@
                 var task = memes.put(file);
                 task.on('state_changed',
                     function progress(snapshot) {
-                        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                         uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                     },
                     function complete() {
