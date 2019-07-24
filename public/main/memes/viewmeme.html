@@ -40,6 +40,8 @@
         var Memes = db.collection("memes");
 
         var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
+        var storage = firebase.storage();
+            var pathReference = storage.ref('images/stars.jpg');
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
@@ -85,7 +87,7 @@
 
             return URLpassword;
         };
-        
+
         var title = document.getElementById('title').value.toString();
 
         function memeRedirect(memeId) {
