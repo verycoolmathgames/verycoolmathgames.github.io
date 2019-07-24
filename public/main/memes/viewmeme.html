@@ -39,6 +39,7 @@
         db.enablePersistence();
 
         window.onload = function() {
+            alert("testing")
             var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
             var Memes = db.collection("memes");
 
