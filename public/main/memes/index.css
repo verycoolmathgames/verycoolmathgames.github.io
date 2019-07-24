@@ -72,6 +72,8 @@ body {
 .meme {
   width: 98%;
   align-self: center;
+  border: 1px solid #000000;
+  border-radius: 5px 5px 5px 5px;
 }
 #description {
   resize: none;
@@ -79,4 +81,6 @@ body {
   background-color: aliceblue;
   align-self: center;
   text-align: left;
+  border: 1px solid #000000;
+  border-radius: 5px 5px 5px 5px;
 }
