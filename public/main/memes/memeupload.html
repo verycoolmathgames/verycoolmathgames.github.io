@@ -90,21 +90,21 @@
         var fileButton = document.getElementById('fileUpload');
 
         function changed(e) {
-            var file = fileButton.target.files[0];
-            
-            var title = document.getElementById('title').value.toString();
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLUsername = urlParams.get('username').toString();
-            var memeId = URLUsername + "_" + title;
+        var file = e.target.files[0];
+        
+        var title = document.getElementById('title').value.toString();
+        var urlParams = new URLSearchParams(window.location.search);
+        var URLUsername = urlParams.get('username').toString();
+        var memeId = URLUsername + "_" + title;
 
-            var memes = storage.ref('memes/' + title);
-            var task = memes.put(file);
-            task.on('state_changed',
-                function progress(snapshot) {
-                    uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                }
-            );
-        };
+        var memes = storage.ref('memes/' + title);
+        var task = memes.put(file);
+        task.on('state_changed',
+            function progress(snapshot) {
+                uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            }
+        );
+        }
 
 
         function uploadMeme() {
@@ -241,7 +241,7 @@
             <br>
             <br>
         <div class="uploadContainer">
-            <input type="file" value="upload" id="fileUpload" onchange="changed(value)" />
+            <input type="file" value="upload" id="fileUpload" />
         </div>
             <br>
             <br>
