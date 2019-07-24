@@ -90,7 +90,7 @@
         var fileButton = document.getElementById('fileUpload');
 
         function changed(e) {
-            var file = file.target.files[0];
+            var file = fileButton.target.files[0];
             
             var title = document.getElementById('title').value.toString();
             var urlParams = new URLSearchParams(window.location.search);
