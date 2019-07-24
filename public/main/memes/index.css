@@ -34,14 +34,6 @@ article {
   flex-direction: row;
   justify-content: space-around;
 }
-.column {
-  height: 1200px;
-  width: 100%;
-  text-align: center;
-  border-left: 2px solid #31a4e1ff;
-  border-right: 2px solid #31a4e1ff;
-  border-top: 5px solid #31a4e1ff;
-}
 .article {
   border-top: 5px solid #31a4e1ff;
   border-bottom: 5px solid #31a4e1ff;
