@@ -234,7 +234,8 @@
     </header>
 
     <article id="upload">
-        
+        <progress value="0" max="100" id="progressBar" style="-webkit-appearance: none; appearance: none; margin-bottom: 10px;">0%</progress>
+        <input type="file" value="upload" id="fileUpload" />
     </article>
 
     <article id="allstuff">
@@ -242,10 +243,11 @@
         <input id="title" placeholder="Title of your article... (Max: 100 Characters)" maxlength="80" required></input>
         <br>
         <br>
-        <progress value="0" max="100" id="progressBar"
-            style="-webkit-appearance: none; appearance: none; margin-bottom: 10px;">0%</progress>
+        <textarea id="text" name="message" rows="30" cols="100" placeholder="Type here... (Max: 5000 Characters)"
+            maxlength="5000" required></textarea>
         <br>
-        <br><input type="file" value="upload" id="fileUpload" />
+        <br>
+        <input id="tags" placeholder="Type tags related to your article. Put a comma in between multiple tags." required>
         <br>
         <br>
         <button onclick="uploadArticle()">Submit</button>
