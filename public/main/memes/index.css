@@ -26,14 +26,6 @@ body {
 .active {
   background-color: #717171;
 }
-
-article {
-  margin-left: 2%;
-  width: 82%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 .article {
   border-top: 5px solid #31a4e1ff;
   border-bottom: 5px solid #31a4e1ff;
