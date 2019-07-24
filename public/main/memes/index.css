@@ -223,7 +223,7 @@ article {
   width: 263px;
 }
 .uploadContainer {
-  background: transparent url(../../../);
+  background: transparent url(../../../images/);
 }
 .uploadContainer input {
   opacity: 0;
