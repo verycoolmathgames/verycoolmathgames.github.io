@@ -43,6 +43,8 @@
             var URLEmail = urlParams.get('email');
             var URLPassword = urlParams.get('password');
             var urlParams = new URLSearchParams(window.location.search);
+
+            var memeid = urlParams.get('meme_ref');
             var mode = urlParams.get("darkmode");
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
@@ -55,8 +57,6 @@
 
             var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
             var Memes = db.collection("memes");
-
-            var memeid = urlParams.get('meme_ref');
             var memeRef = storage.ref('images/' + memeid);
             var meme = Memes.where("id", "==", memeid);
             var memeTitle = meme.data().title;
