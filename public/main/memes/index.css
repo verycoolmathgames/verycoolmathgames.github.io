@@ -73,6 +73,6 @@ body {
   align-self: center;
 }
 #description {
-  resize:"none" 
+  resize: none;
   width: 89%;
 }
