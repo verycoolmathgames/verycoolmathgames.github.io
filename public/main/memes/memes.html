@@ -85,6 +85,18 @@
                 meme.className = "meme";
                 meme.onclick = function () {
                     memeRedirect(memeRef);
+
+                    var washingtonRef = db.collection("cities").doc("DC");
+
+                    return washingtonRef.update({
+                        capital: true
+                    })
+                        .then(function () {
+                            console.log("Document successfully updated!");
+                        })
+                        .catch(function (error) {
+                            console.error("Error updating document: ", error);
+                        });
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
