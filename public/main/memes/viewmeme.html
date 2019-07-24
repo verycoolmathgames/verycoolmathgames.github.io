@@ -37,6 +37,7 @@
         var user = firebase.auth().currentUser;
         var db = firebase.firestore();
         db.enablePersistence();
+            var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
 
         window.onload = function() {
             var urlParams = new URLSearchParams(window.location.search);
@@ -54,7 +55,6 @@
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
 
-            var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
             var Memes = db.collection("memes");
             var memeRef = storage.ref('images/' + memeid);
             var meme = Memes.where("id", "==", memeid);
