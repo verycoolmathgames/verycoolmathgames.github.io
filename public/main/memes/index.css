@@ -8,15 +8,12 @@
   top: 0;
   right:0;
 }
-
 *{
   box-sizing: border-box;
 }
-
 body {
   font-family: Verdana, sans-serif;
 }
-
 article {
   margin-left: 2%;
   width: 82%;
