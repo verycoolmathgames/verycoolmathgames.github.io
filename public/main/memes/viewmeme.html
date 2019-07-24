@@ -59,9 +59,6 @@
             var memeRef = storage.ref('images/' + memeid);
 
             memeRef.getDownloadURL().then(function (url) {
-                // `url` is the download URL for 'images/stars.jpg'
-
-                // This can be downloaded directly:
                 var xhr = new XMLHttpRequest();
                 xhr.responseType = 'blob';
                 xhr.onload = function (event) {
