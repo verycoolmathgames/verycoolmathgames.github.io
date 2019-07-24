@@ -63,7 +63,7 @@
                     querySnapshot.forEach(function (doc) {
                         var memeTitle = doc.data().title;
                         var memeDesc = doc.data().description;
-                        console.log(doc.data().something);
+                        console.log(doc.data());
                     });
                 }).catch(function (error) {
                     console.log("Error getting documents: ", error);
