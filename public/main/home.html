@@ -44,6 +44,7 @@
                 var urlParams = new URLSearchParams(window.location.search);
                 var mode = urlParams.get('mode').toString();
                 window.location.replace(pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
+            }
         };
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
