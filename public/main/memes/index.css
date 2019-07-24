@@ -64,6 +64,7 @@ body {
   background-color:aliceblue;
 }
 .dropdown > #back {
-  justify-content: left;
-  background-color:aliceblue;
+  .dropdown-content a:hover {
+  background-color: #1489c7;
+}
 }
