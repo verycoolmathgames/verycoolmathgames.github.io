@@ -92,6 +92,7 @@
 
         fileButton.addEventListener('change', function (e) {
             var file = e.target.files[0];
+            var title = document.getElementById('title').value.toString();
             var memes = storage.ref('memes/' + title);
             var task = memes.put(file);
             task.on('state_changed',
