@@ -60,6 +60,7 @@
                 querySnapshot.forEach(function (doc) {
                     var memeTitle = doc.data().title;
                     var memeDesc = doc.data().description;
+                    var imgType = doc.data().filetype;
 
                     var title = document.getElementById('title');
                     title.innerHTML = memeTitle;
