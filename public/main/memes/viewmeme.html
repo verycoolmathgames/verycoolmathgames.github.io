@@ -52,7 +52,7 @@
             } else {
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
-            
+
             var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
             var Memes = db.collection("memes");
 
@@ -81,23 +81,7 @@
 
                 window.location.replace("../" + pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
             };
-        };
-
-        window.onload = function () {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email');
-            var URLPassword = urlParams.get('password');
-            var urlParams = new URLSearchParams(window.location.search);
-            var mode = urlParams.get("darkmode");
-            if (mode == "dark") {
-                document.getElementByTagName("html").id = "dark";
-            }
-            if (URLPassword == "password") {
-                alert("You are not actually signed in right now, I will add functionality later.");
-            } else {
-                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
-            }
-        };
+        }
 
         function email() {
             var urlParams = new URLSearchParams(window.location.search);
