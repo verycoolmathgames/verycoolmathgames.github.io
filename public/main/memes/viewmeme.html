@@ -110,7 +110,7 @@
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes;
                     console.log(upvotes);
-                    return doc.update({
+                    return meme.update({
                         views: firebase.firestore.FieldValue.increment(n)
                     });
                     console.log(upvotes);
