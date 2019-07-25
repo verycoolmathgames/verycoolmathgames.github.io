@@ -68,7 +68,7 @@
             }
         };
 
-        function view() {
+        function view(memeid) {
             var urlParams = new URLSearchParams(window.location.search);
             var Memes = db.collection("memes");
             var memeReference = Memes.doc(memeid);
