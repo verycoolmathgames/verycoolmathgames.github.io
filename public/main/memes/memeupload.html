@@ -80,6 +80,8 @@
                 var file = e.target.files[0];
                 var filetype = file.split('.').pop();
 
+                var cityRef = db.collection('cities').doc('BJ');
+
                 cityRef.set({
                     capital: true
                 }, { merge: true });
