@@ -128,9 +128,7 @@
             var washingtonRef = db.collection("cities").doc("DC");
 
             // Set the "capital" field of the city 'DC'
-            return memeReference.update({
-                capital: true
-            })
+            return memeReference.update(new)
             .then(function () {
                 console.log("Document successfully updated!");
             })
