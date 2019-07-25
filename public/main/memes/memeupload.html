@@ -110,7 +110,7 @@
                 var URLUsername = urlParams.get('username').toString();
                 var memeId = URLUsername + "_" + title;
 
-                var file = e.target.files[0];
+                var file = fileButton.files[0];
                 var filetype = file.name.split('.').pop();
 
                 var memeRf = db.collection('cities').doc(memeId);
