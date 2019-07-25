@@ -97,8 +97,6 @@ article {
   flex-direction: row;
 }
 #title {
-  justify-content: center;
-  justify-items: center;
   color: #36baff;
   resize: none;
   width: 100%;
