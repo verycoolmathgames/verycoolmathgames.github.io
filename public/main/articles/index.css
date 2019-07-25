@@ -99,7 +99,6 @@ article {
 #articletitle {
   color: #36baff;
   resize: none;
-  justify-items: center;
   height: 50px;
   font-size: 24px;
 }
