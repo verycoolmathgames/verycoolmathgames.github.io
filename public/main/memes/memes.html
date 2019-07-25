@@ -128,8 +128,7 @@
                 meme.innerHTML = title;
                 meme.className = "meme";
                 meme.onclick = function () {
-                    memeRedirect(memeRef);
-                    return doc.update("views", firebase.firestore.FieldValue.increment(1));
+                    view(memeid);
                 };
                 document.getElementById(outerDiv.id).appendChild(meme);
             });
