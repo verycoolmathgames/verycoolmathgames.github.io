@@ -106,13 +106,14 @@
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
             var meme = Memes.where("id", "==", memeid);
+            return meme.update({
+                views: firebase.firestore.FieldValue.increment(n)
+            });
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes;
                     console.log(upvotes);
-                    return meme.update({
-                        views: firebase.firestore.FieldValue.increment(n)
-                    });
+                    
                     console.log(upvotes);
                 });
             });
