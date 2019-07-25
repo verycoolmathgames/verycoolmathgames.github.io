@@ -59,7 +59,7 @@
             var Memes = db.collection("memes");
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
-                    var memeTitle = doc.data().title;
+                    var artiTitle = doc.data().title;
                     var articleDesc = doc.data().description;
                     var filename = doc.data().filename;
                     var memeViews = doc.data().views;
