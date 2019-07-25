@@ -118,7 +118,7 @@
                 views: firebase.firestore.FieldValue.increment(n)
             }).then(function() {
                 console.log("Upvotes after: ", upvotes);
-            });
+            }).catch();
         };
 
         function redirect(pagePath) {
