@@ -78,7 +78,7 @@
                     votes.innerHTML = memeVotes;
 
                     var memeRef = storage.ref('memes/' + filename);
-                    
+
                     memeRef.getDownloadURL().then(function (url) {
                         var image = document.getElementById('image');
                         image.src = url;
@@ -269,6 +269,7 @@
             </a>
         </div>
             <br>
+            <p></p>
             <br>
         <textarea rows="4" id="description" readonly>
             If you're reading this, something is broken. You shouldn't be reading this. Stop reading this. Just.... stop!
