@@ -80,6 +80,8 @@
                     console.error("Error updating document: ", error);
                 });
             };
+
+            var Articles = db.collection("articles");
             Articles.where("title", "==", title).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var articleTitle = doc.data().title;
