@@ -61,7 +61,7 @@
                 querySnapshot.forEach(function (doc) {
                     var articleTitle = doc.data().title;
                     var filename = doc.data().filename;
-                    var memeViews = doc.data().views;
+                    var articleViews = doc.data().views;
                     var memeVotes = doc.data().upvotes;
 
                     var title = document.getElementById('title');
