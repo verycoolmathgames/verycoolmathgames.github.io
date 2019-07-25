@@ -109,10 +109,6 @@
 
             var memes = storage.ref('memes/' + file.name);
             var task = memes.put(file);
-            console.log(title);
-            console.log(memeId);
-            console.log(file.name);
-            console.log(filetype);
 
             Memes.doc(memeId).set({
                 title: title,
@@ -128,6 +124,10 @@
                 //memeRedirect(memeId);
             });
             console.log(Memes.doc(memeId));
+            console.log(title);
+            console.log(memeId);
+            console.log(file.name);
+            console.log(filetype);
         };
 
         function memeRedirect(memeId) {
