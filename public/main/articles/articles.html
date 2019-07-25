@@ -82,7 +82,7 @@
             var Articles = db.collection("articles");
             var articleReference = Articles.doc(title);
 
-            memeReference.onSnapshot(function (doc) {
+            articleReference.onSnapshot(function (doc) {
                 var views = doc.data().views;
                 var memeRef = doc.data().id.toString();
                 console.log(views);
