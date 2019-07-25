@@ -70,7 +70,7 @@
 
         function view(memeid) {
             var urlParams = new URLSearchParams(window.location.search);
-            var memeid = urlParams.get('memeid').toString;
+            var memeid = urlParams.get('memeid').toString();
             var Memes = db.collection("memes");
             var memeReference = Memes.doc(memeid);
 
