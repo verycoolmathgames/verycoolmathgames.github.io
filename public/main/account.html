@@ -37,13 +37,6 @@
         var db = firebase.firestore();
         db.enablePersistence();
 
-        function getdisplayName() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLUsername = urlParams.get('username').toString();
-
-            return URLUsername;
-        };
-
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
@@ -169,7 +162,7 @@
     </header>
 
     <h3>
-        
+
     </h3>
 
     <article>
