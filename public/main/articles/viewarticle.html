@@ -117,7 +117,7 @@
             var newViews = {
                 views: firebase.firestore.FieldValue.increment(1)
             };
-            return articleReference.update(newViews).then(function () {
+            return articleReference.update(newUpvotes).then(function () {
                 console.log("Document successfully updated!");
                 memeReference.onSnapshot(function (doc) {
                     var votes = doc.data().upvotes;
