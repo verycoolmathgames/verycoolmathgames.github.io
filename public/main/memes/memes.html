@@ -86,7 +86,7 @@
                 console.log("Document successfully updated!");
                 memeReference.onSnapshot(function (doc) {
                     var memeRef = doc.data().id.toString();
-                    console.log(iews);
+                    console.log(newiews);
                     memeRedirect(memeRef);
                 });
             }).catch(function (error) {
