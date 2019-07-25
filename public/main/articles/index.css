@@ -96,7 +96,6 @@ article {
   align-content: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 #title {
   color: #36baff;
