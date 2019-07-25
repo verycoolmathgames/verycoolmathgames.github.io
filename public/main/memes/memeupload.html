@@ -112,8 +112,6 @@
                 filetype: "." + filetype
             }, { merge: true });
 
-            var title = document.getElementById('title').value.toString();
-
             var memes = storage.ref('memes/' + file.name);
             var task = memes.put(file);
             console.log(title);
