@@ -42,6 +42,8 @@
     margin-bottom: 1%;
     flex-wrap: wrap;
     flex-direction: row-reverse;
+    border-color: rgb(72, 191, 255);
+    border-radius: 14px;
 }
 .flex-container>div {
     background-color: white;
