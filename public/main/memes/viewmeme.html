@@ -107,7 +107,7 @@
             var Memes = db.collection("memes");
             var memeRfrnce = Memes.where("id", "==", memeid);
             console.log(memeRfrnce);
-            var memeReference = Memes.doc(memeReference.id);
+            var memeReference = Memes.doc(meme);
             console.log(memeReference);
 
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
