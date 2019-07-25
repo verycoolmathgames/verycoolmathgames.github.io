@@ -106,29 +106,29 @@
 
         
                 var title = document.getElementById('titleup').value.toString();
-                var urlParams = new URLSearchParams(window.location.search);
-                var URLUsername = urlParams.get('username').toString();
-                var memeId = URLUsername + "_" + title;
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLUsername = urlParams.get('username').toString();
+            var memeId = URLUsername + "_" + title;
 
-                var file = fileButton.files[0];
-                var filetype = file.name.split('.').pop();
+            var file = fileButton.files[0];
+            var filetype = file.name.split('.').pop();
 
-                Memes.doc(memeId).set({
-                    filename: file.name,
-                    filetype: "." + filetype
-                }, { merge: true });
+            Memes.doc(memeId).set({
+                filename: file.name,
+                filetype: "." + filetype
+            }, { merge: true });
 
-                var title = document.getElementById('title').value.toString();
-                var urlParams = new URLSearchParams(window.location.search);
-                var URLUsername = urlParams.get('username').toString();
-                var memeId = URLUsername + "_" + title;
+            var title = document.getElementById('title').value.toString();
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLUsername = urlParams.get('username').toString();
+            var memeId = URLUsername + "_" + title;
 
-                var memes = storage.ref('memes/' + file.name);
-                var task = memes.put(file);
-                console.log(title);
-                console.log(memeId);
-                console.log(file.name);
-                console.log(filetype);
+            var memes = storage.ref('memes/' + file.name);
+            var task = memes.put(file);
+            console.log(title);
+            console.log(memeId);
+            console.log(file.name);
+            console.log(filetype);
         };
 
         function memeRedirect(memeId) {
