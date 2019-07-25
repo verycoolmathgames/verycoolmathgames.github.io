@@ -91,6 +91,33 @@
             return URLpassword;
         };
 
+        function view(memeid) {
+                var urlParams = new URLSearchParams(window.location.search);
+                var Memes = db.collection("memes");
+                var memeReference = Memes.doc(memeid);
+
+                memeReference.onSnapshot(function (doc) {
+                    var views = doc.data().views;
+                    var memeRef = doc.data().id.toString();
+                    console.log(views);
+                });
+
+                var newViews = {
+                    views: firebase.firestore.FieldValue.increment(1)
+                };
+                return memeReference.update(newViews).then(function () {
+                    console.log("Document successfully updated!");
+                    memeReference.onSnapshot(function (doc) {
+                        var views = doc.data().views;
+                        var memeRef = doc.data().id.toString();
+                        console.log(views);
+                        memeRedirect(memeRef);
+                    });
+                }).catch(function (error) {
+                    console.error("Error updating document: ", error);
+                });
+            };
+
         Articles.orderBy("likes").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
