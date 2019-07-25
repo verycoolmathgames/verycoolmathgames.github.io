@@ -73,11 +73,10 @@
             var Memes = db.collection("memes");
             var memeReference = Memes.doc(memeid);
 
-            memeReference.get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    var views = doc.data().views;
+            db.collection("cities").doc("SF")
+                .onSnapshot(function (doc) {
+                    console.log("Current data: ", doc.data());
                 });
-            });
 
             var newViews = {
                 views: firebase.firestore.FieldValue.increment(n)
