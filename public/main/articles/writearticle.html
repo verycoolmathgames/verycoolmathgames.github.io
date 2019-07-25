@@ -110,7 +110,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var URLUsername = urlParams.get('username').toString();
 
-            Articles.doc(memeId).set({
+            Articles.doc(title).set({
                 title: title,
                 tags: tags,
                 uploaderName: URLUsername,
