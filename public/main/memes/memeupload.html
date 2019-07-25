@@ -91,19 +91,6 @@
             var month = date.getMonth() + 1;
             var releaseDate = year + "/" + month + "/" + day;
 
-            Memes.doc(memeId).set({
-                title: title,
-                id: memeId,
-                releaseDate: releaseDate,
-                description: description,
-                uploaderName: URLUsername,
-                upvotes: 1,
-                views: 1
-            }, { merge: true }).then(function() {
-                memeRedirect(memeId);
-            });
-            console.log(Memes.doc(memeId));
-
             var fileButton = document.getElementById('fileUpload');
 
             var file = fileButton.files[0];
