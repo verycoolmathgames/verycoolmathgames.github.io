@@ -72,7 +72,7 @@
                     var articleRef = storage.ref('articles/' + articleTitle);
 
                     memeRef.getDownloadURL().then(function (url) {
-                        var image = document.getElementById('image');
+                        var text = document.getElementById('image');
                         image.src = url;
                     }).catch(function (error) {
                         var memeTitle = doc.data().title;
