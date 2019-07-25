@@ -90,7 +90,7 @@
                             var image = document.getElementById('image');
                             image.src = url;
                         }).catch(function (error) {
-                            console.log(error);
+                            console.log("getDownloadURL unable to function properly, :" error);
                         });
                         console.log("Error getting image: ", error);
                     });
