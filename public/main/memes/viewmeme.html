@@ -105,9 +105,9 @@
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes.toString();
-                    console.log("upvotes");
+                    console.log(upvotes);
                     doc.update("views", firebase.firestore.FieldValue.increment(n));
-                    console.log("upvotes");
+                    console.log(upvotes);
                 });
             });
         };
