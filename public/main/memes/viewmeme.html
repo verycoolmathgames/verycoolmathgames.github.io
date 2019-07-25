@@ -121,8 +121,6 @@
             return memeReference.update(newUpvotes)
             .then(function () {
                 console.log("Document successfully updated!");
-                var upvotes = doc.data().upvotes;
-                console.log("Upvotes after: ", upvotes);
             })
             .catch(function (error) {
                 console.error("Error updating document: ", error);
