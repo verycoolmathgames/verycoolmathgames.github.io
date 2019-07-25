@@ -43,7 +43,7 @@
             } else {
                 var urlParams = new URLSearchParams(window.location.search);
                 var mode = urlParams.get('mode').toString();
-                window.locationpagePath + "?mode=" + mode;
+                window.location = pagePath + "?mode=" + mode;
             };
         };
 
