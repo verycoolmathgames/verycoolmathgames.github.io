@@ -100,15 +100,6 @@
                         var text = document.getElementById('text');
                         text.src = url;
                     }).catch(function (error) {
-                        var memeTitle = doc.data().title;
-                        var memeDesc = doc.data().description;
-                        var imgType = doc.data().filetype;
-
-                        var title = document.getElementById('title');
-                        title.innerHTML = memeTitle;
-
-                        var description = document.getElementById('description');
-                        description.innerHTML = memeDesc;
 
                         var memeRef = storage.ref('articles/' + memeTitle + imgType);
 
