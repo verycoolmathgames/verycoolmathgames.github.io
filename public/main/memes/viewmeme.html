@@ -126,7 +126,7 @@
                 console.log(error);
             });
 
-            var memeReference = db.collection("cities").doc("DC");
+            var memeReference = memeReference = firebase.firestore().collection("memes").where("id", "==", memeid);
 
             return memeReference.update(newUpvotes)
             .then(function () {
