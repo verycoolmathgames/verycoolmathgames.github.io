@@ -110,12 +110,6 @@
                 views: firebase.firestore.FieldValue.increment(n)
             });
             console.log(upvotes);
-            Memes.where("id", "==", memeid).get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    var upvotes = doc.data().upvotes;
-                    console.log(upvotes);
-                });
-            });
         };
 
         function redirect(pagePath) {
