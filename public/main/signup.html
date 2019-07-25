@@ -95,6 +95,15 @@ limitations under the License.
                         console.error("Error writing document: ", error);
                     });
 
+                    user.updateProfile({
+                    displayName: "Jane Q. User",
+                    photoURL: "https://example.com/jane-q-user/profile.jpg"
+                }).then(function () {
+                    // Update successful.
+                }).catch(function (error) {
+                    // An error happened.
+                });
+
                 firebase.auth().onAuthStateChanged(function (user) {
                     if (user) {
                         window.location = "home.html?mode=light";
