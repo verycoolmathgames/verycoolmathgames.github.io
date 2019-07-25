@@ -64,7 +64,6 @@
         };
 
         function view(articleTitle) {
-            var urlParams = new URLSearchParams(window.location.search);
             var Articles = db.collection("articles");
             var articleReference = Articles.doc(title);
 
