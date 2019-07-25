@@ -84,6 +84,7 @@
             };
             return memeReference.update(newViews).then(function () {
                 console.log("Document successfully updated!");
+                memeRedirect(memeRef)
             }).catch(function (error) {
                 console.error("Error updating document: ", error);
             });
