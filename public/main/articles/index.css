@@ -94,7 +94,8 @@ article {
 }
 .back_title {
   align-content: center;
-  dis
+  display: flex;
+  flex-
 }
 #title {
   color: #36baff;
