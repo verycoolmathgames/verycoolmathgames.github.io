@@ -106,7 +106,8 @@
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes.toString();
                     doc.update("views", firebase.firestore.FieldValue.increment(n));
-                    console.log("upvotes")
+                    console.log("upvotes");
+                    console.log("")
                 });
             });
         };
