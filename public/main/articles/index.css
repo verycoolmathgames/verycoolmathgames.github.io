@@ -114,13 +114,3 @@ article {
   border: 1px solid #666666;
   border-radius: 5px 5px 5px 5px;
 }
-#description {
-  resize: none;
-  width: 69%;
-  font-size: 18;
-  background-color: aliceblue;
-  align-self: center;
-  text-align: left;
-  border: 1px solid #666666;
-  border-radius: 5px 5px 5px 5px;
-}
