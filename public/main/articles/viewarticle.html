@@ -111,7 +111,7 @@
             articleReference.onSnapshot(function (doc) {
                 var views = doc.data().views;
                 var articleTitle = doc.data().title;
-                console.log(views);
+                console.log(votes);
             });
 
             var newViews = {
