@@ -69,28 +69,28 @@
         };
 
         function vote(n) {
-                var urlParams = new URLSearchParams(window.location.search);
-                var memeid = urlParams.get('meme_ref');
-                var Memes = db.collection("memes");
-                var memeReference = Memes.doc(memeid);
+            var urlParams = new URLSearchParams(window.location.search);
+            var memeid = urlParams.get('meme_ref');
+            var Memes = db.collection("memes");
+            var memeReference = Memes.doc(memeid);
 
-                memeReference.get().then((querySnapshot) => {
-                    querySnapshot.forEach((doc) => {
-                        var upvotes = doc.data().upvotes;
-                    });
+            memeReference.get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var upvotes = doc.data().upvotes;
                 });
+            });
 
-                var newUpvotes = {
-                    upvotes: firebase.firestore.FieldValue.increment(n)
-                };
-                return memeReference.update(newUpvotes)
-                    .then(function () {
-                        console.log("Document successfully updated!");
-                    })
-                    .catch(function (error) {
-                        console.error("Error updating document: ", error);
-                    });
+            var newUpvotes = {
+                upvotes: firebase.firestore.FieldValue.increment(n)
             };
+            return memeReference.update(newUpvotes)
+                .then(function () {
+                    console.log("Document successfully updated!");
+                })
+                .catch(function (error) {
+                    console.error("Error updating document: ", error);
+                });
+        };
 
         Memes.orderBy("upvotes", "desc").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
