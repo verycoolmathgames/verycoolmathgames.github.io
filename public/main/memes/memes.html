@@ -74,7 +74,7 @@
             var memeReference = Memes.doc(memeid);
 
             memeReference.onSnapshot(function (doc) {
-                var views = doc.data().views
+                var views = doc.data().views;
             });
 
             var newViews = {
