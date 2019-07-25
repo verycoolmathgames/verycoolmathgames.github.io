@@ -81,7 +81,7 @@
                 var filetype = file.split('.').pop();
 
                 var memeRf = db.collection('cities').doc('BJ');
-                cityRef.set({
+                memeRf.set({
                     capital: true
                 }, { merge: true });
 
