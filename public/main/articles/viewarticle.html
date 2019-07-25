@@ -61,7 +61,7 @@
                 querySnapshot.forEach(function (doc) {
                     var articleTitle = doc.data().title;
                     var articleViews = doc.data().views;
-                    var articleLikes = doc.data().upvotes;
+                    var articleLis = doc.data().upvotes;
 
                     var title = document.getElementById('title');
                     title.innerHTML = articleTitle;
