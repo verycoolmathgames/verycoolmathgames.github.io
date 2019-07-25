@@ -118,7 +118,6 @@
                 upvotes: firebase.firestore.FieldValue.increment(n)
             };
 
-
             var memeReference = firebase.firestore().collection("memes").where("id", "==", memeid);
 
             return memeReference.update(newUpvotes)
