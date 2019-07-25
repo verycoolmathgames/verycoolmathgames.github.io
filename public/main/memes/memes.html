@@ -75,7 +75,8 @@
 
             memeReference.onSnapshot(function (doc) {
                 var views = doc.data().views;
-                var 
+                
+                var memeRef = doc.data().id.toString();
                 console.log(views);
             });
 
