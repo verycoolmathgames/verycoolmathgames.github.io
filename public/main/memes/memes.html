@@ -83,12 +83,12 @@
                 upvotes: firebase.firestore.FieldValue.increment(n)
             };
             return memeReference.update(newUpvotes)
-                .then(function () {
-                    console.log("Document successfully updated!");
-                })
-                .catch(function (error) {
-                    console.error("Error updating document: ", error);
-                });
+            .then(function () {
+                console.log("Document successfully updated!");
+            })
+            .catch(function (error) {
+                console.error("Error updating document: ", error);
+            });
         };
 
         Memes.orderBy("upvotes", "desc").get().then((querySnapshot) => {
