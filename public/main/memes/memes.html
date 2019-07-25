@@ -83,7 +83,7 @@
             var newUpvotes = {
                 upvotes: firebase.firestore.FieldValue.increment(n)
             };
-            return memeReference.update(newUpvotes)
+            return Memes.doc.update(newUpvotes)
                 .then(function () {
                     console.log("Document successfully updated!");
                 })
