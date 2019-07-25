@@ -80,7 +80,7 @@
                 var file = e.target.files[0];
                 var filetype = file.split('.').pop();
 
-                var memeRf = db.collection('cities').doc('BJ');
+                var memeRf = db.collection('cities').doc('');
                 memeRf.set({
                     filename: file.name,
                     filetype: filetype
