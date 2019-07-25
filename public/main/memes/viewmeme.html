@@ -69,7 +69,7 @@
                     var description = document.getElementById('description');
                     description.innerHTML = memeDesc;
 
-                    var memeRef = storage.ref('memes/' + memeTitle);
+                    var memeRef = storage.ref('memes/' + filename);
 
                     memeRef.getDownloadURL().then(function (url) {
                         var image = document.getElementById('image');
