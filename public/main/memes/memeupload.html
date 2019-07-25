@@ -82,7 +82,8 @@
 
                 var memeRf = db.collection('cities').doc('BJ');
                 memeRf.set({
-                    filename: file.name
+                    filename: file.name,
+                    
                 }, { merge: true });
 
                 var title = document.getElementById('title').value.toString();
