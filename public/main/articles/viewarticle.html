@@ -102,27 +102,32 @@
             });
         };
 
-        function vote(n) {
-            var Articles = db.collection("articles");
-            var memeReference = Articles.doc(a);
+        function view(articleTitle) {
+                var urlParams = new URLSearchParams(window.location.search);
+                var Articles = db.collection("articles");
+                var articleReference = Articles.doc(title);
 
-            memeReference.get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    var upvotes = doc.data().upvotes;
+                articleReference.onSnapshot(function (doc) {
+                    var views = doc.data().views;
+                    var articleTitle = doc.data().title;
+                    console.log(views);
                 });
-            });
 
-            var newUpvotes = {
-                upvotes: firebase.firestore.FieldValue.increment(n)
+                var newViews = {
+                    views: firebase.firestore.FieldValue.increment(1)
+                };
+                return articleReference.update(newViews).then(function () {
+                    console.log("Document successfully updated!");
+                    memeReference.onSnapshot(function (doc) {
+                        var views = doc.data().views;
+                        var articleTitle = doc.data().title.toString();
+                        console.log(views);
+                        memeRedirect(articleTitle);
+                    });
+                }).catch(function (error) {
+                    console.error("Error updating document: ", error);
+                });
             };
-            return memeReference.update(newUpvotes)
-            .then(function () {
-                console.log("Document successfully updated!");
-            })
-            .catch(function (error) {
-                console.error("Error updating document: ", error);
-            });
-        };
 
         function redirect(pagePath) {
             if (pagePath === "signout") {
