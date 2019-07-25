@@ -105,7 +105,7 @@
 
         function view(title) {
             var Memes = db.collection("articles");
-            var memeReference = Memes.doc(memeid);
+            var memeReference = Articles.doc(memeid);
 
             memeReference.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
