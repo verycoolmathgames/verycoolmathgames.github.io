@@ -107,7 +107,7 @@
         };
 
         function view(title) {
-            var Memes = db.collection("memes");
+            var Memes = db.collection("articles");
             var memeReference = Memes.doc(memeid);
 
             memeReference.get().then((querySnapshot) => {
