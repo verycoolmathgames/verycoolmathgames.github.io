@@ -126,7 +126,7 @@
                 console.log(error);
             });
 
-            var memeRe = db.collection("cities").doc("DC");
+            var memeReference = db.collection("cities").doc("DC");
 
             return memeReference.update(newUpvotes)
             .then(function () {
