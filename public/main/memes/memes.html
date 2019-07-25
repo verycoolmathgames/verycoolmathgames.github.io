@@ -70,7 +70,9 @@
 
         function view() {
             var urlParams = new URLSearchParams(window.location.search);
+            var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
+            var memeReference = Memes.doc(memeid);
 
             memeReference.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
