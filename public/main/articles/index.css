@@ -99,7 +99,7 @@ article {
   color: #36baff;
   resize: none;
   width: 88%;
-  text-align: center;
+  align-self: center;
   height: 50px;
   font-size: 24px;
 }
