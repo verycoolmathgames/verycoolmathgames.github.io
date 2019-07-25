@@ -103,6 +103,7 @@ article {
   text-align: center;
   height: 50px;
   font-size: 24px;
+  border: none;
 }
 #back {
   justify-content: left;
