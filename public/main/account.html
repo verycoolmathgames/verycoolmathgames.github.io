@@ -67,7 +67,7 @@
             } else {
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
-            document.querySelectorAll(".accountpages article").style.display = "none";
+            document.querySelectorAll(".accountpages > article").style.display = "none";
             document.querySelector("#welcome").style.display = "block";
         };
 
