@@ -120,7 +120,7 @@
             return articleReference.update(newViews).then(function () {
                 console.log("Document successfully updated!");
                 memeReference.onSnapshot(function (doc) {
-                    var views = doc.data().views;
+                    var votes = doc.data().views;
                     var articleTitle = doc.data().title.toString();
                     console.log(votes);
                 });
