@@ -28,7 +28,8 @@
     font-size: 20px;
 }
 #page {
-    margin
+    margin-top: 0;
+    
 }
 .flex-container {
     display: flex;
