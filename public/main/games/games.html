@@ -58,24 +58,6 @@
             } 
         };
 
-        function getdisplayName() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var username = urlParams.get('username').toString();
-            return username;
-        };
-
-        function email() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email').toString();
-            return URLEmail;
-        };
-
-        function password() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var URLPassword = urlParams.get('password').toString();
-            return URLpassword;
-        };
-
         Games.orderBy("rating", "desc").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var name = doc.data().name.toString();
