@@ -97,7 +97,7 @@
                     var views = doc.data().views;
                     var articleTitle = doc.data().title.toString();
                     console.log(views);
-                    memeRedirect(article);
+                    memeRedirect(articleTitle);
                 });
             }).catch(function (error) {
                 console.error("Error updating document: ", error);
