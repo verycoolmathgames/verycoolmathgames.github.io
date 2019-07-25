@@ -93,7 +93,7 @@ article {
   border-radius: 5px 5px 5px 5px;
 }
 .back_title {
-  align
+  align-content: center;
 }
 #title {
   color: #36baff;
