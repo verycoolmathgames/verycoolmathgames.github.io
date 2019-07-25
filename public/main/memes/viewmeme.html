@@ -119,7 +119,6 @@
             };
 
             return memeReference.update(newUpvotes).then(function () {
-                var upvotes = doc.data().upvotes;
             }).catch(function (error) {
                 console.log(error);
             });
