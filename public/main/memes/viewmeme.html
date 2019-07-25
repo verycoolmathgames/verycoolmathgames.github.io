@@ -104,9 +104,6 @@
         function vote(n) {
             Memes.doc().get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    var title = doc.data().title.toString();
-                    var memeDesc = doc.data().description.toString();
-                    var memeRef = doc.data().id.toString();
                     var upvotes = doc.data().upvotes.toString();
                         return doc.update("views", firebase.firestore.FieldValue.increment(1));
                     };
