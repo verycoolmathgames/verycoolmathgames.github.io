@@ -118,7 +118,7 @@
                 views: firebase.firestore.FieldValue.increment(n)
             };
 
-            return memeReference.update(views).then(function() {
+            return memeReference.update(newUpvotes).then(function() {
                 console.log("Upvotes after: ", upvotes);
             }).catch(function(error) {
                 console.log(error);
