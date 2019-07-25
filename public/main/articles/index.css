@@ -89,3 +89,47 @@ article {
   background-color: #00a7ff;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+.viewmeme {
+  background-color: aliceblue;
+  margin-top: 2%;
+  margin-left: 6.25%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid #000000;
+  border-radius: 5px 5px 5px 5px;
+}
+#title {
+  color: #36baff;
+  resize: none;
+  width: 88%;
+  text-align: center;
+  height: 50px;
+  font-size: 24px;
+}
+#back {
+  justify-content: left;
+  background-color:aliceblue;
+}
+#back:hover {
+  background-color: rgb(157, 206, 250);
+  border: 1px solid #dae7ee;
+  border-radius: 3px;
+}
+.memeimg {
+  width: 49%;
+  align-self: center;
+  border: 1px solid #666666;
+  border-radius: 5px 5px 5px 5px;
+}
+#description {
+  resize: none;
+  width: 69%;
+  font-size: 18;
+  background-color: aliceblue;
+  align-self: center;
+  text-align: left;
+  border: 1px solid #666666;
+  border-radius: 5px 5px 5px 5px;
+}
