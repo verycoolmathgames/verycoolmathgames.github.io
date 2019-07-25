@@ -60,7 +60,6 @@
             Articles.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var articleTitle = doc.data().title;
-                    var filename = doc.data().filename;
                     var articleViews = doc.data().views;
                     var articleVotes = doc.data().upvotes;
 
