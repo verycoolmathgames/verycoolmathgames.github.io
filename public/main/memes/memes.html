@@ -73,7 +73,7 @@
             var Memes = db.collection("memes");
             var memeReference = Memes.doc(memeid);
 
-            db.collection("cities").doc("SF")
+            meme
                 .onSnapshot(function (doc) {
                     console.log("Current data: ", doc.data());
                 });
