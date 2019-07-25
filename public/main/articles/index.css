@@ -103,7 +103,7 @@ article {
   width: 88%;
   align-content: center;
   align-self: center;
-  align-self: center;
+  align-items: center;
   height: 50px;
   font-size: 24px;
 }
