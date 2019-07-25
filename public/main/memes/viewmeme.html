@@ -106,6 +106,7 @@
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
             var memeRfrnce = Memes.where("id", "==", memeid);
+            console.log(meme)
             var memeReference = Memes.doc(memeReference.id);
             console.log(memeReference);
 
