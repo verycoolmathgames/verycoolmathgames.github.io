@@ -106,6 +106,7 @@
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
             var meme = Memes.where("id", "==", memeid);
+            console.log(upvotes);
             return meme.update({
                 views: firebase.firestore.FieldValue.increment(n)
             });
