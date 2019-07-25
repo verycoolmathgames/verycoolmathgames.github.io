@@ -40,7 +40,7 @@
     font-size: 18px;
     line-height: 28px;
     text-align: center;
-    color: lightcoral   
+    color: lightcoral;
 }
 .flex-container {
     display: flex;
