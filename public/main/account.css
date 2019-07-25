@@ -47,7 +47,7 @@
 }
 .flex-container>div {
     background-color: white;
-    color: rgb(105, 105, 105);
+    color: rgb(0, 0, 0);
     width: 100px;
     margin: 10px;
     text-align: center;
