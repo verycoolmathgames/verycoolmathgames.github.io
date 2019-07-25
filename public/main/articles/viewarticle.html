@@ -102,7 +102,7 @@
                     }).catch(function (error) {
                         var articleRef = storage.ref('articles/' + memeTitle + imgType);
 
-                        memeRef.getDownloadURL().then(function (url) {
+                        articleRef.getDownloadURL().then(function (url) {
                             var image = document.getElementById('image');
                             article.src = url;
                             console.log("getDownloadURL successful, ignore error messages related to getting meme image!");
