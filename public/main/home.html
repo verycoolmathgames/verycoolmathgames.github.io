@@ -38,7 +38,7 @@
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
-                window.location.replace("https://verycoolmathgames.github.io");
+                window.location = "https://verycoolmathgames.github.io");
             } else {
                 var urlParams = new URLSearchParams(window.location.search);
                 var mode = urlParams.get('mode').toString();
