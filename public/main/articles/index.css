@@ -96,7 +96,7 @@ article {
   display: flex;
   flex-direction: row;
 }
-#title {
+#articletitle {
   color: #36baff;
   resize: none;
   width: 100%;
