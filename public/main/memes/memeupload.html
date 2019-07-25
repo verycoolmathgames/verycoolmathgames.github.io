@@ -118,6 +118,19 @@
             console.log(memeId);
             console.log(file.name);
             console.log(filetype);
+
+            Memes.doc(memeId).set({
+                title: title,
+                id: memeId,
+                releaseDate: releaseDate,
+                description: description,
+                uploaderName: URLUsername,
+                upvotes: 1,
+                views: 1
+            }, { merge: true }).then(function () {
+                //memeRedirect(memeId);
+            });
+            console.log(Memes.doc(memeId));
         };
 
         function memeRedirect(memeId) {
