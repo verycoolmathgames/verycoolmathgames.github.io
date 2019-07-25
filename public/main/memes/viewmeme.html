@@ -129,17 +129,6 @@
             .catch(function (error) {
                 console.error("Error updating document: ", error);
             });
-
-            // var newUpvotes = {
-            //     upvotes: firebase.firestore.FieldValue.increment(n)
-            // };
-
-            // return memeReference.update(newUpvotes).then(function() {
-            //     var upvotes = doc.data().upvotes;
-            //     console.log("Upvotes after: ", upvotes);
-            // }).catch(function(error) {
-            //     console.log(error);
-            // });
         };
 
         function redirect(pagePath) {
