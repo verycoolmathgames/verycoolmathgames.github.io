@@ -106,7 +106,6 @@
 
         function memeRedirect(memeId) {
             var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email').toString();
             var mode = urlParams.get('mode').toString();
 
             window.location.replace("viewmeme.html?mode=" + mode + "&meme=" + memeId);
