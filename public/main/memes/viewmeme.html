@@ -108,7 +108,7 @@
             // var memeReference = firebase.firestore().collection("memes").where("id", "==", memeid);
             var memeReference = firebase.firestore().collection("memes").doc("B6J7hLTxgGpjYHTOkXfp");
 
-            Memes.where("id", "==", memeid).get().then(querySnapshot) => {
+            Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes;
                     console.log("Upvotes before: ", upvotes);
