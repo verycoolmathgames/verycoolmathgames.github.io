@@ -80,7 +80,7 @@
             });
 
             var newViews = {
-                upvotes: firebase.firestore.FieldValue.increment(n)
+                views: firebase.firestore.FieldValue.increment(n)
             };
             return memeReference.update(newUpvotes)
             .then(function () {
