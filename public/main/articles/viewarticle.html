@@ -60,7 +60,7 @@
             Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var memeTitle = doc.data().title;
-                    var memeDesc = doc.data().description;
+                    var articleDesc = doc.data().description;
                     var filename = doc.data().filename;
                     var memeViews = doc.data().views;
                     var memeVotes = doc.data().upvotes;
