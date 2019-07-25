@@ -93,9 +93,9 @@ article {
   border-radius: 5px 5px 5px 5px;
 }
 .back_title {
-  align-content: center;
   display: flex;
   flex-direction: row;
+  align-content: center;
 }
 #title {
   display: flex;
