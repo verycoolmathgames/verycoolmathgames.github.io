@@ -109,7 +109,7 @@
             var articleReference = Articles.doc(title);
 
             articleReference.onSnapshot(function (doc) {
-                var votes = doc.data().views;
+                var votes = doc.data().votes;
                 var articleTitle = doc.data().title;
                 console.log(votes);
             });
