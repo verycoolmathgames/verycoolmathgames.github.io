@@ -74,8 +74,8 @@
             var memeReference = Memes.doc(memeid);
 
             memeReference.onSnapshot(function (doc) {
-                    console.log("Current data: ", doc.data());
-                });
+                console.log("Current data: ", doc.data());
+            });
 
             var newViews = {
                 views: firebase.firestore.FieldValue.increment(n)
