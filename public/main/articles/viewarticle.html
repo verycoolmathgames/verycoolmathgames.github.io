@@ -121,7 +121,6 @@
                 console.log("Document successfully updated!");
                 memeReference.onSnapshot(function (doc) {
                     var votes = doc.data().upvotes;
-                    var articleTitle = doc.data().title.toString();
                     console.log(votes);
                 });
             }).catch(function (error) {
