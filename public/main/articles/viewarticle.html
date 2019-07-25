@@ -73,7 +73,7 @@
 
                     memeRef.getDownloadURL().then(function (content) {
                         var text = document.getElementById('text');
-                        text.value = ;
+                        text.value = content;
                     }).catch(function (error) {
                         var memeTitle = doc.data().title;
                         var memeDesc = doc.data().description;
