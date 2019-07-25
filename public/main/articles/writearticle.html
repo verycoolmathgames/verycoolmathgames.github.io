@@ -81,6 +81,7 @@
                 console.log('Uploaded a raw string!');
                 articleRedirect(title);
             });
+            
             Articles.doc(title).set({
                 title: title,
                 tags: tags,
