@@ -108,7 +108,7 @@
             var memeReference = Memes.doc(memeid);
             console.log(memeReference);
 
-            meme.get().then((querySnapshot) => {
+            memeReference.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes;
                     console.log("Upvotes before: ", upvotes);
