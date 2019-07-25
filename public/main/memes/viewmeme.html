@@ -102,7 +102,7 @@
         };
 
         function vote(n) {
-            Memes.get().then((querySnapshot) => {
+            Memes.doc().get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var title = doc.data().title.toString();
                     var memeDesc = doc.data().description.toString();
