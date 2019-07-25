@@ -73,7 +73,7 @@
             var Memes = db.collection("memes");
             var memeReference = Memes.doc(memeid);
 
-            memeRefere.get().then((querySnapshot) => {
+            memeReference.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes;
                 });
