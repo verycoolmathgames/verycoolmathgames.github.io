@@ -102,6 +102,7 @@
         };
 
         function vote(n) {
+                var Memes = db.collection("memes");
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes.toString();
