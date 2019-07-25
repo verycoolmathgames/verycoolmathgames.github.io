@@ -98,6 +98,7 @@ article {
   flex-direction: row;
 }
 #title {
+  display: flex;
   
   color: #36baff;
   resize: none;
