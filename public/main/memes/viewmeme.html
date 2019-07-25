@@ -105,7 +105,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
-            var memeRfrnce = firebase.firestore().collection("memes").where("id", "==", memeid);
+            var memeRfrnce = Memes.where("id", "==", memeid);
             var memeReference = Memes.doc(memeReference.id);
             console.log(memeReference);
 
