@@ -95,7 +95,6 @@ article {
 .back_title {
   display: flex;
   flex-direction: row;
-  align-content: center;
 }
 #title {
   display: flex;
