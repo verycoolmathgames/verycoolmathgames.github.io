@@ -27,7 +27,9 @@
     line-height: 20px;
     font-size: 20px;
 }
-
+#page {
+    margin
+}
 .flex-container {
     display: flex;
     align-items: stretch;
