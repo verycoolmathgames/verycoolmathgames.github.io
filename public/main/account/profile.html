@@ -56,9 +56,6 @@
 
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
-            var URLEmail = urlParams.get('email').toString();
-            var URLUsername = urlParams.get('username').toString();
-            var URLPassword = urlParams.get('password').toString();
             var mode = urlParams.get("darkmode");
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
