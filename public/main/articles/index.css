@@ -101,7 +101,7 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  just
+  justify-items: center;
   color: #36baff;
   resize: none;
   width: 88%;
