@@ -102,8 +102,8 @@
         };
 
         function vote(n) {
-                var urlParams = new URLSearchParams(window.location.search);
-                var memeid = urlParams.get('meme_ref');
+            var urlParams = new URLSearchParams(window.location.search);
+            var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
