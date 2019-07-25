@@ -51,10 +51,7 @@
                 document.getElementByTagName("html").id = "dark";
             }
             if (URLPassword == "password") {
-                alert("You are not actually signed in right now, I will add functionality later.");
-            } else {
-                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
-            }
+
 
             function vote(n) {
                 var urlParams = new URLSearchParams(window.location.search);
