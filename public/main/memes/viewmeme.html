@@ -116,7 +116,7 @@
 
             var newUpvotes = {
                 views: firebase.firestore.FieldValue.increment(n)
-            }
+            };
 
             return memeReference.update({
                 views: firebase.firestore.FieldValue.increment(n)
