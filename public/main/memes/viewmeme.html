@@ -89,6 +89,7 @@
                         memeRef.getDownloadURL().then(function (url) {
                             var image = document.getElementById('image');
                             image.src = url;
+                            console.log("")
                         }).catch(function (error) {
                             console.log("getDownloadURL unable to function properly, :", error);
                         });
