@@ -119,9 +119,8 @@
                     }).catch(function (error) {
                         console.log(error);
                     });
-                });
             });
-            
+
             var newUpvotes = {
                 upvotes: firebase.firestore.FieldValue.increment(n)
             };
