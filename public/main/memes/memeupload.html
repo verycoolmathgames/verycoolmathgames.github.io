@@ -94,6 +94,7 @@
             var fileButton = document.getElementById('fileUpload');
             var file = fileButton.files[0];
             var filetype = file.name.split('.').pop();
+            
             var memes = storage.ref('memes/' + file.name);
             var task = memes.put(file);
 
