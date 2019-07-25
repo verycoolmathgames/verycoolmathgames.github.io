@@ -106,7 +106,7 @@
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
             // var memeReference = firebase.firestore().collection("memes").where("id", "==", memeid);
-            var memeReference = firebase.firestore().collection("memes").;
+            var memeReference = firebase.firestore().collection("memes").doc();
 
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
