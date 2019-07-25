@@ -82,7 +82,7 @@
             var newViews = {
                 views: firebase.firestore.FieldValue.increment(n)
             };
-            return memeReference.update(newUpvotes)
+            return memeReference.update(newViews)
             .then(function () {
                 console.log("Document successfully updated!");
             })
