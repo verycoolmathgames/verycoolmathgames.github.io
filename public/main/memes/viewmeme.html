@@ -117,7 +117,7 @@
             return meme.update({
                 views: firebase.firestore.FieldValue.increment(n)
             });
-            console.log(upvotes);
+            console.log("Upvotes before: ", upvotes);
         };
 
         function redirect(pagePath) {
