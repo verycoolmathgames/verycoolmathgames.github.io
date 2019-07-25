@@ -105,7 +105,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
-            var meme = db.collection().where("id", "==", memeid);
+            var meme = db.collection("memes").where("id", "==", memeid);
 
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
