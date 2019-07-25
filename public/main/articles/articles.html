@@ -104,7 +104,7 @@
             });
         };
 
-        Articles.orderBy("likes").get().then((querySnapshot) => {
+        Articles.orderBy("upvotes").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var likes = doc.data().likes.toString();
