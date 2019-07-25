@@ -122,7 +122,7 @@
                 memeReference.onSnapshot(function (doc) {
                     var views = doc.data().views;
                     var articleTitle = doc.data().title.toString();
-                    console.log(views);
+                    console.log(vs);
                 });
             }).catch(function (error) {
                 console.error("Error updating document: ", error);
