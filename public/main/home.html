@@ -46,7 +46,7 @@
                 window.location.replace(pagePath + "?mode=" + mode;
             };
         };
-        
+
         window.onload = function () {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email');
@@ -61,6 +61,7 @@
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
             }
         };
+        
         function getdisplayName() {
             var urlParams = new URLSearchParams(window.location.search);
             var URLEmail = urlParams.get('email');
