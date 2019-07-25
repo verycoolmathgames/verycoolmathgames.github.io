@@ -162,7 +162,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             var mode = urlParams.get('mode').toString();
 
-            window.location.replace("viewarticle.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&article=" + ref);
+            window.location.replace("viewarticle.html?mode=" + mode + "&article=" + ref);
         };
 
     </script>
