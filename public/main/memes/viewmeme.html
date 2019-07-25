@@ -116,7 +116,7 @@
             });
 
             var newUpvotes = {
-                upv: firebase.firestore.FieldValue.increment(n)
+                upvotes: firebase.firestore.FieldValue.increment(n)
             };
 
             return memeReference.update(newUpvotes).then(function() {
