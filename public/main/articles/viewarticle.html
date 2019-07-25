@@ -102,31 +102,6 @@
             });
         };
 
-        function vote(n) {
-            var urlParams = new URLSearchParams(window.location.search);
-            var title = urlParams.get('article');
-            var Articles = db.collection("articles");
-            var articleReference = Articles.doc(title);
-
-            articleReference.onSnapshot(function (doc) {
-                var votes = doc.data().votes;
-                console.log(votes);
-            });
-
-            var newUpvotes = {
-                votes: firebase.firestore.FieldValue.increment(1)
-            };
-            return articleReference.update(newUpvotes).then(function () {
-                console.log("Document successfully updated!");
-                memeReference.onSnapshot(function (doc) {
-                    var votes = doc.data().upvotes;
-                    console.log(votes);
-                });
-            }).catch(function (error) {
-                console.error("Error updating document: ", error);
-            });
-        };
-
         function redirect(pagePath) {
             if (pagePath === "signout") {
                 firebase.auth().signOut();
