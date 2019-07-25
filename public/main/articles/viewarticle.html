@@ -104,7 +104,7 @@
 
         function vote(n) {
             var Articles = db.collection("articles");
-            var memeReference = Articles.doc(memeid);
+            var memeReference = Articles.doc(arid);
 
             memeReference.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
