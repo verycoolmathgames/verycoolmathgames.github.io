@@ -81,7 +81,6 @@
                 var filetype = file.split('.').pop();
 
                 var cityRef = db.collection('cities').doc('BJ');
-
                 cityRef.set({
                     capital: true
                 }, { merge: true });
