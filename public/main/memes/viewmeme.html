@@ -119,7 +119,7 @@
             };
 
             var memeReference = firebase.firestore().collection("memes").where("id", "==", memeid);
-            console.log("meme")
+            console.log(memeReference)
             return memeReference.update(newUpvotes)
             .then(function () {
                 console.log("Document successfully updated!");
