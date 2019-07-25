@@ -120,7 +120,6 @@
 
             return memeReference.update(newUpvotes).then(function () {
                 var upvotes = doc.data().upvotes;
-                console.log("Upvotes after: ", upvotes);
             }).catch(function (error) {
                 console.log(error);
             });
