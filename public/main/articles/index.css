@@ -99,7 +99,7 @@ article {
 }
 #title {
   display: flex;
-  fle
+  flex-direction: 
   color: #36baff;
   resize: none;
   width: 88%;
