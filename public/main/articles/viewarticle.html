@@ -73,7 +73,7 @@
                     var data = document.getElementById('data');
                     data.innerHTML = "Views: " + memeViews + "    " + "Upvotes: " + memeVotes;
 
-                    var memeRef = storage.ref('memes/' + filename);
+                    var memeRef = storage.ref('articles/' + filename);
 
                     memeRef.getDownloadURL().then(function (url) {
                         var image = document.getElementById('image');
