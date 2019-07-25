@@ -110,7 +110,7 @@
 
             var filetype = memeId.split('.').pop();
 
-            Memes.set().({
+            Memes.set(memeId).({
                 title: title,
                 id: memeId,
                 filetype: "." + filetype,
