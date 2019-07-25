@@ -74,9 +74,6 @@
                     var data = document.getElementById('data');
                     views.innerHTML = memeViews;
 
-                    var votes = document.getElementById('votes');
-                    votes.innerHTML = memeVotes;
-
                     var memeRef = storage.ref('memes/' + filename);
 
                     memeRef.getDownloadURL().then(function (url) {
