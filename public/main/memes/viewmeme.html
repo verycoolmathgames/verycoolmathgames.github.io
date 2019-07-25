@@ -106,7 +106,6 @@
             var memeid = urlParams.get('meme_ref');
             var Memes = db.collection("memes");
             var memeReference = Memes.doc(memeid);
-            console.log(memeReference);
 
             memeReference.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
