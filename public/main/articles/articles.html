@@ -95,7 +95,7 @@
                 console.log("Document successfully updated!");
                 memeReference.onSnapshot(function (doc) {
                     var views = doc.data().views;
-                    var memeRef = doc.data().id.toString();
+                    var articleRef = doc.data().id.toString();
                     console.log(views);
                     memeRedirect(memeRef);
                 });
