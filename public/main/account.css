@@ -42,18 +42,15 @@
     margin-bottom: 1%;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    border-color: rgb(72, 191, 255);
-    border-radius: 14px;
 }
 .flex-container>div {
-    background-color: white;
-    color: rgb(0, 0, 0);
+    background-color: #31a4e1ff;
+    color: white;
     width: 100px;
     margin: 10px;
     text-align: center;
     line-height: 100px;
     font-size: 15px;
-    border-color: rgb(72, 191, 255);
     border-radius: 14px;
 }
 .otherelems {
@@ -63,8 +60,6 @@
     border-radius: 14px;
     flex-grow: 2;
     flex-direction: column;
-    border-color: rgb(72, 191, 255);
-    border-radius: 14px;
 }
 .flex-container>.blank {
     background-color: white;
