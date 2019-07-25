@@ -96,7 +96,7 @@
                 var URLUsername = urlParams.get('username').toString();
                 var memeId = URLUsername + "_" + title;
 
-                var memes = storage.ref('memes/' + title);
+                var memes = storage.ref('memes/' + file.name);
                 var task = memes.put(file);
             });
         }
