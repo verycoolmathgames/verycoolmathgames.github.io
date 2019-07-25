@@ -93,7 +93,7 @@
 
         function view(memeid) {
             var urlParams = new URLSearchParams(window.location.search);
-            var Articles = db.collection("memes");
+            var Articles = db.collection("articles");
             var memeReference = articles.doc(memeid);
 
             memeReference.onSnapshot(function (doc) {
