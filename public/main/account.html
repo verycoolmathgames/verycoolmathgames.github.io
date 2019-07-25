@@ -61,12 +61,12 @@
             var mode = urlParams.get("darkmode");
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
-            }
+            };
             if (URLPassword == "password") {
                 alert("You are not actually signed in right now, I will add functionality later.");
             } else {
                 firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
-            }
+            };
             document.querySelectorAll("article").style.display = "none";
             document.querySelector("#welcome").style.display = "block";
         };
