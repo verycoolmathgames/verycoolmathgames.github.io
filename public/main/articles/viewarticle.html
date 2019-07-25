@@ -100,7 +100,6 @@
                         var text = document.getElementById('text');
                         text.src = url;
                     }).catch(function (error) {
-
                         var memeRef = storage.ref('articles/' + memeTitle + imgType);
 
                         memeRef.getDownloadURL().then(function (url) {
