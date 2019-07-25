@@ -49,8 +49,6 @@ limitations under the License.
             var permusername = tempusername.toString();
             var permemail = tempemail.toString();
             var permpassword = temppassword.toString();
-            console.log(permusername, permemail, permpassword);
-            console.log("home.html?email=" + permemail + "&password=" + permpassword);
 
             var db = firebase.firestore();
             var users = db.collection("users");
