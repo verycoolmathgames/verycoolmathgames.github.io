@@ -86,8 +86,6 @@
             });
 
             var urlParams = new URLSearchParams(window.location.search);
-            var URLUsername = urlParams.get('username').toString();
-
             Articles.doc(title).set({
                 title: title,
                 tags: tags,
