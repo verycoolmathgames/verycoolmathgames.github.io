@@ -105,7 +105,7 @@
             Memes.doc().get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes.toString();
-                        return doc.update("views", firebase.firestore.FieldValue.increment(1));
+                    return doc.update("views", firebase.firestore.FieldValue.increment(1));
                     document.getElementById(outerDiv.id).appendChild(meme);
                 });
             });
