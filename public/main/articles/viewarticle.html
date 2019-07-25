@@ -1,0 +1,321 @@
+<html class="mdl-js">
+
+<head>
+
+    <title>Thanks for Sharing</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg"
+        type="image/x-icon">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script defer="" src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+
+    <script>
+
+        firebase.initializeApp({
+            apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
+            authDomain: "verycoolthanksforsharing.firebaseapp.com",
+            databaseURL: "https://verycoolthanksforsharing.firebaseio.com",
+            projectId: "verycoolthanksforsharing",
+            storageBucket: "verycoolthanksforsharing.appspot.com",
+            messagingSenderId: "78626384450",
+            appId: "1:78626384450:web:5c1a5470485502ab"
+        });
+
+        var user = firebase.auth().currentUser;
+        var db = firebase.firestore();
+        db.enablePersistence();
+
+        var storage = firebase.app().storage("gs://verycoolthanksforsharing.appspot.com/");
+
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email');
+            var URLPassword = urlParams.get('password');
+            var mode = urlParams.get("darkmode");
+            var memeid = urlParams.get('meme_ref');
+
+            if (mode == "dark") {
+                document.getElementByTagName("html").id = "dark";
+            }
+            if (URLPassword == "password") {
+                alert("You are not actually signed in right now, I will add functionality later.");
+            } else {
+                firebase.auth().signInWithEmailAndPassword(URLEmail, URLPassword);
+            }
+
+            var Memes = db.collection("memes");
+            Memes.where("id", "==", memeid).get().then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    var memeTitle = doc.data().title;
+                    var memeDesc = doc.data().description;
+                    var filename = doc.data().filename;
+                    var memeViews = doc.data().views;
+                    var memeVotes = doc.data().upvotes;
+
+                    var title = document.getElementById('title');
+                    title.innerHTML = memeTitle;
+
+                    var description = document.getElementById('description');
+                    description.innerHTML = memeDesc;
+
+                    var data = document.getElementById('data');
+                    data.innerHTML = "Views: " + memeViews + "    " + "Upvotes: " + memeVotes;
+
+                    var memeRef = storage.ref('memes/' + filename);
+
+                    memeRef.getDownloadURL().then(function (url) {
+                        var image = document.getElementById('image');
+                        image.src = url;
+                    }).catch(function (error) {
+                        var memeTitle = doc.data().title;
+                        var memeDesc = doc.data().description;
+                        var imgType = doc.data().filetype;
+
+                        var title = document.getElementById('title');
+                        title.innerHTML = memeTitle;
+
+                        var description = document.getElementById('description');
+                        description.innerHTML = memeDesc;
+
+                        var memeRef = storage.ref('memes/' + memeTitle + imgType);
+
+                        memeRef.getDownloadURL().then(function (url) {
+                            var image = document.getElementById('image');
+                            image.src = url;
+                            console.log("getDownloadURL successful, ignore error messages related to getting meme image!");
+                        }).catch(function (error) {
+                            console.log("getDownloadURL unable to function properly, :", error);
+                        });
+                        console.log("Error getting meme image: ", error);
+                    });
+                });
+            }).catch(function (error) {
+                console.log("Error getting documents: ", error);
+            });
+        };
+
+        function vote(n) {
+            var urlParams = new URLSearchParams(window.location.search);
+            var memeid = urlParams.get('meme_ref');
+            var Memes = db.collection("memes");
+            var memeReference = Memes.doc(memeid);
+
+            memeReference.get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var upvotes = doc.data().upvotes;
+                });
+            });
+
+            var newUpvotes = {
+                upvotes: firebase.firestore.FieldValue.increment(n)
+            };
+            return memeReference.update(newUpvotes)
+                .then(function () {
+                    console.log("Document successfully updated!");
+                })
+                .catch(function (error) {
+                    console.error("Error updating document: ", error);
+                });
+        };
+
+        function redirect(pagePath) {
+            if (pagePath === "signout") {
+                firebase.auth().signOut();
+                window.location.replace("https://verycoolmathgames.github.io");
+            } else {
+                var urlParams = new URLSearchParams(window.location.search);
+                var URLEmail = urlParams.get('email').toString();
+                var URLUsername = urlParams.get('username').toString();
+                var URLPassword = urlParams.get('password').toString();
+                var mode = urlParams.get('mode').toString();
+
+                window.location.replace("../" + pagePath + "?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode);
+            };
+        };
+
+        function memeRedirect(memeId) {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            var URLUsername = urlParams.get('username').toString();
+            var URLPassword = urlParams.get('password').toString();
+            var mode = urlParams.get('mode').toString();
+
+            window.location.replace("viewmeme.html?email=" + URLEmail + "&username=" + URLUsername + "&password=" + URLPassword + "&mode=" + mode + "&meme=" + memeId);
+        };
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-143389600-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-143389600-1');
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #31a4e1ff;
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1080bcff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <!--nav begin-->
+        <nav>
+
+            <!--Beginning of Logo-->
+            <a onclick="redirect('home.html')">
+                <img class="logolight" src="https://verycoolmathgames.github.io/images/verycoolmathgameslogolight.jpg">
+            </a>
+            <!--End of Logo-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a class="dropbtn navelement" onclick="redirect('home.html')">Home</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a onclick="redirect('games/games.html')" class="dropbtn navelement">Games</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a onclick="redirect('memes/memes.html')" class="dropbtn navelement">Memes</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            </a>
+            <div class="dropdown">
+                <a onclick="redirect('articles/articles.html')" class="dropbtn navelement">Articles</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a onclick="redirect('leaderboard/leaderboards.html')" class="dropbtn navelement">Leaderboard</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a class="dropbtn navelement" onclick="redirect('account.html')">Account</a>
+            </div>
+            <!--End of Dropdown-->&nbsp;&nbsp;&nbsp;
+
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a class="dropbtn navelement" onclick="redirect('signout')">Sign Out</a>
+            </div>
+            <!--End of Dropdown-->
+
+        </nav>
+        <!--nav end-->
+
+    </header>
+
+    <div class="viewmeme">
+        <div class="back_title">
+            <div class="dropdown">
+                <a class="dropbtn navelement" id="back" onclick="redirect('memes/memes.html')">Back to Memes</a>
+            </div>
+            <h1 id="title"></h1>
+        </div>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+            <a onclick="vote(1)">
+                <img src="../../../images/upvote.png">
+            </a>
+            <img class="memeimg" id="image" src="" alt="This meme sure is taking an awful long time to load isn't it?">
+            <a onclick="vote(-1)">
+                <img src="../../../images/downvote.png">
+            </a>
+        </div>
+        <br>
+        <h3 style="text-align: center;" id="data"></h3>
+        <br>
+        <textarea rows="4" id="description" readonly>
+            If you're reading this, something is broken. You shouldn't be reading this. Stop reading this. Just.... stop!
+        </textarea>
+        <br>
+        <br>
+        <hr style="width:98%;">
+        <div style="width:93%; align-self: center;" id="disqus_thread"></div>
+        <br>
+    </div>
+
+    <script>
+
+        var disqus_config = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var URLEmail = urlParams.get('email').toString();
+            var URLUsername = urlParams.get('username').toString();
+            var URLPassword = urlParams.get('password').toString();
+            var mode = urlParams.get('mode').toString();
+            this.page.url = "https://verycoolmathgames.github.io/articles/viewmeme.html" + "?email=" + URLEmail + " & username=" + URLUsername + " & password=" + URLPassword + " & mode=" + mode;
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sitesinasite-000wehostapp-com-mrktingblog-html.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//sitesinasite-000wehostapp-com-mrktingblog-html.disqus.com/count.js"
+        async></script>
+
+    <br>
+    <br>
+
+    <article>
+
+        <!--Chat-->
+        <div class="chatextreme">
+            <iframe class="chat" src="https://ickyalphanumericwebpages.roycea.repl.co" frameborder="0" height="100%"
+                width="330px" scrolling="no" background-color="aliceblue"></iframe>
+        </div>
+        <!--End of Announcements and Chat Stuff-->
+
+    </article>
+
+</body>
+
+</html>
