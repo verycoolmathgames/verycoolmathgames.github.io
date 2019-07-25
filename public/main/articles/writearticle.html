@@ -81,8 +81,6 @@
                 console.log('Uploaded a raw string!');
                 articleRedirect(title);
             });
-
-            var urlParams = new URLSearchParams(window.location.search);
             Articles.doc(title).set({
                 title: title,
                 tags: tags,
