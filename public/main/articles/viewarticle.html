@@ -82,7 +82,7 @@
             };
 
             var Articles = db.collection("articles");
-            Articles.where("title", "==", title).get().then(function (querySnapshot) {
+            Articles.doc(title).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var articleTitle = doc.data().title;
                     var articleViews = doc.data().views;
