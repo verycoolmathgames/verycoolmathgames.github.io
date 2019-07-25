@@ -110,10 +110,10 @@
             Memes.where("id", "==", memeid).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var upvotes = doc.data().upvotes;
-                    console.log(upvotes);
+                    console.log("upvotes);
                 });
             });
-            
+
             return meme.update({
                 views: firebase.firestore.FieldValue.increment(n)
             });
