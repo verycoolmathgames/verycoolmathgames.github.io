@@ -87,8 +87,8 @@
                 memeReference.onSnapshot(function (doc) {
                     var views = doc.data().views;
                     var memeRef = doc.data().id.toString();
+                    memeRedirect();
                 });
-                memeRedirect();
             }).catch(function (error) {
                 console.error("Error updating document: ", error);
             });
