@@ -68,13 +68,12 @@
                 outerDiv.id = "outer" + username;
 
                 var leaderboard = document.getElementsByClassName("column");
-                
+
 
                 var article = document.createElement("p");
                 article.innerHTML = author + ": " + title;
                 article.className = "article";
                 article.onclick = function () {
-                    articleRedirect(title);
                     return doc.update("views", firebase.firestore.FieldValue.increment(1));
                 };
                 document.getElementById(outerDiv.id).appendChild(article);
