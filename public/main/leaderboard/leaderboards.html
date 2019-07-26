@@ -56,7 +56,7 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
-            Leaderboards.collection("totalPoints").orderBy(collection, "desc").get().then((querySnapshot) => {
+            Leaderboards.collection("totalPoints").orderBy("totalPoints", "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
                     var points = doc.data().totalPoints.toString();
