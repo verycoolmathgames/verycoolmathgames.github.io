@@ -77,7 +77,6 @@
         };
 
         function sortLb(collection){
-            var people = ;
             document.getElementById("leaderboard").remove(document.getElementsByClassName('person'));
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
