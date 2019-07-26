@@ -163,14 +163,11 @@
         function emailed() {
             var credential = firebase.auth.EmailAuthProvider.credential(email, password);
 
-            auth.currentUser.linkWithPopup(provider).then(function (result) {
-                // Accounts successfully linked.
-                var credential = result.credential;
-                var user = result.user;
-                // ...
-            }).catch(function (error) {
-                // Handle Errors here.
-                // ...
+            firebase.auth().currentUser.linkAndRetrieveDataWithCredential(credential).then(function (usercred) {
+                var user = usercred.user;
+                console.log("Account linking success", user);
+            }, function (error) {
+                console.log("Account linking error", error);
             });
         };
 
