@@ -23,7 +23,6 @@ totalPoints.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 
-
 function onloadPoints() {
 
 };
