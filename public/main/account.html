@@ -111,12 +111,12 @@
 
         function deleteAccount() {
             var user = firebase.auth().currentUser;
+            var newPassword = getASecureRandomPassword();
 
-            user.delete().then(function () {
-                window.location = "https://verycoolmathgames.github.io";
+            user.updatePassword(newPassword).then(function () {
+                // Update successful.
             }).catch(function (error) {
-                console.log(error);
-                alert(error);
+                // An error happened.
             });
         };
 
