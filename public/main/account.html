@@ -102,7 +102,7 @@
 
             user.updatePassword(newPassword).then(function () {
                 alert("Password changed!");
-                console.log("Password changed to ", new);
+                console.log("Password changed to ", newPassword);
             }).catch(function (error) {
                 console.log(error);
                 alert(error);
