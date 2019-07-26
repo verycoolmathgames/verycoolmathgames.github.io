@@ -20,7 +20,6 @@ var db = firebase.firestore();
 
 
 var totalPointsRef = db.collection("'leaderboards'/'leaderboards'/'totalPoints'").doc(user.displayName);
-
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         var totalPoints = doc.data().userData;
@@ -37,7 +36,6 @@ totalPointsRef.onSnapshot(function (doc) {
 });
 
 var memesUploadedRef = db.collection("'leaderboards'/'leaderboards'/'memesUploaded'").doc(user.displayName);
-
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         var totalPoints = doc.data().userData;
