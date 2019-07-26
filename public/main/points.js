@@ -63,7 +63,7 @@ totalPointsRef.get().then(function (doc) {
     console.log("Error getting document:", error);
 });
 
-memesUploadedRef.onSnapshot(function (doc) {
+articlesUploadedRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
