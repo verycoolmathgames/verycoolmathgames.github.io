@@ -60,7 +60,7 @@
 
         Leaderboards.orderBy("totalpoints").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                var title = doc.data().title.toString();
+                var username = doc.data().title.toString();
                 var likes = doc.data().likes.toString();
                 var releaseDate = doc.data().releaseDate.toString();
                 var author = doc.data().uploaderName.toString();
