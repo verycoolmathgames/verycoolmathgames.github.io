@@ -75,7 +75,6 @@
             var user = firebase.auth().currentUser;
             var displayName = user.displayName;
             var email = user.email;
-            var password = user.password;
 
             var accountDetails = document.getElementById("accountdetails");
             accountDetails.innerHTML = "Username: " + displayName + "Email: " + email;
