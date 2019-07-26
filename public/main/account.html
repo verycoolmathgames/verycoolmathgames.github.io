@@ -98,16 +98,16 @@
             });
         };
 
-            function changePassword() {
-                var user = firebase.auth().currentUser;
-                var newPassword = getASecureRandomPassword();
+        function changePassword() {
+            var user = firebase.auth().currentUser;
+            var newPassword = getASecureRandomPassword();
 
-                user.updatePassword(newPassword).then(function () {
-                }).catch(function (error) {
-                    console.log(error);
-                    alert(error);
-                });
-            };
+            user.updatePassword(newPassword).then(function () {
+            }).catch(function (error) {
+                console.log(error);
+                alert(error);
+            });
+        };
 
         function deleteAccount() {
             var user = firebase.auth().currentUser;
