@@ -45,6 +45,7 @@ article {
   text-align: center;
   line-height: 50px;
   font-size: 25px;
+  align-self: center;
 }
 #title {
   text-align: center;
