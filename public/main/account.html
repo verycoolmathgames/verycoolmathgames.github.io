@@ -160,7 +160,15 @@
             });
         };
 
-        function emailed()
+        function emailed() {
+             var provider = new firebase.auth.GoogleAuthProvider();
+            var provider = new firebase.auth.FacebookAuthProvider();
+            var provider = new firebase.auth.TwitterAuthProvider();
+            var provider = new firebase.auth.GithubAuthProvider(); var provider = new firebase.auth.GoogleAuthProvider();
+            var provider = new firebase.auth.FacebookAuthProvider();
+            var provider = new firebase.auth.TwitterAuthProvider();
+            var provider = new firebase.auth.GithubAuthProvider();
+        }
 
         function deleteAccount() {
             var user = firebase.auth().currentUser;
