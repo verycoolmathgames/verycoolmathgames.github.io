@@ -72,7 +72,7 @@
                 });
             });
 
-            Leaderboards.collection(collection).doc("Title").get().then(function (doc) {
+            Leaderboards.collection("total").doc("Title").get().then(function (doc) {
                 var title = doc.data().title;
 
                 var leaderboard = document.getElementById("title");
