@@ -90,7 +90,6 @@
 
         function editDetails() {
             var user = firebase.auth().currentUser;
-
             user.updateProfile({
                 displayName: "Jane Q. User",
                 photoURL: "https://example.com/jane-q-user/profile.jpg"
