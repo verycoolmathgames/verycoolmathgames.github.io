@@ -73,9 +73,6 @@
                 var article = document.createElement("p");
                 article.innerHTML = author + ": " + title;
                 article.className = "article";
-                article.onclick = function () {
-                    return doc.update("views", firebase.firestore.FieldValue.increment(1));
-                };
                 document.getElementById(outerDiv.id).appendChild(article);
             });
         });
