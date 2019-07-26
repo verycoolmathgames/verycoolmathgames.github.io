@@ -17,7 +17,7 @@ firebase.initializeApp({
 
 var user = firebase.auth().currentUser;
 var db = firebase.firestore();
-var totalPoints = db.collection("leaderboards").doc("totalPoints").collection("totalPoints").doc(user.displayName);
+var totalPointsRef = db.collection("leaderboards").doc("totalPoints").collection("totalPoints").doc(user.displayName);
 
 totalPoints.get().then(function (doc) {
     if (doc.exists) {
