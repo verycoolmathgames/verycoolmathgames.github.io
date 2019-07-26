@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 
 import "firebase/app";
-
 import * as firebase from "firebase/app";
 
 import "firebase/auth";
