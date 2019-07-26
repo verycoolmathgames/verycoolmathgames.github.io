@@ -59,7 +59,7 @@
             sortLb("totalPoints");
         };
 
-        function sortLb(collection)
+        function sortLb(collection){
 
         Leaderboards.collection("totalPoints").orderBy("totalPoints", "desc").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
