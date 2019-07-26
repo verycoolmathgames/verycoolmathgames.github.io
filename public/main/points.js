@@ -17,4 +17,4 @@ firebase.initializeApp({
 
 document.onload = function () {
     
-}
+};
