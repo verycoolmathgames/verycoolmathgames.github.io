@@ -56,6 +56,25 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
+
+            Leaderboards.collection("totalPoints").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var username = doc.id;
+                    var points = doc.data().totalPoints.toString();
+
+                    var outerDiv = document.createElement("div");
+                    document.getElementById("mostViewed").appendChild(outerDiv);
+                    outerDiv.id = "outer" + username;
+
+                    var leaderboard = document.getElementsByClassName("column");
+
+
+                    var person = document.createElement("p");
+                    person.innerHTML = username + ": " + points;
+                    article.className = "article";
+                    document.getElementById(outerDiv.id).appendChild(article);
+                });
+            });
         };
 
     </script>
