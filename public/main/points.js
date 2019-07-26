@@ -79,7 +79,7 @@ gamesPlayedRef.get().then(function (doc) {
     console.log("Error getting document:", error);
 });
 
-articlesWrittenRef.onSnapshot(function (doc) {
+gamesPlayedRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
