@@ -76,7 +76,7 @@
             });
         };
 
-        function sortLb(collection){
+        function sortLb(collection) {
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
