@@ -101,8 +101,6 @@
         function deleteAccount() {
             var user = firebase.auth().currentUser;
 
-            
-
             user.delete().then(function () {
                 window.location = "https://verycoolmathgames.github.io";
             }).catch(function (error) {
