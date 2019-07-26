@@ -108,6 +108,20 @@
             });
         };
 
+        function reAuth() {
+                var user = firebase.auth().currentUser;
+                var credential;
+
+                // Popup to get user to sign back in 
+
+                user.reauthenticateWithCredential(credential).then(function () {
+                    // User re-authenticated.
+                }).catch(function (error) {
+                    console.log(error);
+                    alert(error);
+                });
+            };
+
         function deleteAccount() {
             var user = firebase.auth().currentUser;
 
