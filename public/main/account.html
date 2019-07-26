@@ -60,7 +60,7 @@
 
         function userMemes() {
             var memesRef = db.collection("memes");
-            memesRef.where("uploaderName", "==", user.displayName)
+            memesRef.where("uploaderName", "==", user.displayName);
         };
 
     </script>
