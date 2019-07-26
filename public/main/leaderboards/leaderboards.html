@@ -56,7 +56,7 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
-            
+
             Leaderboards.collection("totalPoints").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
@@ -71,7 +71,7 @@
 
                     var person = document.createElement("p");
                     person.innerHTML = username + ": " + points;
-                    article.className = "article";
+                    article.className = "person";
                     document.getElementById(outerDiv.id).appendChild(article);
                 });
             });
