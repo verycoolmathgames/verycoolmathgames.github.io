@@ -49,6 +49,7 @@ article {
 #title {
   color: rgb(255, 197, 197);
   font-size: 33px;
+  text-align:center;
   margin-left:20%;
   margin-right:20%;
 }
