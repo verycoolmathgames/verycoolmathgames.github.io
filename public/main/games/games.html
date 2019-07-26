@@ -55,7 +55,8 @@
             var mode = urlParams.get("darkmode");
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
-            } 
+            }
+            
         };
 
         Games.orderBy("rating", "desc").get().then((querySnapshot) => {
