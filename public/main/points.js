@@ -70,7 +70,7 @@ articlesWrittenRef.onSnapshot(function (doc) {
 var gamesPlayedRef = db.collection("'leaderboards'/'leaderboards'/'gamesPlayed'").doc(user.displayName);
 gamesPlayedRef.get().then(function (doc) {
     if (doc.exists) {
-        var articlesWritten = doc.data().userData;
+        var gamesPlayed = doc.data().userData;
         console.log(articlesWritten);
     } else {
         console.log("No such document!");
