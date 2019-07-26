@@ -1,6 +1,14 @@
 /* eslint-disable no-unused-vars */
 
 import * as firebase from "firebase/app";
+import "firebase/app";
+Authentication	import "firebase/auth";
+Cloud Firestore	import "firebase/firestore";
+Cloud Functions for Firebase Client SDK	import "firebase/functions";
+Cloud Messaging	import "firebase/messaging";
+Cloud Storage	import "firebase/storage";
+Performance Monitoring(beta release)	import "firebase/performance";
+Realtime Database	import "firebase/database";
 
 import "firebase/auth";
 import "firebase/firestore";
