@@ -36,7 +36,7 @@ article {
 .person {
   border-top: 5px solid ;
   border-bottom: 5px solid ;
-  border-left: 2px solid lghtgray;
+  border-left: 2px solid ;
   background-color: lightblue;
   color: rgb(0, 50, 70);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
