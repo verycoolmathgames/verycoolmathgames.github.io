@@ -103,7 +103,7 @@ nav{
 .dropdown-contentx {
   display: none;
   position: absolute;
-  left: 50px;
+  left: 500px;
   align-content: center;
   background-color: #269dde;
   min-width: 160px;
