@@ -102,7 +102,7 @@
             var newPassword = getASecureRandomPassword();
 
             user.updatePassword(newPassword).then(function () {
-                alert("assword ");
+                alert("Password ");
                 console.log("Email sent to ", emailAddress);
             }).catch(function (error) {
                 console.log(error);
