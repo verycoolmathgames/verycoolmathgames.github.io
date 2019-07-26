@@ -80,7 +80,7 @@
 
         function changeEmail(newEmail) {
             var user = firebase.auth().currentUser;
-            user.updateEmail(new).catch(function (error) {
+            user.updateEmail(newEmail).catch(function (error) {
                 console.log(error);
                 alert(error);
             });
