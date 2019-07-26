@@ -29,7 +29,7 @@ totalPointsRef.get().then(function (doc) {
     console.log("Error getting document:", error);
 });
 
-totalPoints.onSnapshot(function (doc) {
+totalPointsRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 
