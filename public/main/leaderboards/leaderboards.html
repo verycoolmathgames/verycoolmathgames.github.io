@@ -58,7 +58,7 @@
             }
         };
 
-        Articles.orderBy("views").get().then((querySnapshot) => {
+        Leaderboards.orderBy("views").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var title = doc.data().title.toString();
                 var likes = doc.data().likes.toString();
