@@ -34,7 +34,7 @@ totalPointsRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 
-var memeUploadsRef = db.doc("'leaderboards'/'leaderboards'/'totalPoints'").doc(user.displayName);
+var memeUploadsRef = db.collection("'leaderboards'/'leaderboards'/'totalPoints'").doc(user.displayName);
 
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
