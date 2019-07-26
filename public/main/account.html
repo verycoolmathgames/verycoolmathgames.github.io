@@ -60,6 +60,8 @@
         };
 
         function userMemes() {
+
+                var user = firebase.auth().currentUser;
             var memesRef = db.collection("memes");
             memesRef.where("uploaderName", "==", firebase.auth().currentUser.displayName).get().then(function(querySnapshot) {
                 querySnapshot.forEach(function (doc) {
