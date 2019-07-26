@@ -121,6 +121,6 @@ nav{
 .dropdown-contentx a:hover {
   background-color: #1489c7;
 }
-.dropdownx:hover .dropdown-content {
+.dropdownx:hover .dropdown-contentx {
   display: block;
 }
