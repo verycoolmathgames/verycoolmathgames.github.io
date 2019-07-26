@@ -110,15 +110,15 @@
         };
 
         function deleteAccount() {
-                var user = firebase.auth().currentUser;
+            var user = firebase.auth().currentUser;
 
-                user.delete().then(function () {
-                    window.location = "https://verycoolmathgames.github.io";
-                }).catch(function (error) {
-                    console.log(error);
-                    alert(error);
-                });
-            };
+            user.delete().then(function () {
+                window.location = "https://verycoolmathgames.github.io";
+            }).catch(function (error) {
+                console.log(error);
+                alert(error);
+            });
+        };
 
         function reAuth() {
             var user = firebase.auth().currentUser;
