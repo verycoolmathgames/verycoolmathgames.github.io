@@ -82,11 +82,10 @@
 
                 var meme = document.createElement("p");
                 meme.innerHTML = title;
-                meme.className = "meme";
                 meme.onclick = function () {
                     view(memeid);
                 };
-                
+
                 document.getElementById(outerDiv.id).appendChild(meme);
             } else {
                 //add email to link accounts and google to linked accounts
