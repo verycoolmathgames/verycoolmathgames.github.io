@@ -79,7 +79,7 @@
         };
 
         function sortLb(collection) {
-            $("p").remove(".test");
+            $("p").remove(".person");
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
