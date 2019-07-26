@@ -67,7 +67,7 @@ articlesWrittenRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(user.displayName);
+var gamesPlayedRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(user.displayName);
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         var articlesWritten = doc.data().userData;
