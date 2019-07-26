@@ -69,6 +69,11 @@
             var emailpassword = document.getElementById("emailpassword");
             var userProvider = user.providerData[0].providerId;
 
+            var provider = new firebase.auth.GoogleAuthProvider();
+            var provider = new firebase.auth.FacebookAuthProvider();
+            var provider = new firebase.auth.TwitterAuthProvider();
+            var provider = new firebase.auth.GithubAuthProvider();
+
             /*
                 <i id="google" class="fab fa-google fa-5x"></i> <br>
                 <i id="emailpassword" class="fas fa-envelope fa-5x"></i> <br>
