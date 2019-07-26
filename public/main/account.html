@@ -96,6 +96,16 @@
             });
         };
 
+        function changeUsername(newUsername) {
+                var user = firebase.auth().currentUser;
+                user.updateProfile({
+                    displayName: newUsername
+                }).catch(function (error) {
+                    console.log(error);
+                    alert(error);
+                });
+            };
+
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
