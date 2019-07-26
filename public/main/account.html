@@ -109,16 +109,13 @@
         };
 
         function reAuth() {
-            var user = firebase.auth().currentUser;
-            var credential;
+            var auth = firebase.auth();
+            var emailAddress = "user@example.com";
 
-            // Popup to get user to sign back in 
-
-            user.reauthenticateWithCredential(credential).then(function () {
-                // User re-authenticated.
+            auth.sendPasswordResetEmail(emailAddress).then(function () {
+                // Email sent.
             }).catch(function (error) {
-                console.log(error);
-                alert(error);
+                // An error happened.
             });
         };
 
