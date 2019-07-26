@@ -102,7 +102,7 @@
             console.log("Current data: ", doc.data());
         });
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(user.displayName);
+        var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(firebase.auth().currentUser.displayName);
         totalPointsRef.get().then(function (doc) {
             if (doc.exists) {
                 var articlesWritten = doc.data().userData;
@@ -118,7 +118,7 @@
             console.log("Current data: ", doc.data());
         });
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        var gamesPlayedRef = db.collection("'leaderboards'/'leaderboards'/'gamesPlayed'").doc(user.displayName);
+        var gamesPlayedRef = db.collection("'leaderboards'/'leaderboards'/'gamesPlayed'").doc(firebase.auth().currentUser.displayName);
         gamesPlayedRef.get().then(function (doc) {
             if (doc.exists) {
                 var gamesPlayed = doc.data().userData;
