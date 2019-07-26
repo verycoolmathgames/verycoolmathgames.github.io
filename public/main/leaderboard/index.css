@@ -29,8 +29,8 @@ article {
   width: 100%;
   text-align: center;
   border-left: 2px solid lightgray;
-  border-right: 2px solid #lightgray;
-  border-top: 5px solid #lightgray;
+  border-right: 2px solid lightgray;
+  border-top: 5px solid lightgray;
   background-color: #31a4e1ff;
 }
 .person {
