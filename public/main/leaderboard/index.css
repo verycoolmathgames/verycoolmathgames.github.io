@@ -31,11 +31,11 @@ article {
   border-left: 2px solid #31a4e1ff;
   border-right: 2px solid #31a4e1ff;
   border-top: 5px solid #31a4e1ff;
-  background-color: #31a4e1ff;
+  background-color: #lightgray;
 }
 .person {
-  border-top: 5px solid #31a4e1ff;
-  border-bottom: 5px solid #31a4e1ff;
+  border-top: 5px solid #lightgray;
+  border-bottom: 5px solid #lightgray;
   border-left: 2px solid lightgray;
   background-color: lightblue;
   color: rgb(0, 50, 70);
