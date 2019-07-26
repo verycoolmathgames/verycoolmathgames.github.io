@@ -5,7 +5,7 @@ import "firebase/app";
 Authentication	import "firebase/auth";
 Cloud Firestore	import "firebase/firestore";
 Cloud Functions for Firebase Client SDK	import "firebase/functions";
-Cloud Messaging	import "firebase/messaging";
+import "firebase/messaging";
 import "firebase/storage";
 import "firebase/performance";
 import "firebase/database";
