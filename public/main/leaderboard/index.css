@@ -29,7 +29,7 @@ article {
   width: 100%;
   text-align: center;
   background-color: #31a4e1ff;
-  box-shadow: 2px 16px 32px 0px rgba(0,0,0,0.2);
+  box-shadow: 2px 16px 32px 2px rgba(0,0,0,0.2);
 }
 .person {
   border-top: 5px solid ;
