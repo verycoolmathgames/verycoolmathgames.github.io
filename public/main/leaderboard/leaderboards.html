@@ -60,7 +60,7 @@
         };
 
         function sortLb(collection){
-            Leaderboards.collection(collection).orderBy("totalPoints", "desc").get().then((querySnapshot) => {
+            Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
                     var points = doc.data().totalPoints.toString();
