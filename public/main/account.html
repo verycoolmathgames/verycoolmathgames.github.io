@@ -180,7 +180,7 @@
 
             firebase.auth().currentUser.linkAndRetrieveDataWithCredential(credential).then(function (usercred) {
                 var user = usercred.user;
-                console.log("Account linking success", user);
+                console.log("Account linked succesfully", user);
             }, function (error) {
                 console.log("Account linking error", error);
             });
