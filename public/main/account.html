@@ -82,6 +82,9 @@
 
                 var meme = document.createElement("p");
                 meme.innerHTML = "<i id='google' class='fab fa-google fa-5x'></i> <br>";
+                meme.onclick = function () {
+                    view(memeid);
+                };
 
                 document.getElementById(outerDiv.id).appendChild(meme);
             } else {
