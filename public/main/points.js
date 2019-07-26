@@ -21,5 +21,9 @@ function onloadPoints() {
 };
 
 function memePoints() {
+
+}
+
+function articlePoints() {
     
 }
