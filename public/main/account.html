@@ -90,6 +90,9 @@
             var user = firebase.auth().currentUser;
             user.updateProfile({
                 displayName: new
+            }).catch(function (error) {
+                console.log(error);
+                alert(error);
             });
         }
 
