@@ -75,7 +75,7 @@
                     document.getElementById(outerDiv.id).appendChild(person);
                 });
             });
-            
+
             Leaderboards.collection(collection).doc("Title").get().then(function(doc) {
                 var title = doc.data().title;
 
@@ -180,6 +180,17 @@
 
         <div class="column" id="leaderboard">
             <h1 id="title"></h1>
+            <!--Beginning of Dropdown-->
+            <div class="dropdown">
+                <a href="games/games.html" class="dropbtn navelement">Games</a>
+                <div class="dropdown-content">
+                    <a href="games/popular.html">Popular Games</a>
+                    <a href="games/new.html">New Games</a>
+                    <a href="games/rcmmnd.html">Your Recommendations</a>
+                </div>
+                </a>
+            </div><a>
+                <!--End of Dropdown-->
         </div>
 
     </article>
