@@ -58,7 +58,24 @@
             }
         };
 
+        Leaderboards.collection("totalPoints").orderBy("totalPoints", "desc").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var username = doc.id;
+                    var points = doc.data().totalPoints.toString();
 
+                    var outerDiv = document.createElement("div");
+                    document.getElementById("leaderboard").appendChild(outerDiv);
+                    outerDiv.id = "outer" + username;
+
+                    var leaderboard = document.getElementById("title");
+                    leaderboard.innerHTML = "Total Points";
+
+                    var person = document.createElement("p");
+                    person.innerHTML = username + ":" + points;
+                    person.className = "person";
+                    document.getElementById(outerDiv.id).appendChild(person);
+                });
+            });
 
     </script>
 
