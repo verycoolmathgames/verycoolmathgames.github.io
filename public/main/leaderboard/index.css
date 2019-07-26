@@ -33,7 +33,7 @@ article {
   justify-content: center;
 }
 .person {
-  border-top: 5px solid ;
+  border-top: 5px solid white;
   border-bottom: 5px solid ;
   border-left: 2px solid ;
   background-color: lightblue;
