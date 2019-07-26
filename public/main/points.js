@@ -19,21 +19,10 @@ var user = firebase.auth().currentUser;
 var db = firebase.firestore();
 var totalPoints = db.collection("leaderboards").doc("totalPoints").collection("totalPoints").doc(user.displayName);
 
-totalPoints.get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        var username = doc.id;
-        var data = doc.data().userData.toString();
-
-        var outerDiv = document.createElement("div");
-        document.getElementById("leaderboard").appendChild(outerDiv);
-        outerDiv.id = "outer" + username;
-
-        var person = document.createElement("p");
-        person.innerHTML = username + ": " + data;
-        person.className = "person";
-        document.getElementById(outerDiv.id).appendChild(person);
-    });
+totalPoints.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
 });
+
 
 function onloadPoints() {
 
