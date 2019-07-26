@@ -73,7 +73,9 @@
 
         function userData() {
             var user = firebase.auth().currentUser;
-            
+            var displayName = user.displayName;
+            var email = user.email;
+            var password = user.password;
         };
 
     </script>
