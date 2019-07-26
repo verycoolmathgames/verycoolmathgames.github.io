@@ -37,6 +37,7 @@ article {
   background-color: rgb(112, 0, 216);
   color: rgb(255, 197, 197);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  float: center;
   width: 60%;
   margin-left: 10%;
   margin-right: 10%;
