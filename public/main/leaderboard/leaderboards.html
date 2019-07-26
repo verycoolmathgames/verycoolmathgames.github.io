@@ -84,7 +84,7 @@
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
-                    var data = doc.data().value.toString();
+                    var data = doc.data().userData.toString();
 
                     var outerDiv = document.createElement("div");
                     document.getElementById("leaderboard").appendChild(outerDiv);
