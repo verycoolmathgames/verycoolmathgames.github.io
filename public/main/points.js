@@ -47,7 +47,7 @@ totalPointsRef.get().then(function (doc) {
     console.log("Error getting document:", error);
 });
 
-totalPointsRef.onSnapshot(function (doc) {
+memesUploadedRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 
