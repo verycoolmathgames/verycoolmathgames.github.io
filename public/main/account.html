@@ -177,7 +177,7 @@
             };
 
             var email = document.getElementById("popupemail");
-            var password = document.get
+            var password = document.getElementById
 
             var credential = firebase.auth.EmailAuthProvider.credential(email, password);
             firebase.auth().currentUser.linkAndRetrieveDataWithCredential(credential).then(function (usercred) {
