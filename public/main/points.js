@@ -16,5 +16,5 @@ firebase.initializeApp({
 });
 
 function onloadPoints() {
-    var user = firebase.auth().curren
+    var user = firebase.auth().currentUser
 };
