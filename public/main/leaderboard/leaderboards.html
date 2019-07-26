@@ -56,7 +56,7 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
-            sortLb()
+            sortLb("totalPoints")
         };
 
         Leaderboards.collection("totalPoints").orderBy("totalPoints", "desc").get().then((querySnapshot) => {
