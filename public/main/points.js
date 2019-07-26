@@ -17,7 +17,7 @@ firebase.initializeApp({
 
 function onloadPoints() {
     var user = firebase.auth().currentUser;
-
+    var db = firebase.
 };
 
 function memePoints() {
@@ -25,5 +25,5 @@ function memePoints() {
 }
 
 function articlePoints() {
-    
+
 }
