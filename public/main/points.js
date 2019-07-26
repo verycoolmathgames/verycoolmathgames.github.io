@@ -34,6 +34,23 @@ totalPointsRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 
+var totalPointsRef = db.collection("leaderboards").doc("totalPoints").collection("totalPoints").doc(user.displayName);
+
+totalPointsRef.get().then(function (doc) {
+    if (doc.exists) {
+        var totalPoints = doc.data().userData;
+        console.log("Document data:", doc.data());
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
+
+totalPointsRef.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
+});
+
 function onloadPoints() {
 
 };
