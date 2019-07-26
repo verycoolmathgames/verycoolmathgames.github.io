@@ -113,7 +113,7 @@
             var user = firebase.auth().currentUser;
             var credential;
 
-            // Prompt the user to re-provide their sign-in credentials
+            // Redirect user to 
 
             user.reauthenticateWithCredential(credential).then(function () {
                 // User re-authenticated.
