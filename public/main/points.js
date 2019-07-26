@@ -51,7 +51,7 @@ memesUploadedRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'memesUploaded'").doc(user.displayName);
+var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritte'").doc(user.displayName);
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         var memesUploaded = doc.data().userData;
