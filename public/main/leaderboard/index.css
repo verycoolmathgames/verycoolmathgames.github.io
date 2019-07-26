@@ -33,7 +33,6 @@ article {
   justify-content: center;
 }
 .person {
-  /* background-color: rgb(112, 0, 216); */
   background-color: #0475df;
   color: rgb(255, 197, 197);;
   border: 0.5px solid rgb(255, 197, 197);
