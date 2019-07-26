@@ -74,9 +74,6 @@
 
             Leaderboards.collection("totalPoints").doc("Title").get().then(function (doc) {
                 var title = doc.data().title;
-
-                var leaderboard = document.getElementById("title");
-                leaderboard.innerHTML = title;
             });
         };
 
