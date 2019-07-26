@@ -88,7 +88,7 @@
             });
         };
 
-        function changeUsernaem() {
+        function changeUsernaem(new) {
             var user = firebase.auth().currentUser;
             user.updateProfile({
                 displayName: new,
