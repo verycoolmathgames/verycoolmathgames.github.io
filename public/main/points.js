@@ -63,7 +63,7 @@ totalPointsRef.get().then(function (doc) {
     console.log("Error getting document:", error);
 });
 
-articlesUploadedRef.onSnapshot(function (doc) {
+articlesWrittenRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
