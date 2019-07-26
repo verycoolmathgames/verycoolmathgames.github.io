@@ -97,7 +97,7 @@
             });
         };
 
-        function changePassword() {
+        function changePassword(newPassword) {
             var user = firebase.auth().currentUser;
 
             user.updatePassword(newPassword).then(function () {
