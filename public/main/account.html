@@ -96,7 +96,7 @@
             });
         };
 
-        function delete(newUsername) {
+        function deleteAccount(newUsername) {
             var user = firebase.auth().currentUser;
 
             user.delete().then(function () {
