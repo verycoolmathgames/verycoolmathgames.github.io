@@ -91,7 +91,7 @@
         function changeUsernaem(new) {
             var user = firebase.auth().currentUser;
             user.updateProfile({
-                displayName: new,
+                displayName: new
             }).then(function () {
                 // Update successful.
             }).catch(function (error) {
