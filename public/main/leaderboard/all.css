@@ -100,7 +100,7 @@ nav{
   color: white;
   background-color: #0d8ed4;
 }
-.dropdown-content {
+.dropdown-contentx {
   display: none;
   position: absolute;
   top: 50px;
@@ -110,7 +110,7 @@ nav{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-.dropdown-content a {
+.dropdown-contentx a {
   float: none;
   color: white;
   padding: 12px 16px;
