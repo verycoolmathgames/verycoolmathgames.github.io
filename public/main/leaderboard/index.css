@@ -21,6 +21,7 @@ article {
   margin-left: 2%;
   width: 82%;
   display: flex;
+  text-align: centerl
   flex-direction: row;
   justify-content: space-around;
 }
