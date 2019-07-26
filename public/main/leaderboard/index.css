@@ -34,7 +34,7 @@ article {
   justify-content: center;
 }
 .person {
-  background-color: rgb(112, 0, 216);
+  /* background-color: rgb(112, 0, 216); */
   background-color: ;
   color: rgb(255, 197, 197);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
