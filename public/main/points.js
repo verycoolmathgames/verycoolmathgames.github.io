@@ -17,3 +17,80 @@ firebase.initializeApp({
 var user = firebase.auth().currentUser;
 var db = firebase.firestore();
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var totalPointsRef = db.collection("'leaderboards'/'leaderboards'/'totalPoints'").doc(user.displayName);
+totalPointsRef.get().then(function (doc) {
+    if (doc.exists) {
+        var totalPoints = doc.data().userData;
+        console.log(totalPoints);
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
+
+totalPointsRef.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var memesUploadedRef = db.collection("'leaderboards'/'leaderboards'/'memesUploaded'").doc(user.displayName);
+totalPointsRef.get().then(function (doc) {
+    if (doc.exists) {
+        var memesUploaded = doc.data().userData;
+        console.log(memesUploaded);
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
+
+memesUploadedRef.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(user.displayName);
+totalPointsRef.get().then(function (doc) {
+    if (doc.exists) {
+        var articlesWritten = doc.data().userData;
+        console.log(articlesWritten);
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
+
+articlesWrittenRef.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var gamesPlayedRef = db.collection("'leaderboards'/'leaderboards'/'gamesPlayed'").doc(user.displayName);
+gamesPlayedRef.get().then(function (doc) {
+    if (doc.exists) {
+        var gamesPlayed = doc.data().userData;
+        console.log(gamesPlayed);
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
+
+gamesPlayedRef.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function onloadPoints() {
+
+};
+
+function memePoints() {
+
+}
+
+function articlePoints() {
+
+}
