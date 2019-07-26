@@ -76,6 +76,17 @@
 
             if (userProvider == "password") {
                 //add google to link accounts and email to linked accounts
+                var outerDiv = document.createElement("div");
+                document.getElementById("newest").appendChild(outerDiv);
+                outerDiv.id = "outer" + title + "new";
+
+                var meme = document.createElement("p");
+                meme.innerHTML = title;
+                meme.className = "meme";
+                meme.onclick = function () {
+                    view(memeid);
+                };
+                document.getElementById(outerDiv.id).appendChild(meme);
 
             } else {
                 //add email to link accounts and google to linked accounts
