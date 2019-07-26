@@ -116,7 +116,8 @@
             user.updatePassword(newPassword).then(function () {
                 // Update successful.
             }).catch(function (error) {
-                // An error happened.
+                console.log(error);
+                alert(error);
             });
         };
 
