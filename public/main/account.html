@@ -110,7 +110,7 @@
 
         function reAuth() {
             var auth = firebase.auth();
-            var emailAddress = ;
+            var emailAddress = user.email;
 
             auth.sendPasswordResetEmail(emailAddress).then(function () {
                 alert("Email sent!");
