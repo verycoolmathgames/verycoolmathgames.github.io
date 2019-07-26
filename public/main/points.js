@@ -21,6 +21,7 @@ var totalPointsRef = db.collection("leaderboards").doc("totalPoints").collection
 
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
+        
         console.log("Document data:", doc.data());
     } else {
         console.log("No such document!");
