@@ -176,7 +176,7 @@
                 }
             };
 
-            var email = document.getElementById("popupemail");
+            var email = document.getElementById("popupemail").value;
             var password = document.getElementById("popuppassword").value;
 
             var credential = firebase.auth.EmailAuthProvider.credential(email, password);
