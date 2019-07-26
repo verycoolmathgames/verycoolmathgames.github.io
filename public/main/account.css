@@ -103,9 +103,3 @@
   font-size: 28px;
   font-weight: bold;
 }
-
-.clickout:hover, .clickout:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
