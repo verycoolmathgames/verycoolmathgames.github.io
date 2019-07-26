@@ -96,7 +96,7 @@ nav{
   font-family: sans-serif;
   margin: 0;
 }
-.navbar a:hover, .dropdownx:hover .dropbtn {
+.navbar a:hover, .dropdownx:hover .dropbtnx {
   color: white;
   background-color: #0d8ed4;
 }
