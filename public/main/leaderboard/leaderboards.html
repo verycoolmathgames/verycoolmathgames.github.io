@@ -78,7 +78,7 @@
 
         function sortLb(collection){
             var people = document.getElementsByClassName('person');
-            document.getElementById("leaderboard").removeChild();
+            document.getElementById("leaderboard").removeChild(people);
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
