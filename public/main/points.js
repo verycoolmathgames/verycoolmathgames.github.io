@@ -71,7 +71,7 @@ var gamesPlayedRef = db.collection("'leaderboards'/'leaderboards'/'gamesPlayed'"
 gamesPlayedRef.get().then(function (doc) {
     if (doc.exists) {
         var gamesPlayed = doc.data().userData;
-        console.log(articlesWritten);
+        console.log(gamesPlayed);
     } else {
         console.log("No such document!");
     }
