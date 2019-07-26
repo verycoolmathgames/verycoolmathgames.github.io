@@ -19,7 +19,7 @@ var user = firebase.auth().currentUser;
 var db = firebase.firestore();
 var totalPointsRef = db.collection("leaderboards").doc("totalPoints").collection("totalPoints").doc(user.displayName);
 
-totalPoints.get().then(function (doc) {
+totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         console.log("Document data:", doc.data());
     } else {
