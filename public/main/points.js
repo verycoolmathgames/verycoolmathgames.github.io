@@ -20,4 +20,6 @@ function onloadPoints() {
 
 };
 
-function 
+function memePoints() {
+    
+}
