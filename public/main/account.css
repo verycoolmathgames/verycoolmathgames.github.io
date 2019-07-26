@@ -45,7 +45,6 @@
 .flex-container {
     display: flex;
     align-items: stretch;
-    margin-left: 19%;
     margin-right: 18%;
     margin-bottom: 1%;
     flex-wrap: wrap;
