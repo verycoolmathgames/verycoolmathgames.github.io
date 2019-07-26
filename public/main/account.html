@@ -91,7 +91,7 @@
 
             user.updateProfile({
                 displayName: newUsername
-            }).catch(function (error) {
+            }).then(function()).catch(function (error) {
                 console.log(error);
                 alert(error);
             });
