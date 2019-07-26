@@ -54,7 +54,7 @@ memesUploadedRef.onSnapshot(function (doc) {
 var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(user.displayName);
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
-        var memesUploaded = doc.data().userData;
+        var articlesWritten = doc.data().userData;
         console.log(memesUploaded);
     } else {
         console.log("No such document!");
