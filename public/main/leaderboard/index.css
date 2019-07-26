@@ -28,9 +28,6 @@ article {
   height: 1200px;
   width: 100%;
   text-align: center;
-  border-left: 2px solid lightgray;
-  border-right: 2px solid lightgray;
-  border-top: 2px solid lightgray;
   background-color: #31a4e1ff;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
