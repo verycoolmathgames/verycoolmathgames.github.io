@@ -118,7 +118,7 @@ nav{
   display: block;
   text-align: left;
 }
-.dropdown-content a:hover {
+.dropdown-contentx a:hover {
   background-color: #1489c7;
 }
 .dropdown:hover .dropdown-content {
