@@ -17,21 +17,6 @@ firebase.initializeApp({
 var user = firebase.auth().currentUser;
 var db = firebase.firestore();
 
-window.document.addEventListener("DOMContentLoaded", event => {
-
-    const firebase = require(firebase());
-    const app = firebase.app();
-    const db = firebase.firestore();
-    const chatHistory = db.collection("website_chat");
-
-    chatHistory.onSnapshot(doc => {
-        const chatData = doc.data();
-        var name = document.createTextNode(chatData.displayName + `<br>`);
-        var text = document.createTextNode(chatData.text + `<br>`);
-    })
-
-});
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var totalPointsRef = db.collection("'leaderboards'/'leaderboards'/'totalPoints'").doc(user.displayName);
 totalPointsRef.get().then(function (doc) {
