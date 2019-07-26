@@ -7,7 +7,7 @@ Cloud Firestore	import "firebase/firestore";
 Cloud Functions for Firebase Client SDK	import "firebase/functions";
 Cloud Messaging	import "firebase/messaging";
 Cloud Storage	import "firebase/storage";
-Performance Monitoring(beta release)	import "firebase/performance";
+import "firebase/performance";
 import "firebase/database";
 
 import "firebase/auth";
