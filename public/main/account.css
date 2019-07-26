@@ -104,7 +104,7 @@
   font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.clickout:hover, .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
