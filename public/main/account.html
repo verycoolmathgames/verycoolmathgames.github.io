@@ -114,7 +114,7 @@
 
             auth.sendPasswordResetEmail(emailAddress).then(function () {
                 alert("Email sent!");
-                console.log("Email sent to ", email)
+                console.log("Email sent to ", emailAddress)
             }).catch(function (error) {
                 console.log(error);
                 alert(error);
