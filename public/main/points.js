@@ -67,7 +67,22 @@ articlesWrittenRef.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesWritten'").doc(user.displayName);
+totalPointsRef.get().then(function (doc) {
+    if (doc.exists) {
+        var articlesWritten = doc.data().userData;
+        console.log(articlesWritten);
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
 
+articlesWrittenRef.onSnapshot(function (doc) {
+    console.log("Current data: ", doc.data());
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function onloadPoints() {
 
 };
