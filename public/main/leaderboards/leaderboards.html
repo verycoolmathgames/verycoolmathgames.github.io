@@ -62,7 +62,6 @@
             querySnapshot.forEach((doc) => {
                 var username = doc.id;
                 var points = doc.data().totalPoints.toString();
-                var views = doc.data().views.toString();
 
                 var outerDiv = document.createElement("div");
                 document.getElementById("mostViewed").appendChild(outerDiv);
