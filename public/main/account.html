@@ -161,7 +161,7 @@
         };
 
         function emailed() {
-            var provider = new firebase.auth.EmailAuthProvider();
+            var credential = firebase.auth.EmailAuthProvider.credential(email, password);
 
             auth.currentUser.linkWithPopup(provider).then(function (result) {
                 // Accounts successfully linked.
