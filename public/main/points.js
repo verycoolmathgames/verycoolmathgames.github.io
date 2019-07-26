@@ -55,7 +55,7 @@ var articlesWrittenRef = db.collection("'leaderboards'/'leaderboards'/'articlesW
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         var articlesWritten = doc.data().userData;
-        console.log(memesUploaded);
+        console.log(articlesWritten);
     } else {
         console.log("No such document!");
     }
