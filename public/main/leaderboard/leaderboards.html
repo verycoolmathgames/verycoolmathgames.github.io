@@ -77,7 +77,6 @@
         };
 
         function sortLb(collection){
-            document.getElementById("leaderboard").remove(document.querySelectorAll('person'));
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
