@@ -19,6 +19,17 @@ var user = firebase.auth().currentUser;
 var db = firebase.firestore();
 var totalPoints = db.collection("leaderboards").doc("totalPoints").collection("totalPoints").doc(user.displayName);
 
+totalPoints.get().then(function (doc) {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function (error) {
+    console.log("Error getting document:", error);
+});
+
 totalPoints.onSnapshot(function (doc) {
     console.log("Current data: ", doc.data());
 });
