@@ -71,10 +71,6 @@
                     document.getElementById(outerDiv.id).appendChild(person);
                 });
             });
-
-            Leaderboards.collection("totalPoints").doc("Title").get().then(function (doc) {
-                var title = doc.data().title;
-            });
         };
 
         function sortLb(collection){
