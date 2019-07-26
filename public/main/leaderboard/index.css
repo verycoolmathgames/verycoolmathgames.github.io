@@ -32,6 +32,7 @@ article {
   border-right: 2px solid lightgray;
   border-top: 2px solid lightgray;
   background-color: #31a4e1ff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .person {
   border-top: 5px solid ;
