@@ -4,8 +4,6 @@ import * as firebase from "firebase/app";
 
 import "firebase/auth";
 import "firebase/firestore";
-var user = firebase.auth().currentUser;
-var db = firebase.firestore()
 
 firebase.initializeApp({
     apiKey: "AIzaSyCxRTkWjoToUoNsM8Rm6zPwiJBG_JCB4fo",
