@@ -39,7 +39,7 @@ var memesUploadedRef = db.collection("'leaderboards'/'leaderboards'/'memesUpload
 totalPointsRef.get().then(function (doc) {
     if (doc.exists) {
         var totalPoints = doc.data().userData;
-        console.log("Document data:", doc.data());
+        console.log(memesUploaded);
     } else {
         console.log("No such document!");
     }
