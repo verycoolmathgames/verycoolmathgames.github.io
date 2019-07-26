@@ -107,17 +107,17 @@
         };
 
         function reAuth() {
-        var user = firebase.auth().currentUser;
-        var credential;
+            var user = firebase.auth().currentUser;
+            var credential;
 
-        // Prompt the user to re-provide their sign-in credentials
+            // Prompt the user to re-provide their sign-in credentials
 
-        user.reauthenticateWithCredential(credential).then(function () {
-            // User re-authenticated.
-        }).catch(function (error) {
-            console.log(error);
-            alert(error);
-        });
+            user.reauthenticateWithCredential(credential).then(function () {
+                // User re-authenticated.
+            }).catch(function (error) {
+                console.log(error);
+                alert(error);
+            });
         }
 
     </script>
