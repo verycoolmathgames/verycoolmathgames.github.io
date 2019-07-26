@@ -58,7 +58,7 @@
             if (mode == "dark") {
                 document.getElementByTagName("html").id = "dark";
             }
-            
+
             Leaderboards.collection("totalPoints").orderBy("totalPoints", "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
@@ -84,7 +84,7 @@
             Leaderboards.collection(collection).orderBy(collection, "desc").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var username = doc.id;
-                    var data = doc.data().data.toString();
+                    var data = doc.data().value.toString();
 
                     var outerDiv = document.createElement("div");
                     document.getElementById("leaderboard").appendChild(outerDiv);
