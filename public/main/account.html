@@ -80,8 +80,7 @@
 
         function changeEmail() {
             var user = firebase.auth().currentUser;
-            user.updateEmail("user@example.com").then(function () {
-            }).catch(function (error) {
+            user.updateEmail("user@example.com").catch(function (error) {
                 console.log(error);
                 alert(error);
             });
@@ -91,6 +90,9 @@
             var user = firebase.auth().currentUser;
             user.updateProfile({
                 displayName: new
+            }).catch(function (error) {
+                console.log(error);
+                alert(error);
             });
         }
 
