@@ -86,7 +86,7 @@
             console.log("Current data: ", doc.data());
         });
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        var memesUploadedRef = db.collection("'leaderboards'/'leaderboards'/'memesUploaded'").doc(user.displayName);
+        var memesUploadedRef = db.collection("'leaderboards'/'leaderboards'/'memesUploaded'").doc(firebase.auth().currentUser.displayName);
         totalPointsRef.get().then(function (doc) {
             if (doc.exists) {
                 var memesUploaded = doc.data().userData;
