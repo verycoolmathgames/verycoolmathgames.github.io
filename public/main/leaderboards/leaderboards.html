@@ -62,8 +62,6 @@
             querySnapshot.forEach((doc) => {
                 var username = doc.id;
                 var points = doc.data().totalPoints.toString();
-                var releaseDate = doc.data().releaseDate.toString();
-                var author = doc.data().uploaderName.toString();
                 var views = doc.data().views.toString();
 
                 var outerDiv = document.createElement("div");
