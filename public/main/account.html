@@ -78,8 +78,7 @@
             var password = user.password;
         };
 
-        function changeEmail() {}
-
+        function changeEmail() {
             var user = firebase.auth().currentUser;
 
                 user.updateEmail("user@example.com").then(function () {
