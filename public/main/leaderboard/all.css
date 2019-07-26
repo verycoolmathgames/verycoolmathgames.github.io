@@ -96,12 +96,10 @@ nav{
   font-family: sans-serif;
   margin: 0;
 }
-
 .navbar a:hover, .dropdown:hover .dropbtn {
   color: white;
   background-color: #0d8ed4;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
