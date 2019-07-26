@@ -59,6 +59,8 @@
             sortLb("totalPoints");
         };
 
+        function sortLb()
+
         Leaderboards.collection("totalPoints").orderBy("totalPoints", "desc").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 var username = doc.id;
