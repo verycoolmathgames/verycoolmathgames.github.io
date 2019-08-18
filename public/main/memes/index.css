@@ -60,7 +60,9 @@ article {
   line-height: 50px;
   font-size: 25px;
 }
-.meme
+.meme:hover {
+  cursor: pointer;
+}
 article {
   margin-left: 2%;
   width: 82%;
