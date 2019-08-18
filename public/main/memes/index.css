@@ -11,7 +11,7 @@
 }
 
 .button:hover {
-  
+  cursor: pointer;
 }
 
 .chat {
