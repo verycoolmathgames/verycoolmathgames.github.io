@@ -4,6 +4,10 @@
   font-family: courier;
 }
 
+.button:hover {
+  
+}
+
 .chat {
   position: fixed;
   top: 0;
